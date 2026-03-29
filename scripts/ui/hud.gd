@@ -297,16 +297,15 @@ func _on_menu_item(id: int) -> void:
 			get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 		4:
 			var muted := AudioManager.toggle_mute()
+			var popup := menu_btn.get_popup()
+			for i in range(popup.item_count):
+				if popup.get_item_id(i) == 4:
+					popup.set_item_text(i, "🔇  Music Off" if muted else "🔊  Toggle Music")
 		5:
 			tutorial._is_complete = false
 			tutorial._current_step = -1
 			tutorial._save_state()
 			tutorial.trigger("game_start")
-			# Update menu label
-			var popup := menu_btn.get_popup()
-			for i in range(popup.item_count):
-				if popup.get_item_id(i) == 4:
-					popup.set_item_text(i, "🔇  Music Off" if muted else "🔊  Toggle Music")
 
 
 func _show_achievements() -> void:
