@@ -2,7 +2,7 @@
     "scenarios": [
         {
             "id": "scenario_001",
-            "name": "Blueprint Skepticism",
+            "name": "Reform Plan Skepticism",
             "year": 2013,
             "month": 6,
             "category": "political_event",
@@ -122,7 +122,7 @@
         },
         {
             "id": "scenario_003",
-            "name": "VLE Usage Enforcement",
+            "name": "Virtual Learning Platform Crisis",
             "year": 2015,
             "month": 6,
             "category": "policy_debate",
@@ -185,7 +185,7 @@
         },
         {
             "id": "scenario_004",
-            "name": "TIMSS Results Crisis",
+            "name": "International Math & Science Rankings",
             "trigger_event": "event_020",
             "year": 2016,
             "month": 1,
@@ -419,7 +419,7 @@
         },
         {
             "id": "scenario_008",
-            "name": "GE14 Aftermath Management",
+            "name": "General Election Aftermath",
             "year": 2018,
             "month": 5,
             "category": "political_event",
@@ -538,7 +538,7 @@
         },
         {
             "id": "scenario_010",
-            "name": "PISA Disappointment",
+            "name": "Global Education Rankings Shock",
             "trigger_event": "event_021",
             "year": 2018,
             "month": 12,
@@ -600,7 +600,7 @@
         },
         {
             "id": "scenario_011",
-            "name": "UPSR Abolishment Debate",
+            "name": "Primary Exam Reform Debate",
             "year": 2019,
             "month": 3,
             "category": "policy_debate",
@@ -719,7 +719,7 @@
         },
         {
             "id": "scenario_013",
-            "name": "Sheraton Move Crisis",
+            "name": "Political Leadership Change",
             "year": 2020,
             "month": 2,
             "category": "political_event",
@@ -964,7 +964,7 @@
         },
         {
             "id": "scenario_017",
-            "name": "UPSR Abolishment Implementation",
+            "name": "Primary Exam Reform Implementation",
             "year": 2021,
             "month": 8,
             "category": "policy_debate",
@@ -1151,7 +1151,7 @@
         },
         {
             "id": "scenario_020",
-            "name": "PT3 Abolishment Process",
+            "name": "Lower Secondary Exam Reform",
             "year": 2022,
             "month": 9,
             "category": "policy_debate",
@@ -1330,7 +1330,7 @@
         },
         {
             "id": "scenario_023",
-            "name": "DAPU Restructured to DU",
+            "name": "Education Unit Restructuring",
             "year": 2024,
             "month": 1,
             "category": "political_event",
@@ -1448,7 +1448,7 @@
         },
         {
             "id": "scenario_025",
-            "name": "Final Blueprint Review",
+            "name": "Final Reform Assessment",
             "trigger_event": "event_024",
             "year": 2024,
             "month": 6,
@@ -1519,7 +1519,7 @@
         },
         {
             "id": "scenario_026",
-            "name": "Blueprint Report Card Leak",
+            "name": "Reform Report Card Leak",
             "year": 2025,
             "month": 1,
             "category": "crisis_response",
@@ -1578,7 +1578,7 @@
         },
         {
             "id": "scenario_027",
-            "name": "Blueprint Legacy Planning",
+            "name": "Education Reform Legacy Planning",
             "year": 2025,
             "month": 6,
             "category": "policy_debate",

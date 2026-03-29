@@ -9,6 +9,9 @@ func _ready() -> void:
 	new_game_btn.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/hud.tscn"))
 	quit_btn.pressed.connect(func(): get_tree().quit())
 
+	# Play menu music
+	AudioManager.play_menu_music()
+
 	# Background
 	var bg := ColorRect.new()
 	bg.color = ThemeConfig.BG_CREAM

@@ -50,7 +50,7 @@ static func apply_callback_chains(
 	scenario: Dictionary,
 	scenarios_completed: Dictionary
 ) -> Dictionary:
-	if str(scenario.get("name", "")) == "UPSR Abolishment Implementation":
+	if str(scenario.get("name", "")) == "Primary Exam Reform Implementation":
 		return _apply_upsr_chain(scenario, scenarios_completed)
 	return scenario
 

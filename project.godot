@@ -24,6 +24,7 @@ GameTimer="*res://scripts/autoloads/game_timer.gd"
 YearCycleEngine="*res://scripts/autoloads/year_cycle_engine.gd"
 SaveLoadSystem="*res://scripts/autoloads/save_load_system.gd"
 AchievementSystem="*res://scripts/autoloads/achievement_system.gd"
+AudioManager="*res://scripts/autoloads/audio_manager.gd"
 
 [display]
 

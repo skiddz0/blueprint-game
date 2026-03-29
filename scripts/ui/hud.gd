@@ -86,6 +86,8 @@ func _ready() -> void:
 	popup.add_separator()
 	popup.add_item("🏆  Achievements", 2)
 	popup.add_separator()
+	popup.add_item("🔊  Toggle Music", 4)
+	popup.add_separator()
 	popup.add_item("🚪  Main Menu", 3)
 	popup.id_pressed.connect(_on_menu_item)
 
@@ -267,7 +269,16 @@ func _on_menu_item(id: int) -> void:
 		0: save_load_modal.open("save")
 		1: save_load_modal.open("load")
 		2: _show_achievements()
-		3: get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		3:
+			AudioManager.play_menu_music()
+			get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		4:
+			var muted := AudioManager.toggle_mute()
+			# Update menu label
+			var popup := menu_btn.get_popup()
+			for i in range(popup.item_count):
+				if popup.get_item_id(i) == 4:
+					popup.set_item_text(i, "🔇  Music Off" if muted else "🔊  Toggle Music")
 
 
 func _show_achievements() -> void:

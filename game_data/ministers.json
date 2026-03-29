@@ -2,8 +2,8 @@
     "ministers": [
         {
             "id": "minister_001",
-            "name": "Tan Sri Moo-Hidin",
-            "nickname": "The Blueprint Architect",
+            "name": "Tan Sri Ahmad Bakar",
+            "nickname": "The Master Planner",
             "start_year": 2013,
             "end_year": 2015,
             "start_month": 1,
@@ -41,8 +41,8 @@
         },
         {
             "id": "minister_002",
-            "name": "Dato' Seri Mad-Zir",
-            "nickname": "Steady Hands",
+            "name": "Dato' Seri Ismail Razak",
+            "nickname": "The Steady Hand",
             "start_year": 2016,
             "end_year": 2018,
             "start_month": 1,
@@ -80,8 +80,8 @@
         },
         {
             "id": "minister_003",
-            "name": "Dr. Maz-Lee",
-            "nickname": "The Academic Reformist",
+            "name": "Dr. Nur Aisyah",
+            "nickname": "The Bold Reformer",
             "start_year": 2018,
             "end_year": 2020,
             "start_month": 5,
@@ -120,8 +120,8 @@
         },
         {
             "id": "minister_004",
-            "name": "Dr. Rad-Zee",
-            "nickname": "Crisis Manager",
+            "name": "Dr. Kamal Hassan",
+            "nickname": "The Crisis Navigator",
             "start_year": 2020,
             "end_year": 2022,
             "start_month": 3,
@@ -159,8 +159,8 @@
         },
         {
             "id": "minister_005",
-            "name": "Ms. Fadz-Lina",
-            "nickname": "Human Touch",
+            "name": "Puan Siti Hajar",
+            "nickname": "The People's Minister",
             "start_year": 2023,
             "end_year": 2025,
             "start_month": 1,
