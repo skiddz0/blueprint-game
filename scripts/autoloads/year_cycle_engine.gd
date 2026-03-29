@@ -8,10 +8,16 @@ func _ready() -> void:
 	GameTimer.month_advanced.connect(_on_month_advanced)
 	GameTimer.year_ended.connect(_on_year_ended)
 
+	# Initialize achievements when data is ready
+	if DataLoader.is_loaded():
+		AchievementSystem.initialize(DataLoader.get_achievements())
+	else:
+		DataLoader.data_loaded.connect(func():
+			AchievementSystem.initialize(DataLoader.get_achievements()), CONNECT_ONE_SHOT)
+
 
 ## Called each time a month boundary is crossed.
 func _on_month_advanced(_month: int) -> void:
-	# Advance game state month (updates initiative progress)
 	GameStateManager.advance_month()
 
 	var year: int = GameStateManager.state["year"]
@@ -19,8 +25,7 @@ func _on_month_advanced(_month: int) -> void:
 
 	# Check for scenario trigger
 	var scenario: Variant = ScenarioEngine.check_for_scenario(
-		year,
-		current_month,
+		year, current_month,
 		DataLoader.get_scenarios(),
 		GameStateManager.state["scenarios_completed"]
 	)
@@ -29,13 +34,13 @@ func _on_month_advanced(_month: int) -> void:
 		GameStateManager.trigger_scenario(scenario)
 		return
 
-	# Mid-year review (month 5 = June, config: mid_year_month = 6, but 0-indexed = 5)
+	# Mid-year review
 	var config: Dictionary = DataLoader.get_config()
 	var mid_year: int = int(config.get("time", {}).get("mid_year_month", 6)) - 1
 	if current_month == mid_year:
 		GameStateManager.snapshot_mid_year_kpis()
 
-	# October budget check (month 9 = October, config: october_month = 10, 0-indexed = 9)
+	# October budget check
 	var october: int = int(config.get("time", {}).get("october_month", 10)) - 1
 	if current_month == october:
 		GameStateManager.check_october_budget()
@@ -46,8 +51,12 @@ func _on_year_ended() -> void:
 	GameTimer.pause()
 	GameStateManager.process_year_end()
 
-	# If game is not over, timer stays paused for PLANNING phase.
-	# UI will call start_new_year() when player confirms initiative selection.
+	# Auto-save at year-end
+	SaveLoadSystem.auto_save()
+
+	# Check achievements at year-end
+	var is_game_end: bool = GameStateManager.state.get("game_over", false)
+	AchievementSystem.check_achievements(GameStateManager.state, is_game_end)
 
 
 ## Called by UI when player confirms initiative selection and is ready to start.

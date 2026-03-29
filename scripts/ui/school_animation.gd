@@ -122,7 +122,7 @@ func _animate_walking_to_school(delta: float) -> void:
 		teacher.visible = false
 
 
-func _animate_teaching(delta: float) -> void:
+func _animate_teaching(_delta: float) -> void:
 	# Show teacher
 	var teacher := get_node_or_null("Teacher")
 	if teacher:

@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://scripts/ui/scenario_modal.gd" id="3_scn"]
 [ext_resource type="Script" path="res://scripts/ui/game_over_screen.gd" id="4_go"]
 [ext_resource type="Script" path="res://scripts/ui/school_animation.gd" id="5_anim"]
+[ext_resource type="Script" path="res://scripts/ui/save_load_modal.gd" id="6_save"]
 
 [node name="HUD" type="PanelContainer"]
 anchors_preset = 15
@@ -42,6 +43,11 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Wave 1"
 
+[node name="PhaseLabel" type="Label" parent="VBoxMain/HeaderPanel/HeaderBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "PLANNING"
+
 [node name="Spacer1" type="Control" parent="VBoxMain/HeaderPanel/HeaderBar"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -71,10 +77,10 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "⚡1.0x"
 
-[node name="PhaseLabel" type="Label" parent="VBoxMain/HeaderPanel/HeaderBar"]
+[node name="MenuBtn" type="MenuButton" parent="VBoxMain/HeaderPanel/HeaderBar"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "PLANNING"
+text = "☰"
 
 [node name="HSep" type="HSeparator" parent="VBoxMain"]
 layout_mode = 2
@@ -96,9 +102,18 @@ theme_override_constants/margin_bottom = 8
 layout_mode = 2
 theme_override_constants/separation = 6
 
-[node name="MinisterHeader" type="Label" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar"]
+[node name="MinisterHeaderRow" type="HBoxContainer" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="MinisterHeader" type="Label" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar/MinisterHeaderRow"]
 layout_mode = 2
 text = "MINISTER"
+
+[node name="MinisterNameLabel" type="Label" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar/MinisterHeaderRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="MinisterPortrait" type="TextureRect" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar"]
 unique_name_in_owner = true
@@ -106,11 +121,6 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 200)
 expand_mode = 1
 stretch_mode = 5
-
-[node name="MinisterNameLabel" type="Label" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar"]
-unique_name_in_owner = true
-layout_mode = 2
-horizontal_alignment = 1
 
 [node name="MinisterNicknameLabel" type="Label" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar"]
 unique_name_in_owner = true
@@ -245,11 +255,48 @@ custom_minimum_size = Vector2(32, 0)
 text = "60"
 horizontal_alignment = 2
 
-[node name="SchoolAnimation" type="Control" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar"]
+[node name="Sep2" type="HSeparator" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar"]
 layout_mode = 2
-size_flags_vertical = 3
-custom_minimum_size = Vector2(0, 80)
-script = ExtResource("5_anim")
+
+[node name="SentimentHeader" type="Label" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar"]
+layout_mode = 2
+text = "PUBLIC SENTIMENT"
+
+[node name="SentimentPanel" type="PanelContainer" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SentimentHBox" type="HBoxContainer" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar/SentimentPanel"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SentimentFace" type="Label" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar/SentimentPanel/SentimentHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "😐"
+
+[node name="SentimentInfo" type="VBoxContainer" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar/SentimentPanel/SentimentHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SentimentText" type="Label" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar/SentimentPanel/SentimentHBox/SentimentInfo"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Neutral"
+
+[node name="SentimentDetail" type="Label" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar/SentimentPanel/SentimentHBox/SentimentInfo"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Avg KPI: 50"
+
+[node name="SentimentBar" type="ProgressBar" parent="VBoxMain/ContentSplit/SidebarMargin/Sidebar/SentimentPanel/SentimentHBox/SentimentInfo"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 0.0
+max_value = 100.0
+value = 50.0
+show_percentage = false
+custom_minimum_size = Vector2(0, 8)
 
 [node name="VSep" type="VSeparator" parent="VBoxMain/ContentSplit"]
 layout_mode = 2
@@ -267,26 +314,42 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 6
 
-[node name="SelectInitiativesBtn" type="Button" parent="VBoxMain/ContentSplit/MainMargin/MainContent"]
-unique_name_in_owner = true
+[node name="InitiativesHeaderRow" type="HBoxContainer" parent="VBoxMain/ContentSplit/MainMargin/MainContent"]
 layout_mode = 2
-size_flags_horizontal = 0
-text = "🎯 Select Initiatives"
+theme_override_constants/separation = 12
 
-[node name="InitiativesHeader" type="Label" parent="VBoxMain/ContentSplit/MainMargin/MainContent"]
+[node name="InitiativesHeader" type="Label" parent="VBoxMain/ContentSplit/MainMargin/MainContent/InitiativesHeaderRow"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "ACTIVE INITIATIVES"
 
-[node name="InitiativesScroll" type="ScrollContainer" parent="VBoxMain/ContentSplit/MainMargin/MainContent"]
+[node name="SelectInitiativesBtn" type="Button" parent="VBoxMain/ContentSplit/MainMargin/MainContent/InitiativesHeaderRow"]
+unique_name_in_owner = true
 layout_mode = 2
+text = "🎯 Select"
+
+[node name="InitiativesRow" type="HBoxContainer" parent="VBoxMain/ContentSplit/MainMargin/MainContent"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="InitiativesScroll" type="ScrollContainer" parent="VBoxMain/ContentSplit/MainMargin/MainContent/InitiativesRow"]
+layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_minimum_size = Vector2(0, 120)
 
-[node name="InitiativesContainer" type="VBoxContainer" parent="VBoxMain/ContentSplit/MainMargin/MainContent/InitiativesScroll"]
+[node name="InitiativesContainer" type="VBoxContainer" parent="VBoxMain/ContentSplit/MainMargin/MainContent/InitiativesRow/InitiativesScroll"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 4
+
+[node name="SchoolAnimation" type="Control" parent="VBoxMain/ContentSplit/MainMargin/MainContent/InitiativesRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 0)
+size_flags_vertical = 3
+script = ExtResource("5_anim")
 
 [node name="ShiftsHeader" type="Label" parent="VBoxMain/ContentSplit/MainMargin/MainContent"]
 layout_mode = 2
@@ -342,7 +405,7 @@ theme_override_constants/separation = 8
 
 [node name="Header" type="Label" parent="InitiativeSelector/MarginBox/CardPanel/VBox"]
 layout_mode = 2
-text = "SELECT INITIATIVES"
+text = "Select Initiatives"
 
 [node name="SearchField" type="LineEdit" parent="InitiativeSelector/MarginBox/CardPanel/VBox"]
 unique_name_in_owner = true
@@ -542,3 +605,49 @@ theme_override_constants/separation = 6
 unique_name_in_owner = true
 layout_mode = 2
 text = "Play Again"
+
+[node name="SaveLoadModal" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+script = ExtResource("6_save")
+
+[node name="MarginBox" type="MarginContainer" parent="SaveLoadModal"]
+layout_mode = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 40
+
+[node name="CardPanel" type="PanelContainer" parent="SaveLoadModal/MarginBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="SaveLoadModal/MarginBox/CardPanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SaveLoadTitle" type="Label" parent="SaveLoadModal/MarginBox/CardPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "SAVE / LOAD"
+
+[node name="SlotsScroll" type="ScrollContainer" parent="SaveLoadModal/MarginBox/CardPanel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SlotsContainer" type="VBoxContainer" parent="SaveLoadModal/MarginBox/CardPanel/VBox/SlotsScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="CloseBtn" type="Button" parent="SaveLoadModal/MarginBox/CardPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Close"

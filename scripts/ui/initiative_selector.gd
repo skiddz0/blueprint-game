@@ -30,7 +30,7 @@ const CATEGORY_COLORS := {
 	"policy": Color(0.20, 0.72, 0.35),
 	"technology": Color(0.15, 0.75, 0.85),
 	"community": Color(0.92, 0.45, 0.65),
-	"governance": Color(0.55, 0.38, 0.25),
+	"governance": Color(0.50, 0.30, 0.75),
 }
 
 
@@ -177,16 +177,22 @@ func _build_card(init: Dictionary, adjusted_rm: float, pc_cost: int,
 	var cat: String = str(init.get("category", ""))
 	var cat_color: Color = CATEGORY_COLORS.get(cat, ThemeConfig.BLUE)
 
-	var panel := PanelContainer.new()
+	# Vibrant category-colored cards
+	var card_bg: Color
+	var accent: Color
 	if is_selected:
-		panel.add_theme_stylebox_override("panel",
-			ThemeConfig.make_left_accent_panel(ThemeConfig.BG_CARD_SELECTED, cat_color, 5, 8, 10))
+		card_bg = cat_color.lerp(Color.WHITE, 0.75)
+		accent = cat_color
 	elif can_afford:
-		panel.add_theme_stylebox_override("panel",
-			ThemeConfig.make_left_accent_panel(ThemeConfig.BG_WHITE, cat_color.lerp(ThemeConfig.BG_CREAM, 0.5), 4, 8, 10))
+		card_bg = cat_color.lerp(Color.WHITE, 0.88)
+		accent = cat_color.lerp(Color.WHITE, 0.3)
 	else:
-		panel.add_theme_stylebox_override("panel",
-			ThemeConfig.make_left_accent_panel(Color(0.95, 0.93, 0.92), ThemeConfig.KPI_RED.lerp(ThemeConfig.BG_CREAM, 0.5), 4, 8, 10))
+		card_bg = Color(0.92, 0.90, 0.88)
+		accent = ThemeConfig.KPI_RED.lerp(Color.WHITE, 0.5)
+
+	var panel := PanelContainer.new()
+	panel.add_theme_stylebox_override("panel",
+		ThemeConfig.make_left_accent_panel(card_bg, accent, 5, 8, 10))
 
 	var vbox := VBoxContainer.new()
 	vbox.add_theme_constant_override("separation", 3)
@@ -194,11 +200,22 @@ func _build_card(init: Dictionary, adjusted_rm: float, pc_cost: int,
 
 	# Row 1: checkbox + name + duration
 	var header := HBoxContainer.new()
-	var checkbox := CheckBox.new()
-	checkbox.button_pressed = is_selected
-	checkbox.disabled = not can_afford and not is_selected
-	checkbox.toggled.connect(func(_p: bool): _on_initiative_toggled(init["id"]))
-	header.add_child(checkbox)
+	# Toggle button instead of checkbox — white bg, colored when selected
+	var toggle := Button.new()
+	toggle.toggle_mode = true
+	toggle.button_pressed = is_selected
+	toggle.disabled = not can_afford and not is_selected
+	toggle.text = "✅" if is_selected else "⬜"
+	toggle.custom_minimum_size = Vector2(36, 36)
+	if can_afford or is_selected:
+		var bg_col := Color.WHITE if not is_selected else cat_color.lerp(Color.WHITE, 0.6)
+		ThemeConfig.style_button(toggle, bg_col, cat_color.lerp(Color.WHITE, 0.7))
+		toggle.add_theme_color_override("font_color", cat_color)
+	else:
+		ThemeConfig.style_button(toggle, Color(0.90, 0.88, 0.86), Color(0.90, 0.88, 0.86))
+		toggle.add_theme_color_override("font_color", ThemeConfig.TEXT_MUTED)
+	toggle.toggled.connect(func(_p: bool): _on_initiative_toggled(init["id"]))
+	header.add_child(toggle)
 
 	var name_lbl := Label.new()
 	name_lbl.text = str(init.get("name", ""))

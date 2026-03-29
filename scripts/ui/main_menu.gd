@@ -1,4 +1,4 @@
-## Main Menu — Colorful, playful entry screen.
+## Main Menu — Colorful entry screen with Continue/Load support.
 extends Control
 
 @onready var new_game_btn: Button = %NewGameBtn
@@ -9,7 +9,7 @@ func _ready() -> void:
 	new_game_btn.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/hud.tscn"))
 	quit_btn.pressed.connect(func(): get_tree().quit())
 
-	# Cream background
+	# Background
 	var bg := ColorRect.new()
 	bg.color = ThemeConfig.BG_CREAM
 	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -22,7 +22,6 @@ func _ready() -> void:
 	title.add_theme_font_size_override("font_size", 48)
 	title.add_theme_color_override("font_color", ThemeConfig.BLUE)
 
-	# Subtitle
 	var subtitle: Label = $VBox/Subtitle
 	subtitle.add_theme_font_size_override("font_size", ThemeConfig.FONT_SUBTITLE)
 	subtitle.add_theme_color_override("font_color", ThemeConfig.ORANGE)
@@ -36,13 +35,33 @@ func _ready() -> void:
 	$VBox.add_child(tagline)
 	$VBox.move_child(tagline, 2)
 
-	# Buttons
+	# New Game button
 	ThemeConfig.style_button(new_game_btn, ThemeConfig.GREEN, ThemeConfig.GREEN_LIGHT)
-	new_game_btn.add_theme_font_size_override("font_size", ThemeConfig.FONT_HEADER)
-	new_game_btn.custom_minimum_size = Vector2(240, 50)
+	new_game_btn.add_theme_font_size_override("font_size", 18)
+	new_game_btn.custom_minimum_size = Vector2(260, 50)
+	new_game_btn.text = "🎮 New Game"
 
+	# Continue button (auto-save)
+	if SaveLoadSystem.has_any_save():
+		var continue_btn := Button.new()
+		continue_btn.text = "▶ Continue"
+		continue_btn.custom_minimum_size = Vector2(260, 50)
+		ThemeConfig.style_button(continue_btn, ThemeConfig.BLUE, ThemeConfig.BLUE_LIGHT)
+		continue_btn.add_theme_font_size_override("font_size", 18)
+		continue_btn.pressed.connect(func():
+			get_tree().change_scene_to_file("res://scenes/hud.tscn")
+			# Load auto-save after scene is ready
+			await get_tree().process_frame
+			await get_tree().process_frame
+			SaveLoadSystem.load_game(SaveLoadSystem.AUTO_SLOT)
+		)
+		$VBox.add_child(continue_btn)
+		$VBox.move_child(continue_btn, $VBox.get_children().find(new_game_btn) + 1)
+
+	# Quit button
 	ThemeConfig.style_button(quit_btn, ThemeConfig.RED, ThemeConfig.RED_LIGHT)
-	quit_btn.custom_minimum_size = Vector2(240, 50)
+	quit_btn.custom_minimum_size = Vector2(260, 50)
+	quit_btn.text = "🚪 Quit"
 
 	# Version
 	var ver := Label.new()

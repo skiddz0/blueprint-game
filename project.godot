@@ -22,6 +22,8 @@ DataLoader="*res://scripts/autoloads/data_loader.gd"
 GameStateManager="*res://scripts/autoloads/game_state_manager.gd"
 GameTimer="*res://scripts/autoloads/game_timer.gd"
 YearCycleEngine="*res://scripts/autoloads/year_cycle_engine.gd"
+SaveLoadSystem="*res://scripts/autoloads/save_load_system.gd"
+AchievementSystem="*res://scripts/autoloads/achievement_system.gd"
 
 [display]
 
