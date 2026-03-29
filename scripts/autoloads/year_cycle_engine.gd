@@ -5,6 +5,8 @@ extends Node
 
 ## Emitted before year-end processing with snapshot data for the summary screen.
 signal year_end_data_ready(data: Dictionary)
+## Emitted at mid-year (June) with KPI comparison data.
+signal mid_year_review_ready(data: Dictionary)
 
 
 func _ready() -> void:
@@ -38,6 +40,14 @@ func _on_month_advanced(_month: int) -> void:
 	var mid_year: int = int(config.get("time", {}).get("mid_year_month", 6)) - 1
 	if current_month == mid_year:
 		GameStateManager.snapshot_mid_year_kpis()
+		GameTimer.pause()
+		mid_year_review_ready.emit({
+			"year": year,
+			"start_kpis": GameStateManager.state["start_of_year_kpis"].duplicate(true),
+			"current_kpis": GameStateManager.state["kpis"].duplicate(true),
+			"active_initiatives": GameStateManager.state["active_initiatives"].duplicate(true),
+		})
+		return
 
 	var october: int = int(config.get("time", {}).get("october_month", 10)) - 1
 	if current_month == october:

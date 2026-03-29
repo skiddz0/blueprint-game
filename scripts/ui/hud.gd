@@ -51,6 +51,7 @@ const KPI_ICONS := {
 @onready var game_over_screen: Control = %GameOverScreen
 @onready var save_load_modal: Control = %SaveLoadModal
 @onready var year_end_summary: Control = %YearEndSummary
+@onready var mid_year_review: Control = %MidYearReview
 @onready var menu_btn: MenuButton = %MenuBtn
 
 var _kpi_bars: Dictionary = {}
@@ -103,7 +104,10 @@ func _ready() -> void:
 	save_load_modal.visible = false
 	year_end_summary.visible = false
 	year_end_summary.continue_pressed.connect(_on_year_end_continue)
+	mid_year_review.visible = false
+	mid_year_review.continue_pressed.connect(_on_mid_year_continue)
 	YearCycleEngine.year_end_data_ready.connect(_on_year_end_data_ready)
+	YearCycleEngine.mid_year_review_ready.connect(_on_mid_year_review_ready)
 
 	# Achievement toast
 	AchievementSystem.achievement_unlocked.connect(_on_achievement_unlocked)
@@ -256,6 +260,17 @@ func _on_year_end_data_ready(data: Dictionary) -> void:
 
 func _on_year_end_continue() -> void:
 	_refresh_all()
+
+func _on_mid_year_review_ready(data: Dictionary) -> void:
+	mid_year_review.show_review(
+		int(data["year"]),
+		data["start_kpis"],
+		data["current_kpis"],
+		data["active_initiatives"],
+	)
+
+func _on_mid_year_continue() -> void:
+	GameTimer.resume()
 
 func _on_pause_pressed() -> void:
 	var phase := GameStateManager.get_phase()
