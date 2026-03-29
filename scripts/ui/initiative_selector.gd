@@ -1,5 +1,4 @@
-## Initiative Selector — January planning modal for selecting initiatives.
-## See: design/gdd/initiative-selector-ui.md
+## Initiative Selector — Playful January planning modal.
 extends Control
 
 signal selection_confirmed
@@ -20,9 +19,18 @@ var _category_buttons: Dictionary = {}
 const CATEGORIES := ["all", "infrastructure", "human_capital", "policy",
 	"technology", "community", "governance"]
 const CATEGORY_LABELS := {
-	"all": "All", "infrastructure": "🏗 Infra", "human_capital": "👩‍🏫 Human",
+	"all": "🌟 All", "infrastructure": "🏗️ Infra", "human_capital": "👩‍🏫 Human",
 	"policy": "📜 Policy", "technology": "💻 Tech", "community": "🤝 Community",
-	"governance": "🏛 Gov"
+	"governance": "🏛️ Gov"
+}
+const CATEGORY_COLORS := {
+	"all": Color(0.25, 0.52, 0.95),
+	"infrastructure": Color(0.95, 0.55, 0.15),
+	"human_capital": Color(0.58, 0.35, 0.85),
+	"policy": Color(0.20, 0.72, 0.35),
+	"technology": Color(0.15, 0.75, 0.85),
+	"community": Color(0.92, 0.45, 0.65),
+	"governance": Color(0.55, 0.38, 0.25),
 }
 
 
@@ -31,36 +39,55 @@ func _ready() -> void:
 	cancel_btn.pressed.connect(_on_cancel)
 	search_field.text_changed.connect(_on_search_changed)
 
-	# Style the modal background
-	add_theme_stylebox_override("panel", ThemeConfig.make_panel_stylebox(ThemeConfig.BG_MODAL, 0, 0))
+	# Modal background — semi-transparent overlay + white card
+	add_theme_stylebox_override("panel", ThemeConfig.make_panel_stylebox(
+		Color(0.0, 0.0, 0.0, 0.45), 0, 0))
 
-	# Style buttons
-	ThemeConfig.style_button(confirm_btn, ThemeConfig.BTN_PRIMARY, ThemeConfig.BTN_PRIMARY_HOVER)
-	ThemeConfig.style_button(cancel_btn)
+	# Style header
+	var header_lbl: Node = %SearchField.get_parent().get_child(0)
+	if header_lbl is Label:
+		header_lbl.add_theme_font_size_override("font_size", ThemeConfig.FONT_TITLE)
+		header_lbl.add_theme_color_override("font_color", ThemeConfig.BLUE)
 
-	# Style labels
+	# Summary labels
 	summary_label.add_theme_font_size_override("font_size", ThemeConfig.FONT_BODY)
-	summary_label.add_theme_color_override("font_color", ThemeConfig.ACCENT_GOLD)
+	summary_label.add_theme_color_override("font_color", ThemeConfig.ORANGE)
 	projected_label.add_theme_font_size_override("font_size", ThemeConfig.FONT_BODY)
-	projected_label.add_theme_color_override("font_color", ThemeConfig.TEXT_SECONDARY)
+	projected_label.add_theme_color_override("font_color", ThemeConfig.BLUE)
 
-	# Build category filter buttons
+	# Buttons
+	ThemeConfig.style_button(confirm_btn, ThemeConfig.GREEN, ThemeConfig.GREEN_LIGHT)
+	confirm_btn.add_theme_font_size_override("font_size", ThemeConfig.FONT_HEADER)
+	ThemeConfig.style_button(cancel_btn, ThemeConfig.RED, ThemeConfig.RED_LIGHT)
+
+	# Category filter buttons
 	for cat: String in CATEGORIES:
 		var btn := Button.new()
 		btn.text = CATEGORY_LABELS.get(cat, cat)
 		btn.toggle_mode = true
 		btn.button_pressed = (cat == "all")
 		btn.pressed.connect(_on_category_pressed.bind(cat))
-		ThemeConfig.style_button(btn)
+		var col: Color = CATEGORY_COLORS.get(cat, ThemeConfig.BLUE)
+		ThemeConfig.style_button(btn, col.lerp(ThemeConfig.BG_CREAM, 0.6), col.lerp(ThemeConfig.BG_CREAM, 0.4))
 		category_tabs.add_child(btn)
 		_category_buttons[cat] = btn
+
+	# Search field styling
+	search_field.add_theme_color_override("font_color", ThemeConfig.TEXT_DARK)
+	search_field.add_theme_color_override("font_placeholder_color", ThemeConfig.TEXT_MUTED)
+	search_field.add_theme_stylebox_override("normal",
+		ThemeConfig.make_bordered_panel(ThemeConfig.BG_WHITE, ThemeConfig.BORDER_LIGHT, 1, 8, 8))
+
+	# Card panel background
+	var card_panel: PanelContainer = %SearchField.get_parent().get_parent()
+	card_panel.add_theme_stylebox_override("panel",
+		ThemeConfig.make_card(ThemeConfig.BG_CREAM, ThemeConfig.BLUE, 16, 16))
 
 
 func open_selector() -> void:
 	_current_filter = "all"
 	_search_text = ""
 	search_field.text = ""
-	# Reset category button states
 	for cat: String in _category_buttons:
 		_category_buttons[cat].button_pressed = (cat == "all")
 	_rebuild_list()
@@ -74,7 +101,6 @@ func _on_confirm() -> void:
 	YearCycleEngine.start_new_year()
 	selection_confirmed.emit()
 
-
 func _on_cancel() -> void:
 	for init: Dictionary in GameStateManager.state["initiatives"]:
 		if init["selected"]:
@@ -82,18 +108,15 @@ func _on_cancel() -> void:
 	visible = false
 	selection_cancelled.emit()
 
-
 func _on_search_changed(new_text: String) -> void:
 	_search_text = new_text.to_lower()
 	_rebuild_list()
-
 
 func _on_category_pressed(category: String) -> void:
 	_current_filter = category
 	for cat: String in _category_buttons:
 		_category_buttons[cat].button_pressed = (cat == category)
 	_rebuild_list()
-
 
 func _on_initiative_toggled(initiative_id: String) -> void:
 	GameStateManager.toggle_initiative(initiative_id)
@@ -112,59 +135,64 @@ func _rebuild_list() -> void:
 	var budget: float = GameStateManager.state["budget"]
 	var pc: int = GameStateManager.state["political_capital"]
 
-	# Calculate committed costs for affordability
 	var committed_rm := 0.0
 	var committed_pc := 0
 	for init: Dictionary in GameStateManager.state["initiatives"]:
 		if init["selected"]:
 			var d: float = ResourceSystem.get_minister_discount(
-				minister.get("cost_modifiers"), init.get("category", ""))
+				minister.get("cost_modifiers"), str(init.get("category", "")))
 			committed_rm += ResourceSystem.calculate_initiative_cost(
 				float(init["cost_rm"]), efficiency, d, config)
 			committed_pc += int(init.get("cost_pc", 0))
 
 	var count := 0
 	for init: Dictionary in GameStateManager.state["initiatives"]:
-		if int(init.get("unlock_year", 9999)) > year:
-			continue
-		if _current_filter != "all" and init.get("category", "") != _current_filter:
-			continue
-		if _search_text != "" and _search_text not in str(init.get("name", "")).to_lower():
-			continue
+		if int(init.get("unlock_year", 9999)) > year: continue
+		if _current_filter != "all" and init.get("category", "") != _current_filter: continue
+		if _search_text != "" and _search_text not in str(init.get("name", "")).to_lower(): continue
 
 		var discount: float = ResourceSystem.get_minister_discount(
-			minister.get("cost_modifiers"), init.get("category", ""))
+			minister.get("cost_modifiers"), str(init.get("category", "")))
 		var adjusted_rm: float = ResourceSystem.calculate_initiative_cost(
 			float(init["cost_rm"]), efficiency, discount, config)
 		var pc_cost: int = int(init.get("cost_pc", 0))
 
-		# Affordability: can we afford this if not already selected?
 		var is_selected: bool = init.get("selected", false)
 		var can_afford := true
 		if not is_selected:
 			can_afford = (committed_rm + adjusted_rm <= budget) and (committed_pc + pc_cost <= pc)
 
-		var card := _build_initiative_card(init, adjusted_rm, pc_cost, is_selected, can_afford)
-		initiative_list.add_child(card)
+		initiative_list.add_child(_build_card(init, adjusted_rm, pc_cost, is_selected, can_afford))
 		count += 1
 
 	if count == 0:
 		var empty := Label.new()
-		empty.text = "No matching initiatives"
+		empty.text = "No matching initiatives 🔍"
 		empty.add_theme_color_override("font_color", ThemeConfig.TEXT_MUTED)
 		initiative_list.add_child(empty)
 
 
-func _build_initiative_card(init: Dictionary, adjusted_rm: float, pc_cost: int,
+func _build_card(init: Dictionary, adjusted_rm: float, pc_cost: int,
 		is_selected: bool, can_afford: bool) -> PanelContainer:
-	var bg_color := ThemeConfig.BG_CARD if not is_selected else ThemeConfig.ACCENT_BLUE.darkened(0.6)
+	var cat: String = str(init.get("category", ""))
+	var cat_color: Color = CATEGORY_COLORS.get(cat, ThemeConfig.BLUE)
+
 	var panel := PanelContainer.new()
-	panel.add_theme_stylebox_override("panel", ThemeConfig.make_panel_stylebox(bg_color, 4, 6))
+	if is_selected:
+		panel.add_theme_stylebox_override("panel",
+			ThemeConfig.make_left_accent_panel(ThemeConfig.BG_CARD_SELECTED, cat_color, 5, 8, 10))
+	elif can_afford:
+		panel.add_theme_stylebox_override("panel",
+			ThemeConfig.make_left_accent_panel(ThemeConfig.BG_WHITE, cat_color.lerp(ThemeConfig.BG_CREAM, 0.5), 4, 8, 10))
+	else:
+		panel.add_theme_stylebox_override("panel",
+			ThemeConfig.make_left_accent_panel(Color(0.95, 0.93, 0.92), ThemeConfig.KPI_RED.lerp(ThemeConfig.BG_CREAM, 0.5), 4, 8, 10))
 
 	var vbox := VBoxContainer.new()
+	vbox.add_theme_constant_override("separation", 3)
 	panel.add_child(vbox)
 
-	# Row 1: checkbox + name
+	# Row 1: checkbox + name + duration
 	var header := HBoxContainer.new()
 	var checkbox := CheckBox.new()
 	checkbox.button_pressed = is_selected
@@ -172,60 +200,50 @@ func _build_initiative_card(init: Dictionary, adjusted_rm: float, pc_cost: int,
 	checkbox.toggled.connect(func(_p: bool): _on_initiative_toggled(init["id"]))
 	header.add_child(checkbox)
 
-	var name_label := Label.new()
-	name_label.text = str(init.get("name", ""))
-	name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	name_label.clip_text = true
-	name_label.add_theme_font_size_override("font_size", ThemeConfig.FONT_BODY)
-	if can_afford or is_selected:
-		name_label.add_theme_color_override("font_color", ThemeConfig.TEXT_PRIMARY)
-	else:
-		name_label.add_theme_color_override("font_color", ThemeConfig.TEXT_MUTED)
-	header.add_child(name_label)
+	var name_lbl := Label.new()
+	name_lbl.text = str(init.get("name", ""))
+	name_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	name_lbl.clip_text = true
+	name_lbl.add_theme_font_size_override("font_size", ThemeConfig.FONT_BODY)
+	name_lbl.add_theme_color_override("font_color", ThemeConfig.TEXT_DARK if (can_afford or is_selected) else ThemeConfig.TEXT_MUTED)
+	header.add_child(name_lbl)
 
-	# Duration badge
-	var dur_label := Label.new()
-	dur_label.text = "%d mo" % int(init.get("duration_months", 0))
-	dur_label.add_theme_font_size_override("font_size", ThemeConfig.FONT_SMALL)
-	dur_label.add_theme_color_override("font_color", ThemeConfig.TEXT_SECONDARY)
-	header.add_child(dur_label)
-
+	var dur_lbl := Label.new()
+	dur_lbl.text = "⏱ %d mo" % int(init.get("duration_months", 0))
+	dur_lbl.add_theme_font_size_override("font_size", ThemeConfig.FONT_SMALL)
+	dur_lbl.add_theme_color_override("font_color", ThemeConfig.TEXT_SECONDARY)
+	header.add_child(dur_lbl)
 	vbox.add_child(header)
 
 	# Row 2: costs + effects
 	var info_row := HBoxContainer.new()
+	info_row.add_theme_constant_override("separation", 12)
 
-	var cost_label := Label.new()
-	cost_label.text = "💰 RM %.1fM" % adjusted_rm
+	var cost_lbl := Label.new()
+	cost_lbl.text = "💰 RM %.1fM" % adjusted_rm
 	if pc_cost > 0:
-		cost_label.text += "  🏛 PC %d" % pc_cost
-	cost_label.add_theme_font_size_override("font_size", ThemeConfig.FONT_SMALL)
+		cost_lbl.text += "  🏛 PC %d" % pc_cost
+	cost_lbl.add_theme_font_size_override("font_size", ThemeConfig.FONT_BODY)
 	if not can_afford and not is_selected:
-		cost_label.add_theme_color_override("font_color", ThemeConfig.KPI_RED)
+		cost_lbl.add_theme_color_override("font_color", ThemeConfig.KPI_RED)
 	else:
-		cost_label.add_theme_color_override("font_color", ThemeConfig.ACCENT_GOLD)
-	info_row.add_child(cost_label)
+		cost_lbl.add_theme_color_override("font_color", ThemeConfig.ORANGE)
+	info_row.add_child(cost_lbl)
 
 	var spacer := Control.new()
 	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	info_row.add_child(spacer)
 
-	# Effects
 	var effects: Variant = init.get("effects")
 	if effects is Dictionary:
 		for kpi: String in effects:
 			var val: float = float(effects[kpi])
-			var eff_label := Label.new()
 			var prefix := "+" if val > 0 else ""
-			eff_label.text = "%s %s%d" % [kpi.substr(0, 3).capitalize(), prefix, int(val)]
-			eff_label.add_theme_font_size_override("font_size", ThemeConfig.FONT_SMALL)
-			eff_label.add_theme_color_override("font_color", ThemeConfig.get_effect_color(val))
-			info_row.add_child(eff_label)
-
-			var sep := Label.new()
-			sep.text = "  "
-			info_row.add_child(sep)
-
+			var eff := Label.new()
+			eff.text = "%s %s%d" % [kpi.substr(0, 3).capitalize(), prefix, int(val)]
+			eff.add_theme_font_size_override("font_size", ThemeConfig.FONT_SMALL)
+			eff.add_theme_color_override("font_color", ThemeConfig.get_effect_color(val))
+			info_row.add_child(eff)
 	vbox.add_child(info_row)
 
 	return panel
@@ -243,7 +261,7 @@ func _update_summary() -> void:
 
 	for init: Dictionary in selected:
 		var discount: float = ResourceSystem.get_minister_discount(
-			minister.get("cost_modifiers"), init.get("category", ""))
+			minister.get("cost_modifiers"), str(init.get("category", "")))
 		total_rm += ResourceSystem.calculate_initiative_cost(
 			float(init["cost_rm"]), efficiency, discount, config)
 		total_pc += int(init.get("cost_pc", 0))
@@ -253,17 +271,16 @@ func _update_summary() -> void:
 				if projected.has(kpi):
 					projected[kpi] += int(effects[kpi])
 
-	summary_label.text = "Selected: %d  |  💰 RM %.1f / %.1f  |  🏛 PC %d / %d" % [
+	summary_label.text = "🎯 Selected: %d  |  💰 RM %.1f / %.1f  |  🏛 PC %d / %d" % [
 		selected.size(), total_rm, GameStateManager.state["budget"],
-		total_pc, GameStateManager.state["political_capital"]
-	]
+		total_pc, GameStateManager.state["political_capital"]]
 
 	var proj_parts: Array = []
 	for kpi: String in projected:
 		if projected[kpi] != 0:
 			var prefix := "+" if projected[kpi] > 0 else ""
 			proj_parts.append("%s %s%d" % [kpi.capitalize(), prefix, projected[kpi]])
-	projected_label.text = "Projected KPIs: " + (", ".join(proj_parts) if proj_parts.size() > 0 else "—")
+	projected_label.text = "📊 Projected: " + (", ".join(proj_parts) if proj_parts.size() > 0 else "—")
 
 
 func _unhandled_input(event: InputEvent) -> void:
