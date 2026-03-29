@@ -2,7 +2,11 @@
 
 **A strategy game about Education Transformation**
 
-Navigate 13 years of education reform (2013-2025). Balance budgets, political capital, and 5 competing KPIs across 27 historical crisis scenarios. Every decision has consequences — and there are no right answers.
+This game was born from 8 years of working in education transformation. It was an incredible experience — we got to do so much for education, from rolling out technology in rural schools to reforming national assessments. It was fun, meaningful, and sometimes exhausting.
+
+But here's the thing most people don't see: it's not easy. Budgets shrink every wave. Ministers change and bring new agendas. A flood hits and your carefully planned initiatives get delayed. A pandemic throws everything into chaos. Public sentiment swings based on decisions you made years ago.
+
+I built this game to let people experience what it's actually like — the trade-offs, the impossible choices, the small victories, and the moments where nothing goes according to plan. It's a strategy game, but it's also a love letter to everyone who works in education reform.
 
 Built with **Godot 4.6** | GDScript | JSON-driven data
 
