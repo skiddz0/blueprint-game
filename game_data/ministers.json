@@ -8,7 +8,7 @@
             "end_year": 2015,
             "start_month": 1,
             "end_month": 12,
-            "portrait": "minister_moo_hidin.png",
+            "portrait": "minister_1.png",
             "wave": 1,
             "legacy": [
                 "Launched the Reform Plan in 2012 (before game starts)",
@@ -47,7 +47,7 @@
             "end_year": 2018,
             "start_month": 1,
             "end_month": 4,
-            "portrait": "minister_mad_zir.png",
+            "portrait": "minister_2.png",
             "wave": 2,
             "legacy": [
                 "Maintained stability during acceleration phase",
@@ -86,7 +86,7 @@
             "end_year": 2020,
             "start_month": 5,
             "end_month": 2,
-            "portrait": "minister_maz_lee.png",
+            "portrait": "minister_3.png",
             "wave": 2,
             "legacy": [
                 "Pushed for exam reforms (Primary National Exam/Lower Secondary Assessment abolishment)",
@@ -126,7 +126,7 @@
             "end_year": 2022,
             "start_month": 3,
             "end_month": 12,
-            "portrait": "minister_rad_zee.png",
+            "portrait": "minister_4.png",
             "wave": 2,
             "legacy": [
                 "Navigated COVID-19 pandemic",
@@ -165,7 +165,7 @@
             "end_year": 2025,
             "start_month": 1,
             "end_month": 12,
-            "portrait": "minister_fadz_lina.png",
+            "portrait": "minister_5.png",
             "wave": 3,
             "legacy": [
                 "Post-pandemic recovery focus",
