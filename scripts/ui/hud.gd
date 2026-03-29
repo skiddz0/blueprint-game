@@ -50,10 +50,13 @@ const KPI_ICONS := {
 @onready var scenario_modal: Control = %ScenarioModal
 @onready var game_over_screen: Control = %GameOverScreen
 @onready var save_load_modal: Control = %SaveLoadModal
+@onready var year_end_summary: Control = %YearEndSummary
 @onready var menu_btn: MenuButton = %MenuBtn
 
 var _kpi_bars: Dictionary = {}
 var _kpi_labels: Dictionary = {}
+var _pre_year_end_kpis: Dictionary = {}
+var _year_end_initiative_results: Array = []
 
 
 func _ready() -> void:
@@ -67,6 +70,7 @@ func _ready() -> void:
 	GameStateManager.history_updated.connect(func(_e: String): _refresh_events())
 	GameStateManager.scenario_triggered.connect(_on_scenario_triggered)
 	GameStateManager.scenario_resolved.connect(func(_s: String, _c: String): scenario_modal.visible = false; YearCycleEngine.resume_after_scenario())
+	GameStateManager.year_ended.connect(_on_year_ended)
 	GameStateManager.game_over.connect(func(w: bool, g: String): game_over_screen.show_results(w, g); game_over_screen.visible = true)
 	GameTimer.timer_paused.connect(func(): pause_btn.text = "▶ Resume")
 	GameTimer.timer_resumed.connect(func(): pause_btn.text = "⏸ Pause")
@@ -95,6 +99,9 @@ func _ready() -> void:
 	scenario_modal.visible = false
 	game_over_screen.visible = false
 	save_load_modal.visible = false
+	year_end_summary.visible = false
+	year_end_summary.continue_pressed.connect(_on_year_end_continue)
+	YearCycleEngine.year_end_data_ready.connect(_on_year_end_data_ready)
 
 	# Achievement toast
 	AchievementSystem.achievement_unlocked.connect(_on_achievement_unlocked)
@@ -224,6 +231,29 @@ func _on_kpi_changed(kpi_name: String, _old: float, new_value: float) -> void:
 func _on_scenario_triggered(scenario: Dictionary) -> void:
 	scenario_modal.show_scenario(scenario)
 	scenario_modal.visible = true
+
+func _on_year_ended(completed_year: int) -> void:
+	_refresh_all()
+
+func _on_year_end_data_ready(data: Dictionary) -> void:
+	# Don't show summary if game is over — game over screen handles that
+	if GameStateManager.state.get("game_over", false):
+		return
+	year_end_summary.show_summary(
+		int(data["completed_year"]),
+		data["old_kpis"],
+		data["new_kpis"],
+		data["initiative_results"],
+		float(data["new_budget"]),
+		bool(data["has_october_penalty"]),
+		bool(data["minister_changed"]),
+		str(data["new_minister_name"]),
+		bool(data["agenda_met"]),
+		int(data["agenda_reward_pc"]),
+	)
+
+func _on_year_end_continue() -> void:
+	_refresh_all()
 
 func _on_pause_pressed() -> void:
 	var phase := GameStateManager.get_phase()

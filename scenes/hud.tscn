@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/ui/game_over_screen.gd" id="4_go"]
 [ext_resource type="Script" path="res://scripts/ui/school_animation.gd" id="5_anim"]
 [ext_resource type="Script" path="res://scripts/ui/save_load_modal.gd" id="6_save"]
+[ext_resource type="Script" path="res://scripts/ui/year_end_summary.gd" id="7_yes"]
 
 [node name="HUD" type="PanelContainer"]
 anchors_preset = 15
@@ -651,3 +652,50 @@ theme_override_constants/separation = 8
 unique_name_in_owner = true
 layout_mode = 2
 text = "Close"
+
+[node name="YearEndSummary" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+script = ExtResource("7_yes")
+
+[node name="MarginBox" type="MarginContainer" parent="YearEndSummary"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 30
+
+[node name="CardPanel" type="PanelContainer" parent="YearEndSummary/MarginBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="YearEndSummary/MarginBox/CardPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="YearEndTitle" type="Label" parent="YearEndSummary/MarginBox/CardPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Year Summary"
+horizontal_alignment = 1
+
+[node name="ContentScroll" type="ScrollContainer" parent="YearEndSummary/MarginBox/CardPanel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="YearEndContent" type="VBoxContainer" parent="YearEndSummary/MarginBox/CardPanel/VBox/ContentScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="YearEndContinueBtn" type="Button" parent="YearEndSummary/MarginBox/CardPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Continue to Next Year ▶"
