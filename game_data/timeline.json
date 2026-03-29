@@ -43,7 +43,7 @@
         {
             "date": "2018-05",
             "event_id": "event_002",
-            "name": "GE14 Government Change"
+            "name": "general election Government Change"
         },
         {
             "date": "2018-05",
@@ -54,7 +54,7 @@
         {
             "date": "2020-02",
             "event_id": "event_003",
-            "name": "Sheraton Move"
+            "name": "political leadership change"
         },
         {
             "date": "2020-03",
@@ -70,7 +70,7 @@
         {
             "date": "2021-01",
             "event_id": "event_005",
-            "name": "DidikTV Launch"
+            "name": "EduChannel Launch"
         },
         {
             "date": "2022-12",

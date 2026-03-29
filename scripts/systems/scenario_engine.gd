@@ -55,7 +55,7 @@ static func apply_callback_chains(
 	return scenario
 
 
-## UPSR callback chain implementation.
+## Primary exam reform callback chain implementation.
 static func _apply_upsr_chain(
 	scenario: Dictionary,
 	scenarios_completed: Dictionary

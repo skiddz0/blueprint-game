@@ -506,7 +506,7 @@
         {
             "id": "pol_006",
             "name": "Coordinate Primary Exam Modernization",
-            "description": "Reform UPSR exam to reduce exam stress",
+            "description": "Reform Primary National Exam exam to reduce exam stress",
             "category": "policy",
             "shift": 1,
             "cost_rm": 6,
@@ -569,7 +569,7 @@
         {
             "id": "pol_009",
             "name": "Coordinate Primary Exam Transition",
-            "description": "Phase out UPSR examination system",
+            "description": "Phase out Primary National Exam examination system",
             "category": "policy",
             "shift": 1,
             "cost_rm": 8,
@@ -590,7 +590,7 @@
         {
             "id": "pol_010",
             "name": "Execute Lower Secondary Assessment Reform",
-            "description": "Reform or abolish PT3 examination",
+            "description": "Reform or abolish Lower Secondary Assessment examination",
             "category": "policy",
             "shift": 1,
             "cost_rm": 7,

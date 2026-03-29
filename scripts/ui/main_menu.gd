@@ -31,7 +31,7 @@ func _ready() -> void:
 
 	# Tagline
 	var tagline := Label.new()
-	tagline.text = "A strategy game about Malaysia's Education Blueprint 🎓"
+	tagline.text = "Navigate 13 years of reform. Every decision counts. 🎓"
 	tagline.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	tagline.add_theme_font_size_override("font_size", ThemeConfig.FONT_BODY)
 	tagline.add_theme_color_override("font_color", ThemeConfig.TEXT_BODY)

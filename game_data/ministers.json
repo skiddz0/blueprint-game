@@ -11,11 +11,11 @@
             "portrait": "minister_moo_hidin.png",
             "wave": 1,
             "legacy": [
-                "Launched the Blueprint in 2012 (before game starts)",
+                "Launched the Reform Plan in 2012 (before game starts)",
                 "Defined the 11 Shifts framework",
                 "Set transformation vision and KPI targets"
             ],
-            "priority_text": "Prove the Blueprint delivers. Show early wins through efficient execution.",
+            "priority_text": "Prove the Reform Plan delivers. Show early wins through efficient execution.",
             "agenda": {
                 "description": "Achieve Efficiency > 70",
                 "kpi": "efficiency",
@@ -31,11 +31,11 @@
             },
             "transition_in": {
                 "title": "Minister Appointed - 2013",
-                "message": "Tan Sri Moo-Hidin, the Blueprint Architect who launched it in 2012, wants to prove it can deliver results.\n\nHis priority: Show efficient execution in the first 3 years."
+                "message": "Tan Sri Ahmad Bakar, the Reform Plan Architect who launched it in 2012, wants to prove it can deliver results.\n\nHis priority: Show efficient execution in the first 3 years."
             },
             "transition_out": {
                 "title": "Minister Completes Term - 2015",
-                "message": "Tan Sri Moo-Hidin has completed his term. His legacy: Establishing the Blueprint framework.",
+                "message": "Tan Sri Ahmad Bakar has completed his term. His legacy: Establishing the Reform Plan framework.",
                 "summary": "2013-2015: Foundation phase executed"
             }
         },
@@ -70,11 +70,11 @@
             },
             "transition_in": {
                 "title": "New Minister Appointed - 2016",
-                "message": "Dato' Seri Mad-Zir takes over. Known for his steady approach and focus on teacher welfare.\n\nHis priority: Close the achievement gap."
+                "message": "Dato' Seri Ismail Razak takes over. Known for his steady approach and focus on teacher welfare.\n\nHis priority: Close the achievement gap."
             },
             "transition_out": {
                 "title": "Minister Completes Term - 2018",
-                "message": "Dato' Seri Mad-Zir's tenure ends with GE14. His legacy: Stability and teacher focus.",
+                "message": "Dato' Seri Ismail Razak's tenure ends with general election. His legacy: Stability and teacher focus.",
                 "summary": "2016-2018: Steady acceleration phase"
             }
         },
@@ -89,7 +89,7 @@
             "portrait": "minister_maz_lee.png",
             "wave": 2,
             "legacy": [
-                "Pushed for exam reforms (UPSR/PT3 abolishment)",
+                "Pushed for exam reforms (Primary National Exam/Lower Secondary Assessment abolishment)",
                 "Challenged traditional education norms",
                 "Short but impactful tenure"
             ],
@@ -110,11 +110,11 @@
             },
             "transition_in": {
                 "title": "New Minister Appointed - May 2018",
-                "message": "Dr. Maz-Lee arrives after GE14. An academic reformist who wants to shake things up.\n\nHis priority: Student outcomes above all else."
+                "message": "Dr. Nur Aisyah arrives after general election. An academic reformist who wants to shake things up.\n\nHis priority: Student outcomes above all else."
             },
             "transition_out": {
                 "title": "Minister Resigns - February 2020",
-                "message": "Dr. Maz-Lee's tenure ends abruptly with the Sheraton Move. His legacy: Bold reforms.",
+                "message": "Dr. Nur Aisyah's tenure ends abruptly with the political leadership change. His legacy: Bold reforms.",
                 "summary": "2018-2020: Reform-focused but controversial"
             }
         },
@@ -130,7 +130,7 @@
             "wave": 2,
             "legacy": [
                 "Navigated COVID-19 pandemic",
-                "Launched DidikTV and digital learning",
+                "Launched EduChannel and digital learning",
                 "Crisis response became his defining achievement"
             ],
             "priority_text": "Survive the pandemic. Keep schools accessible.",
@@ -149,11 +149,11 @@
             },
             "transition_in": {
                 "title": "New Minister Appointed - March 2020",
-                "message": "Dr. Rad-Zee takes over during political crisis. Within weeks, COVID-19 hits.\n\nHis priority: Keep education accessible during pandemic."
+                "message": "Dr. Kamal Hassan takes over during political crisis. Within weeks, COVID-19 hits.\n\nHis priority: Keep education accessible during pandemic."
             },
             "transition_out": {
                 "title": "Minister Completes Term - 2022",
-                "message": "Dr. Rad-Zee's tenure ends. His legacy: Steering education through the pandemic.",
+                "message": "Dr. Kamal Hassan's tenure ends. His legacy: Steering education through the pandemic.",
                 "summary": "2020-2022: Crisis management and digital transformation"
             }
         },
@@ -190,11 +190,11 @@
             },
             "transition_in": {
                 "title": "New Minister Appointed - 2023",
-                "message": "Ms. Fadz-Lina takes over for Wave 3. Known for her empathy and focus on wellbeing.\n\nHer priority: Rebuild trust and heal post-pandemic wounds."
+                "message": "Ms. Siti Hajar takes over for Wave 3. Known for her empathy and focus on wellbeing.\n\nHer priority: Rebuild trust and heal post-pandemic wounds."
             },
             "transition_out": {
-                "title": "Blueprint Concludes - 2025",
-                "message": "Ms. Fadz-Lina's tenure ends with the Blueprint's conclusion. Her legacy: Human-centered recovery.",
+                "title": "Reform Plan Concludes - 2025",
+                "message": "Ms. Siti Hajar's tenure ends with the Reform Plan's conclusion. Her legacy: Human-centered recovery.",
                 "summary": "2023-2025: Recovery and excellence phase"
             }
         }

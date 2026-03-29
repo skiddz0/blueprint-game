@@ -7,7 +7,7 @@
             "month": 6,
             "category": "political_event",
             "title": "📋 BLUEPRINT SKEPTICISM - FIRST TEST",
-            "context": "Six months into the Blueprint, critics call it \"another government plan that will gather dust.\" Media pressure mounts for visible results.\n\nAs the newly appointed DAPU Director, how do you respond?",
+            "context": "Six months into the Reform Plan, critics call it \"another government plan that will gather dust.\" Media pressure mounts for visible results.\n\nAs the newly appointed DAPU Director, how do you respond?",
             "choices": [
                 {
                     "id": "skeptic_a",
@@ -21,7 +21,7 @@
                         "quality": -2
                     },
                     "outcome_text": "Quick wins generate positive media coverage, but long-term planning suffers.",
-                    "headline": "MOE shows early Blueprint results - critics cautiously optimistic"
+                    "headline": "MOE shows early Reform Plan results - critics cautiously optimistic"
                 },
                 {
                     "id": "skeptic_b",
@@ -34,8 +34,8 @@
                         "unity": 4,
                         "efficiency": 3
                     },
-                    "outcome_text": "Broad coalition of educators and community leaders rally behind Blueprint vision.",
-                    "headline": "Education community unites behind Blueprint vision"
+                    "outcome_text": "Broad coalition of educators and community leaders rally behind Reform Plan vision.",
+                    "headline": "Education community unites behind Reform Plan vision"
                 },
                 {
                     "id": "skeptic_c",
@@ -51,13 +51,13 @@
                         "quality": 2
                     },
                     "outcome_text": "Transparent reporting builds credibility. Some critics become cautious supporters.",
-                    "headline": "MOE launches Blueprint progress dashboard"
+                    "headline": "MOE launches Reform Plan progress dashboard"
                 }
             ],
             "cannot_afford_penalty": {
                 "unity_kpi": -5,
-                "outcome_text": "Unable to counter skepticism. Blueprint credibility erodes early.",
-                "headline": "Blueprint dismissed as empty promises - public confidence drops"
+                "outcome_text": "Unable to counter skepticism. Reform Plan credibility erodes early.",
+                "headline": "Reform Plan dismissed as empty promises - public confidence drops"
             }
         },
         {
@@ -126,8 +126,8 @@
             "year": 2015,
             "month": 6,
             "category": "policy_debate",
-            "title": "📱 VLE ADOPTION STRATEGY",
-            "context": "Teachers complain about forced Frog VLE logins just to hit KPIs. The platform shows low actual usage despite high login numbers.\n\nHow should DAPU coordinate the VLE rollout?",
+            "title": "📱 Virtual Learning Platform ADOPTION STRATEGY",
+            "context": "Teachers complain about forced Virtual Learning Platform logins just to hit KPIs. The platform shows low actual usage despite high login numbers.\n\nHow should DAPU coordinate the Virtual Learning Platform rollout?",
             "choices": [
                 {
                     "id": "vle_a",
@@ -142,7 +142,7 @@
                         "efficiency": -3
                     },
                     "outcome_text": "Login numbers increase but teacher morale drops. 'Checkbox exercise' criticism grows.",
-                    "headline": "Teachers protest VLE enforcement - 'We're not robots'"
+                    "headline": "Teachers protest Virtual Learning Platform enforcement - 'We're not robots'"
                 },
                 {
                     "id": "vle_b",
@@ -173,13 +173,13 @@
                         "quality": 3,
                         "efficiency": 2
                     },
-                    "outcome_text": "Model schools demonstrate VLE value. Other schools request to join program.",
+                    "outcome_text": "Model schools demonstrate Virtual Learning Platform value. Other schools request to join program.",
                     "headline": "Pilot schools show promise of digital learning"
                 }
             ],
             "cannot_afford_penalty": {
                 "unity_kpi": -5,
-                "outcome_text": "VLE rollout stalls without clear direction.",
+                "outcome_text": "Virtual Learning Platform rollout stalls without clear direction.",
                 "headline": "MOE's digital learning initiative loses momentum"
             }
         },
@@ -190,8 +190,8 @@
             "year": 2016,
             "month": 1,
             "category": "performance_review",
-            "title": "🚨 TIMSS 2015 RESULTS - WAVE 2 PRESSURE",
-            "context": "TIMSS 2015 results show Malaysia's ranking has stagnated. Wave 2 begins with intense scrutiny on quality improvements.\n\nMINISTER'S CONCERN: 'We need visible progress NOW.'\n\nYour strategic response:",
+            "title": "🚨 International Math Rankings 2015 RESULTS - WAVE 2 PRESSURE",
+            "context": "International Math Rankings 2015 results show Malaysia's ranking has stagnated. Wave 2 begins with intense scrutiny on quality improvements.\n\nMINISTER'S CONCERN: 'We need visible progress NOW.'\n\nYour strategic response:",
             "choices": [
                 {
                     "id": "timss_a",
@@ -206,7 +206,7 @@
                         "efficiency": -2
                     },
                     "outcome_text": "Aggressive upskilling shows early promise but strains system capacity.",
-                    "headline": "MOE launches intensive teacher development in response to TIMSS"
+                    "headline": "MOE launches intensive teacher development in response to International Math Rankings"
                 },
                 {
                     "id": "timss_b",
@@ -235,12 +235,12 @@
                         "quality": 2
                     },
                     "outcome_text": "Measured response maintains stakeholder confidence in long-term vision.",
-                    "headline": "MOE reaffirms commitment to Blueprint despite TIMSS results"
+                    "headline": "MOE reaffirms commitment to Reform Plan despite International Math Rankings results"
                 }
             ],
             "cannot_afford_penalty": {
                 "quality_kpi": -8,
-                "outcome_text": "Inability to respond to TIMSS results damages credibility.",
+                "outcome_text": "Inability to respond to International Math Rankings results damages credibility.",
                 "headline": "MOE criticized for lack of response to international assessment results"
             }
         },
@@ -251,7 +251,7 @@
             "month": 2,
             "category": "political_event",
             "title": "🔄 NEW MINISTER - WAVE 2 BEGINS",
-            "context": "Wave 2 begins with a new Education Minister. The new minister wants to put their stamp on the Blueprint.\n\nHow should DAPU manage this transition?",
+            "context": "Wave 2 begins with a new Education Minister. The new minister wants to put their stamp on the Reform Plan.\n\nHow should DAPU manage this transition?",
             "choices": [
                 {
                     "id": "newmin_a",
@@ -279,7 +279,7 @@
                         "quality": 2
                     },
                     "outcome_text": "Wave 1 results provide strong foundation for Wave 2 mandate.",
-                    "headline": "Blueprint Wave 1 results earn ministerial support"
+                    "headline": "Reform Plan Wave 1 results earn ministerial support"
                 },
                 {
                     "id": "newmin_c",
@@ -424,7 +424,7 @@
             "month": 5,
             "category": "political_event",
             "title": "🗳️ NEW GOVERNMENT - POLICY REVIEW",
-            "context": "Historic government change. New Minister Dr. Maz-Lee wants to review all Blueprint initiatives.\n\nHow should DAPU position itself?",
+            "context": "Historic government change. New Minister Dr. Nur Aisyah wants to review all Reform Plan initiatives.\n\nHow should DAPU position itself?",
             "choices": [
                 {
                     "id": "ge14_a",
@@ -449,14 +449,14 @@
                 {
                     "id": "ge14_b",
                     "label": "B) MAINTAIN CONTINUITY",
-                    "description": "Invest budget in demonstrating Blueprint's ongoing value.",
+                    "description": "Invest budget in demonstrating Reform Plan's ongoing value.",
                     "costs": {
                         "budget": 10
                     },
                     "effects": {
                         "efficiency": 5
                     },
-                    "outcome_text": "Blueprint framework preserved despite political change.",
+                    "outcome_text": "Reform Plan framework preserved despite political change.",
                     "headline": "Education transformation continues despite transition"
                 },
                 {
@@ -475,7 +475,7 @@
             "cannot_afford_penalty": {
                 "unity_kpi": -5,
                 "outcome_text": "DAPU unable to navigate political transition effectively.",
-                "headline": "Education coordination unit struggles post-GE14"
+                "headline": "Education coordination unit struggles post-general election"
             }
         },
         {
@@ -484,8 +484,8 @@
             "year": 2018,
             "month": 10,
             "category": "crisis_response",
-            "title": "📰 UPSR PAPERS LEAKED!",
-            "context": "Science and English UPSR papers leaked online days before exam. Public outrage. Integrity of national exam at stake.\n\nDAPU must coordinate response:",
+            "title": "📰 Primary National Exam PAPERS LEAKED!",
+            "context": "Science and English Primary National Exam papers leaked online days before exam. Public outrage. Integrity of national exam at stake.\n\nDAPU must coordinate response:",
             "choices": [
                 {
                     "id": "leak_a",
@@ -543,8 +543,8 @@
             "year": 2018,
             "month": 12,
             "category": "international_benchmark",
-            "title": "📉 PISA 2018 - EQUITY CONCERNS",
-            "context": "PISA 2018 results reveal persistent achievement gaps between urban and rural students.\n\nPUBLIC PRESSURE: 'The Blueprint promised equity. Where is it?'\n\nYour response strategy:",
+            "title": "📉 Global Education Assessment 2018 - EQUITY CONCERNS",
+            "context": "Global Education Assessment 2018 results reveal persistent achievement gaps between urban and rural students.\n\nPUBLIC PRESSURE: 'The Reform Plan promised equity. Where is it?'\n\nYour response strategy:",
             "choices": [
                 {
                     "id": "pisa_a",
@@ -560,7 +560,7 @@
                         "efficiency": -3
                     },
                     "outcome_text": "Bold rural investment shows commitment but strains budget significantly.",
-                    "headline": "MOE launches major rural education initiative after PISA results"
+                    "headline": "MOE launches major rural education initiative after Global Education Assessment results"
                 },
                 {
                     "id": "pisa_b",
@@ -589,13 +589,13 @@
                         "equity": 2
                     },
                     "outcome_text": "Communication strategy maintains public support despite challenges.",
-                    "headline": "MOE emphasizes long-term equity progress amid PISA results"
+                    "headline": "MOE emphasizes long-term equity progress amid Global Education Assessment results"
                 }
             ],
             "cannot_afford_penalty": {
                 "equity_kpi": -8,
-                "outcome_text": "Failure to address equity concerns damages Blueprint credibility.",
-                "headline": "PISA results expose unfulfilled Blueprint equity promises"
+                "outcome_text": "Failure to address equity concerns damages Reform Plan credibility.",
+                "headline": "Global Education Assessment results expose unfulfilled Reform Plan equity promises"
             }
         },
         {
@@ -604,8 +604,8 @@
             "year": 2019,
             "month": 3,
             "category": "policy_debate",
-            "title": "📝 UPSR ABOLISHMENT PROPOSAL",
-            "context": "Minister Dr. Maz-Lee proposes abolishing UPSR exam. Public divided: some celebrate reduced stress, others fear declining standards.\n\nDAPU must coordinate implementation strategy:",
+            "title": "📝 Primary National Exam ABOLISHMENT PROPOSAL",
+            "context": "Minister Dr. Nur Aisyah proposes abolishing Primary National Exam exam. Public divided: some celebrate reduced stress, others fear declining standards.\n\nDAPU must coordinate implementation strategy:",
             "choices": [
                 {
                     "id": "upsr_a",
@@ -618,7 +618,7 @@
                         "quality": 6,
                         "unity": -5
                     },
-                    "outcome_text": "UPSR abolished. Reformists celebrate, traditionalists protest.",
+                    "outcome_text": "Primary National Exam abolished. Reformists celebrate, traditionalists protest.",
                     "headline": "Malaysia abolishes primary school exam - historic reform"
                 },
                 {
@@ -633,12 +633,12 @@
                         "unity": 2
                     },
                     "outcome_text": "Moderate reform satisfies most stakeholders.",
-                    "headline": "MOE reforms UPSR format - balanced approach"
+                    "headline": "MOE reforms Primary National Exam format - balanced approach"
                 },
                 {
                     "id": "upsr_c",
                     "label": "C) MAINTAIN WITH IMPROVEMENTS",
-                    "description": "Keep UPSR but invest in improvements.",
+                    "description": "Keep Primary National Exam but invest in improvements.",
                     "costs": {
                         "budget": 8
                     },
@@ -648,12 +648,12 @@
                         "efficiency": 2
                     },
                     "outcome_text": "Status quo maintained. Opportunity for bold reform lost.",
-                    "headline": "MOE opts for incremental UPSR improvements"
+                    "headline": "MOE opts for incremental Primary National Exam improvements"
                 }
             ],
             "cannot_afford_penalty": {
                 "unity_kpi": -5,
-                "outcome_text": "UPSR debate drags on without resolution.",
+                "outcome_text": "Primary National Exam debate drags on without resolution.",
                 "headline": "MOE indecisive on exam reform"
             }
         },
@@ -724,7 +724,7 @@
             "month": 2,
             "category": "political_event",
             "title": "⚠️ POLITICAL CRISIS - GOVERNMENT COLLAPSE",
-            "context": "Sheraton Move: Government collapses overnight. Minister Dr. Maz-Lee resigns. Political instability.\n\nHow should DAPU navigate this crisis?",
+            "context": "political leadership change: Government collapses overnight. Minister Dr. Nur Aisyah resigns. Political instability.\n\nHow should DAPU navigate this crisis?",
             "choices": [
                 {
                     "id": "sheraton_a",
@@ -968,8 +968,8 @@
             "year": 2021,
             "month": 8,
             "category": "policy_debate",
-            "title": "✅ UPSR ABOLISHMENT - FINAL DECISION",
-            "context": "Time to finalize UPSR abolishment. Alternative assessment needed.\n\nDAPU must coordinate implementation:",
+            "title": "✅ Primary National Exam ABOLISHMENT - FINAL DECISION",
+            "context": "Time to finalize Primary National Exam abolishment. Alternative assessment needed.\n\nDAPU must coordinate implementation:",
             "choices": [
                 {
                     "id": "upsr_impl_a",
@@ -983,7 +983,7 @@
                         "unity": -6
                     },
                     "outcome_text": "Bold move divides public. Reformists celebrate.",
-                    "headline": "UPSR abolished - parents divided on decision"
+                    "headline": "Primary National Exam abolished - parents divided on decision"
                 },
                 {
                     "id": "upsr_impl_b",
@@ -998,7 +998,7 @@
                         "unity": 3
                     },
                     "outcome_text": "Smooth transition builds confidence in reform.",
-                    "headline": "MOE's measured UPSR transition praised"
+                    "headline": "MOE's measured Primary National Exam transition praised"
                 },
                 {
                     "id": "upsr_impl_c",
@@ -1018,8 +1018,8 @@
             ],
             "cannot_afford_penalty": {
                 "unity_kpi": -5,
-                "outcome_text": "UPSR abolishment stalls without clear plan.",
-                "headline": "UPSR reform confusion angers stakeholders"
+                "outcome_text": "Primary National Exam abolishment stalls without clear plan.",
+                "headline": "Primary National Exam reform confusion angers stakeholders"
             }
         },
         {
@@ -1085,8 +1085,8 @@
             "cannot_afford_penalty": {
                 "quality_kpi": -6,
                 "equity_kpi": -4,
-                "outcome_text": "Failure to address learning loss jeopardizes Blueprint targets.",
-                "headline": "Pandemic learning loss threatens Blueprint achievement"
+                "outcome_text": "Failure to address learning loss jeopardizes Reform Plan targets.",
+                "headline": "Pandemic learning loss threatens Reform Plan achievement"
             }
         },
         {
@@ -1155,8 +1155,8 @@
             "year": 2022,
             "month": 9,
             "category": "policy_debate",
-            "title": "📝 PT3 ABOLISHMENT DECISION",
-            "context": "Following UPSR abolishment, PT3 exam also under review.\n\nDAPU must coordinate decision:",
+            "title": "📝 Lower Secondary Assessment ABOLISHMENT DECISION",
+            "context": "Following Primary National Exam abolishment, Lower Secondary Assessment exam also under review.\n\nDAPU must coordinate decision:",
             "choices": [
                 {
                     "id": "pt3_a",
@@ -1169,8 +1169,8 @@
                         "quality": 6,
                         "unity": -6
                     },
-                    "outcome_text": "PT3 abolished. Exam-free lower secondary achieved.",
-                    "headline": "Malaysia abolishes PT3 - exam reform continues"
+                    "outcome_text": "Lower Secondary Assessment abolished. Exam-free lower secondary achieved.",
+                    "headline": "Malaysia abolishes Lower Secondary Assessment - exam reform continues"
                 },
                 {
                     "id": "pt3_b",
@@ -1188,8 +1188,8 @@
                 },
                 {
                     "id": "pt3_c",
-                    "label": "C) REFORMED PT3",
-                    "description": "Keep PT3 but reform format and reduce stakes.",
+                    "label": "C) REFORMED Lower Secondary Assessment",
+                    "description": "Keep Lower Secondary Assessment but reform format and reduce stakes.",
                     "costs": {
                         "budget": 8
                     },
@@ -1198,13 +1198,13 @@
                         "unity": 3
                     },
                     "outcome_text": "Moderate reform satisfies traditionalists.",
-                    "headline": "MOE reforms PT3 exam format"
+                    "headline": "MOE reforms Lower Secondary Assessment exam format"
                 }
             ],
             "cannot_afford_penalty": {
                 "unity_kpi": -5,
-                "outcome_text": "PT3 debate drags on without resolution.",
-                "headline": "MOE indecisive on PT3 future"
+                "outcome_text": "Lower Secondary Assessment debate drags on without resolution.",
+                "headline": "MOE indecisive on Lower Secondary Assessment future"
             }
         },
         {
@@ -1454,7 +1454,7 @@
             "month": 6,
             "category": "milestone_review",
             "title": "🎯 FINAL BLUEPRINT REVIEW - 2025 APPROACH",
-            "context": "Mid-2024 comprehensive review shows progress but gaps remain. One year left to achieve 2025 targets.\n\nFINAL PUSH: 'This is our last chance to deliver on the Blueprint promise.'\n\nYour final year strategy:",
+            "context": "Mid-2024 comprehensive review shows progress but gaps remain. One year left to achieve 2025 targets.\n\nFINAL PUSH: 'This is our last chance to deliver on the Reform Plan promise.'\n\nYour final year strategy:",
             "choices": [
                 {
                     "id": "final_a",
@@ -1472,7 +1472,7 @@
                         "efficiency": -3
                     },
                     "outcome_text": "Heroic final push delivers impressive results but at significant cost.",
-                    "headline": "MOE launches all-out effort to achieve Blueprint 2025 targets"
+                    "headline": "MOE launches all-out effort to achieve Reform Plan 2025 targets"
                 },
                 {
                     "id": "final_b",
@@ -1489,7 +1489,7 @@
                         "unity": 3
                     },
                     "outcome_text": "Focused strategy delivers solid results on priority areas.",
-                    "headline": "MOE targets key Blueprint metrics in final year push"
+                    "headline": "MOE targets key Reform Plan metrics in final year push"
                 },
                 {
                     "id": "final_c",
@@ -1507,14 +1507,14 @@
                         "efficiency": 4
                     },
                     "outcome_text": "Forward-looking approach builds foundation for continued transformation.",
-                    "headline": "MOE prepares sustainable post-Blueprint education framework"
+                    "headline": "MOE prepares sustainable post-Reform Plan education framework"
                 }
             ],
             "cannot_afford_penalty": {
                 "quality_kpi": -5,
                 "unity_kpi": -5,
-                "outcome_text": "Inability to execute final year strategy undermines entire Blueprint.",
-                "headline": "Blueprint 2025 ends with whimper as final push fails"
+                "outcome_text": "Inability to execute final year strategy undermines entire Reform Plan.",
+                "headline": "Reform Plan 2025 ends with whimper as final push fails"
             }
         },
         {
@@ -1524,7 +1524,7 @@
             "month": 1,
             "category": "crisis_response",
             "title": "📰 BLUEPRINT REPORT CARD LEAKED",
-            "context": "Internal Blueprint performance report leaked to media. Public now sees raw KPI scores. Depending on your performance, this could be vindication or crisis.\n\nHow do you handle the leak?",
+            "context": "Internal Reform Plan performance report leaked to media. Public now sees raw KPI scores. Depending on your performance, this could be vindication or crisis.\n\nHow do you handle the leak?",
             "choices": [
                 {
                     "id": "rcleak_a",
@@ -1538,7 +1538,7 @@
                         "efficiency": 2
                     },
                     "outcome_text": "Transparent approach wins respect. Public appreciates honesty.",
-                    "headline": "DU earns praise for transparent Blueprint assessment"
+                    "headline": "DU earns praise for transparent Reform Plan assessment"
                 },
                 {
                     "id": "rcleak_b",
@@ -1573,7 +1573,7 @@
             "cannot_afford_penalty": {
                 "unity_kpi": -8,
                 "outcome_text": "No response to leak destroys public confidence.",
-                "headline": "Blueprint credibility collapses after unanswered report card leak"
+                "headline": "Reform Plan credibility collapses after unanswered report card leak"
             }
         },
         {
@@ -1583,12 +1583,12 @@
             "month": 6,
             "category": "policy_debate",
             "title": "📜 BLUEPRINT LEGACY",
-            "context": "Blueprint concludes in 2025. Time to plan for post-Blueprint era.\n\nDU must coordinate legacy planning:",
+            "context": "Reform Plan concludes in 2025. Time to plan for post-Reform Plan era.\n\nDU must coordinate legacy planning:",
             "choices": [
                 {
                     "id": "legacy_a",
                     "label": "A) FORMALIZE GAINS",
-                    "description": "Invest in institutionalizing Blueprint achievements.",
+                    "description": "Invest in institutionalizing Reform Plan achievements.",
                     "costs": {
                         "budget": 20
                     },
@@ -1599,8 +1599,8 @@
                         "unity": 3,
                         "efficiency": 3
                     },
-                    "outcome_text": "Blueprint gains locked in for future.",
-                    "headline": "Blueprint achievements institutionalized"
+                    "outcome_text": "Reform Plan gains locked in for future.",
+                    "headline": "Reform Plan achievements institutionalized"
                 },
                 {
                     "id": "legacy_b",
@@ -1613,7 +1613,7 @@
                         "unity": 6
                     },
                     "outcome_text": "Comprehensive report becomes reference for future reforms.",
-                    "headline": "Blueprint report documents transformation journey"
+                    "headline": "Reform Plan report documents transformation journey"
                 },
                 {
                     "id": "legacy_c",
@@ -1633,8 +1633,8 @@
             ],
             "cannot_afford_penalty": {
                 "unity_kpi": -5,
-                "outcome_text": "Blueprint ends without clear succession plan.",
-                "headline": "Blueprint legacy uncertain as 2025 ends"
+                "outcome_text": "Reform Plan ends without clear succession plan.",
+                "headline": "Reform Plan legacy uncertain as 2025 ends"
             }
         }
     ]
