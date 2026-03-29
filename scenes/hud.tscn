@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scripts/ui/save_load_modal.gd" id="6_save"]
 [ext_resource type="Script" path="res://scripts/ui/year_end_summary.gd" id="7_yes"]
 [ext_resource type="Script" path="res://scripts/ui/mid_year_review.gd" id="8_mid"]
+[ext_resource type="Script" path="res://scripts/ui/tutorial.gd" id="9_tut"]
 
 [node name="HUD" type="PanelContainer"]
 anchors_preset = 15
@@ -747,3 +748,67 @@ theme_override_constants/separation = 6
 unique_name_in_owner = true
 layout_mode = 2
 text = "Continue ▶"
+
+[node name="Tutorial" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+script = ExtResource("9_tut")
+
+[node name="CenterBox" type="CenterContainer" parent="Tutorial"]
+layout_mode = 2
+
+[node name="TutorialPanel" type="PanelContainer" parent="Tutorial/CenterBox"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(520, 0)
+
+[node name="VBox" type="VBoxContainer" parent="Tutorial/CenterBox/TutorialPanel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TutorialIcon" type="Label" parent="Tutorial/CenterBox/TutorialPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "🎓"
+horizontal_alignment = 1
+
+[node name="TutorialTitle" type="Label" parent="Tutorial/CenterBox/TutorialPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Welcome!"
+horizontal_alignment = 1
+
+[node name="TutorialText" type="Label" parent="Tutorial/CenterBox/TutorialPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = ""
+autowrap_mode = 3
+
+[node name="TutorialStepLabel" type="Label" parent="Tutorial/CenterBox/TutorialPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Step 1 of 11"
+horizontal_alignment = 1
+
+[node name="BtnRow" type="HBoxContainer" parent="Tutorial/CenterBox/TutorialPanel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TutorialBtn" type="Button" parent="Tutorial/CenterBox/TutorialPanel/VBox/BtnRow"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(200, 42)
+text = "Next"
+
+[node name="TutorialSkipBtn" type="Button" parent="Tutorial/CenterBox/TutorialPanel/VBox/BtnRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Skip Tutorial"

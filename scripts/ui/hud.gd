@@ -52,6 +52,7 @@ const KPI_ICONS := {
 @onready var save_load_modal: Control = %SaveLoadModal
 @onready var year_end_summary: Control = %YearEndSummary
 @onready var mid_year_review: Control = %MidYearReview
+@onready var tutorial: Control = %Tutorial
 @onready var menu_btn: MenuButton = %MenuBtn
 
 var _kpi_bars: Dictionary = {}
@@ -63,7 +64,7 @@ var _year_end_initiative_results: Array = []
 func _ready() -> void:
 	GameStateManager.game_initialized.connect(_on_game_initialized)
 	GameStateManager.phase_changed.connect(_on_phase_changed)
-	GameStateManager.year_started.connect(func(_y: int): _refresh_all())
+	GameStateManager.year_started.connect(func(_y: int): _refresh_all(); tutorial.trigger("year_started"))
 	GameStateManager.month_advanced.connect(_on_month_advanced)
 	GameStateManager.kpi_changed.connect(_on_kpi_changed)
 	GameStateManager.budget_changed.connect(func(_o: float, n: float): budget_label.text = "💰 RM %.1fM" % n)
@@ -88,6 +89,7 @@ func _ready() -> void:
 	popup.add_item("🏆  Achievements", 2)
 	popup.add_separator()
 	popup.add_item("🔊  Toggle Music", 4)
+	popup.add_item("📖  Replay Tutorial", 5)
 	popup.add_separator()
 	popup.add_item("🚪  Main Menu", 3)
 	popup.id_pressed.connect(_on_menu_item)
@@ -213,6 +215,7 @@ func _apply_styling() -> void:
 
 func _on_game_initialized() -> void:
 	_refresh_all()
+	tutorial.trigger("game_start")
 
 func _on_phase_changed(new_phase: String) -> void:
 	phase_label.text = new_phase
@@ -235,6 +238,7 @@ func _on_kpi_changed(kpi_name: String, _old: float, new_value: float) -> void:
 	_update_kpi_display(kpi_name, new_value)
 
 func _on_scenario_triggered(scenario: Dictionary) -> void:
+	tutorial.trigger("scenario")
 	scenario_modal.show_scenario(scenario)
 	scenario_modal.visible = true
 
@@ -242,6 +246,9 @@ func _on_year_ended(completed_year: int) -> void:
 	_refresh_all()
 
 func _on_year_end_data_ready(data: Dictionary) -> void:
+	tutorial.trigger("year_end")
+	if bool(data.get("minister_changed", false)):
+		tutorial.trigger("minister_change")
 	# Don't show summary if game is over — game over screen handles that
 	if GameStateManager.state.get("game_over", false):
 		return
@@ -262,6 +269,7 @@ func _on_year_end_continue() -> void:
 	_refresh_all()
 
 func _on_mid_year_review_ready(data: Dictionary) -> void:
+	tutorial.trigger("mid_year")
 	mid_year_review.show_review(
 		int(data["year"]),
 		data["start_kpis"],
@@ -289,6 +297,11 @@ func _on_menu_item(id: int) -> void:
 			get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 		4:
 			var muted := AudioManager.toggle_mute()
+		5:
+			tutorial._is_complete = false
+			tutorial._current_step = -1
+			tutorial._save_state()
+			tutorial.trigger("game_start")
 			# Update menu label
 			var popup := menu_btn.get_popup()
 			for i in range(popup.item_count):
