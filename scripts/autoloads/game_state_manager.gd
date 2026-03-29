@@ -140,7 +140,11 @@ func set_budget(value: float) -> void:
 func apply_pc_change(delta: int) -> void:
 	var max_pc: int = int(DataLoader.get_config().get("resources", {}).get("max_pc", 100))
 	var old_value: int = state["political_capital"]
-	state["political_capital"] = clampi(old_value + delta, 0, max_pc)
+	# No PC cap in year 1 (2013) — let new players accumulate freely
+	if state["year"] <= 2013:
+		state["political_capital"] = maxi(0, old_value + delta)
+	else:
+		state["political_capital"] = clampi(old_value + delta, 0, max_pc)
 	if old_value != state["political_capital"]:
 		pc_changed.emit(old_value, state["political_capital"])
 
