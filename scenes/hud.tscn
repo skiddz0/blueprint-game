@@ -1,0 +1,498 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/hud.gd" id="1_hud"]
+[ext_resource type="Script" path="res://scripts/ui/initiative_selector.gd" id="2_sel"]
+[ext_resource type="Script" path="res://scripts/ui/scenario_modal.gd" id="3_scn"]
+[ext_resource type="Script" path="res://scripts/ui/game_over_screen.gd" id="4_go"]
+
+[node name="HUD" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hud")
+
+[node name="VBoxMain" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HeaderBar" type="HBoxContainer" parent="VBoxMain"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 44)
+theme_override_constants/separation = 20
+
+[node name="YearLabel" type="Label" parent="VBoxMain/HeaderBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Year: 2013"
+
+[node name="MonthLabel" type="Label" parent="VBoxMain/HeaderBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Jan"
+
+[node name="WaveLabel" type="Label" parent="VBoxMain/HeaderBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Wave 1"
+
+[node name="Spacer1" type="Control" parent="VBoxMain/HeaderBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BudgetLabel" type="Label" parent="VBoxMain/HeaderBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "RM 100.0M"
+
+[node name="PCLabel" type="Label" parent="VBoxMain/HeaderBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "PC: 50"
+
+[node name="TimerLabel" type="Label" parent="VBoxMain/HeaderBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "6:00"
+
+[node name="PauseBtn" type="Button" parent="VBoxMain/HeaderBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Pause"
+
+[node name="SpeedBtn" type="Button" parent="VBoxMain/HeaderBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1.0x"
+
+[node name="PhaseLabel" type="Label" parent="VBoxMain/HeaderBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "PLANNING"
+
+[node name="HSep" type="HSeparator" parent="VBoxMain"]
+layout_mode = 2
+
+[node name="ContentSplit" type="HSplitContainer" parent="VBoxMain"]
+layout_mode = 2
+size_flags_vertical = 3
+split_offset = 270
+
+[node name="Sidebar" type="VBoxContainer" parent="VBoxMain/ContentSplit"]
+layout_mode = 2
+custom_minimum_size = Vector2(260, 0)
+theme_override_constants/separation = 6
+
+[node name="MinisterHeader" type="Label" parent="VBoxMain/ContentSplit/Sidebar"]
+layout_mode = 2
+text = "MINISTER"
+
+[node name="MinisterNameLabel" type="Label" parent="VBoxMain/ContentSplit/Sidebar"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MinisterNicknameLabel" type="Label" parent="VBoxMain/ContentSplit/Sidebar"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MinisterAgendaLabel" type="Label" parent="VBoxMain/ContentSplit/Sidebar"]
+unique_name_in_owner = true
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="Sep1" type="HSeparator" parent="VBoxMain/ContentSplit/Sidebar"]
+layout_mode = 2
+
+[node name="KPIHeader" type="Label" parent="VBoxMain/ContentSplit/Sidebar"]
+layout_mode = 2
+text = "KEY PERFORMANCE INDICATORS"
+
+[node name="QualityRow" type="HBoxContainer" parent="VBoxMain/ContentSplit/Sidebar"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="QualityLabel" type="Label" parent="VBoxMain/ContentSplit/Sidebar/QualityRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "Quality"
+
+[node name="QualityBar" type="ProgressBar" parent="VBoxMain/ContentSplit/Sidebar/QualityRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+value = 45.0
+show_percentage = false
+
+[node name="QualityValue" type="Label" parent="VBoxMain/ContentSplit/Sidebar/QualityRow"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(32, 0)
+text = "45"
+horizontal_alignment = 2
+
+[node name="EquityRow" type="HBoxContainer" parent="VBoxMain/ContentSplit/Sidebar"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="EquityLabel" type="Label" parent="VBoxMain/ContentSplit/Sidebar/EquityRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "Equity"
+
+[node name="EquityBar" type="ProgressBar" parent="VBoxMain/ContentSplit/Sidebar/EquityRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+show_percentage = false
+
+[node name="EquityValue" type="Label" parent="VBoxMain/ContentSplit/Sidebar/EquityRow"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(32, 0)
+text = "50"
+horizontal_alignment = 2
+
+[node name="AccessRow" type="HBoxContainer" parent="VBoxMain/ContentSplit/Sidebar"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="AccessLabel" type="Label" parent="VBoxMain/ContentSplit/Sidebar/AccessRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "Access"
+
+[node name="AccessBar" type="ProgressBar" parent="VBoxMain/ContentSplit/Sidebar/AccessRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+value = 45.0
+show_percentage = false
+
+[node name="AccessValue" type="Label" parent="VBoxMain/ContentSplit/Sidebar/AccessRow"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(32, 0)
+text = "45"
+horizontal_alignment = 2
+
+[node name="UnityRow" type="HBoxContainer" parent="VBoxMain/ContentSplit/Sidebar"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="UnityLabel" type="Label" parent="VBoxMain/ContentSplit/Sidebar/UnityRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "Unity"
+
+[node name="UnityBar" type="ProgressBar" parent="VBoxMain/ContentSplit/Sidebar/UnityRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+show_percentage = false
+
+[node name="UnityValue" type="Label" parent="VBoxMain/ContentSplit/Sidebar/UnityRow"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(32, 0)
+text = "50"
+horizontal_alignment = 2
+
+[node name="EfficiencyRow" type="HBoxContainer" parent="VBoxMain/ContentSplit/Sidebar"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="EfficiencyLabel" type="Label" parent="VBoxMain/ContentSplit/Sidebar/EfficiencyRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "Efficiency"
+
+[node name="EfficiencyBar" type="ProgressBar" parent="VBoxMain/ContentSplit/Sidebar/EfficiencyRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+value = 60.0
+show_percentage = false
+
+[node name="EfficiencyValue" type="Label" parent="VBoxMain/ContentSplit/Sidebar/EfficiencyRow"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(32, 0)
+text = "60"
+horizontal_alignment = 2
+
+[node name="VSep" type="VSeparator" parent="VBoxMain/ContentSplit"]
+layout_mode = 2
+
+[node name="MainContent" type="VBoxContainer" parent="VBoxMain/ContentSplit"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="SelectInitiativesBtn" type="Button" parent="VBoxMain/ContentSplit/MainContent"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Select Initiatives for This Year"
+
+[node name="InitiativesHeader" type="Label" parent="VBoxMain/ContentSplit/MainContent"]
+layout_mode = 2
+text = "ACTIVE INITIATIVES"
+
+[node name="InitiativesScroll" type="ScrollContainer" parent="VBoxMain/ContentSplit/MainContent"]
+layout_mode = 2
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 120)
+
+[node name="InitiativesContainer" type="VBoxContainer" parent="VBoxMain/ContentSplit/MainContent/InitiativesScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="ShiftsHeader" type="Label" parent="VBoxMain/ContentSplit/MainContent"]
+layout_mode = 2
+text = "STRATEGIC SHIFTS"
+
+[node name="ShiftsContainer" type="GridContainer" parent="VBoxMain/ContentSplit/MainContent"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 6
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+
+[node name="EventsHeader" type="Label" parent="VBoxMain/ContentSplit/MainContent"]
+layout_mode = 2
+text = "RECENT EVENTS"
+
+[node name="EventsScroll" type="ScrollContainer" parent="VBoxMain/ContentSplit/MainContent"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="EventsContainer" type="VBoxContainer" parent="VBoxMain/ContentSplit/MainContent/EventsScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="InitiativeSelector" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+script = ExtResource("2_sel")
+
+[node name="MarginBox" type="MarginContainer" parent="InitiativeSelector"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="InitiativeSelector/MarginBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Header" type="Label" parent="InitiativeSelector/MarginBox/VBox"]
+layout_mode = 2
+text = "SELECT INITIATIVES"
+
+[node name="SearchField" type="LineEdit" parent="InitiativeSelector/MarginBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Search initiatives..."
+
+[node name="CategoryTabs" type="HBoxContainer" parent="InitiativeSelector/MarginBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="ListScroll" type="ScrollContainer" parent="InitiativeSelector/MarginBox/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InitiativeList" type="VBoxContainer" parent="InitiativeSelector/MarginBox/VBox/ListScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="SummaryLabel" type="Label" parent="InitiativeSelector/MarginBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Selected: 0"
+
+[node name="ProjectedLabel" type="Label" parent="InitiativeSelector/MarginBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Projected: None"
+
+[node name="ButtonRow" type="HBoxContainer" parent="InitiativeSelector/MarginBox/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ConfirmBtn" type="Button" parent="InitiativeSelector/MarginBox/VBox/ButtonRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Confirm Selection"
+
+[node name="CancelBtn" type="Button" parent="InitiativeSelector/MarginBox/VBox/ButtonRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Cancel"
+
+[node name="ScenarioModal" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+script = ExtResource("3_scn")
+
+[node name="MarginBox" type="MarginContainer" parent="ScenarioModal"]
+layout_mode = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 40
+
+[node name="VBox" type="VBoxContainer" parent="ScenarioModal/MarginBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ScenarioTitleLabel" type="Label" parent="ScenarioModal/MarginBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Scenario Title"
+
+[node name="ScenarioCategoryLabel" type="Label" parent="ScenarioModal/MarginBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Category"
+
+[node name="ContextLabel" type="RichTextLabel" parent="ScenarioModal/MarginBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(0, 80)
+fit_content = true
+scroll_active = false
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="ScenarioModal/MarginBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="OutcomePanel" type="PanelContainer" parent="ScenarioModal/MarginBox/VBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="OutcomeVBox" type="VBoxContainer" parent="ScenarioModal/MarginBox/VBox/OutcomePanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="OutcomeHeader" type="Label" parent="ScenarioModal/MarginBox/VBox/OutcomePanel/OutcomeVBox"]
+layout_mode = 2
+text = "OUTCOME"
+
+[node name="OutcomeText" type="Label" parent="ScenarioModal/MarginBox/VBox/OutcomePanel/OutcomeVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="HeadlineLabel" type="Label" parent="ScenarioModal/MarginBox/VBox/OutcomePanel/OutcomeVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ContinueBtn" type="Button" parent="ScenarioModal/MarginBox/VBox/OutcomePanel/OutcomeVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Continue"
+
+[node name="CannotAffordPanel" type="PanelContainer" parent="ScenarioModal/MarginBox/VBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="CAVBox" type="VBoxContainer" parent="ScenarioModal/MarginBox/VBox/CannotAffordPanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="CAHeader" type="Label" parent="ScenarioModal/MarginBox/VBox/CannotAffordPanel/CAVBox"]
+layout_mode = 2
+text = "CANNOT AFFORD ANY OPTION"
+
+[node name="CannotAffordText" type="Label" parent="ScenarioModal/MarginBox/VBox/CannotAffordPanel/CAVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="CannotAffordBtn" type="Button" parent="ScenarioModal/MarginBox/VBox/CannotAffordPanel/CAVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Continue"
+
+[node name="GameOverScreen" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+script = ExtResource("4_go")
+
+[node name="CenterBox" type="CenterContainer" parent="GameOverScreen"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="GameOverScreen/CenterBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(500, 0)
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="GameOverScreen/CenterBox/VBox"]
+layout_mode = 2
+text = "THE BLUEPRINT STORY"
+horizontal_alignment = 1
+
+[node name="GradeLabel" type="Label" parent="GameOverScreen/CenterBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "B"
+horizontal_alignment = 1
+
+[node name="ResultLabel" type="Label" parent="GameOverScreen/CenterBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Victory!"
+horizontal_alignment = 1
+
+[node name="AvgKpiLabel" type="Label" parent="GameOverScreen/CenterBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Average KPI: 65.0"
+horizontal_alignment = 1
+
+[node name="KpiSummary" type="VBoxContainer" parent="GameOverScreen/CenterBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="PlayAgainBtn" type="Button" parent="GameOverScreen/CenterBox/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Play Again"

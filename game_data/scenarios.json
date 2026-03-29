@@ -1,0 +1,1641 @@
+{
+    "scenarios": [
+        {
+            "id": "scenario_001",
+            "name": "Blueprint Skepticism",
+            "year": 2013,
+            "month": 6,
+            "category": "political_event",
+            "title": "📋 BLUEPRINT SKEPTICISM - FIRST TEST",
+            "context": "Six months into the Blueprint, critics call it \"another government plan that will gather dust.\" Media pressure mounts for visible results.\n\nAs the newly appointed DAPU Director, how do you respond?",
+            "choices": [
+                {
+                    "id": "skeptic_a",
+                    "label": "A) QUICK WINS CAMPAIGN",
+                    "description": "Redirect resources to high-visibility quick wins. Show immediate progress.",
+                    "costs": {
+                        "budget": 15
+                    },
+                    "effects": {
+                        "unity": 5,
+                        "quality": -2
+                    },
+                    "outcome_text": "Quick wins generate positive media coverage, but long-term planning suffers.",
+                    "headline": "MOE shows early Blueprint results - critics cautiously optimistic"
+                },
+                {
+                    "id": "skeptic_b",
+                    "label": "B) STAKEHOLDER ENGAGEMENT",
+                    "description": "Invest political capital in building coalition of supporters.",
+                    "costs": {
+                        "pc": 12
+                    },
+                    "effects": {
+                        "unity": 4,
+                        "efficiency": 3
+                    },
+                    "outcome_text": "Broad coalition of educators and community leaders rally behind Blueprint vision.",
+                    "headline": "Education community unites behind Blueprint vision"
+                },
+                {
+                    "id": "skeptic_c",
+                    "label": "C) DATA-DRIVEN TRANSPARENCY",
+                    "description": "Publish detailed progress dashboards. Let data speak.",
+                    "costs": {
+                        "budget": 8,
+                        "pc": 5
+                    },
+                    "effects": {
+                        "unity": 3,
+                        "efficiency": 4,
+                        "quality": 2
+                    },
+                    "outcome_text": "Transparent reporting builds credibility. Some critics become cautious supporters.",
+                    "headline": "MOE launches Blueprint progress dashboard"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "Unable to counter skepticism. Blueprint credibility erodes early.",
+                "headline": "Blueprint dismissed as empty promises - public confidence drops"
+            }
+        },
+        {
+            "id": "scenario_002",
+            "name": "East Coast Flood Response",
+            "trigger_event": "event_001",
+            "year": 2014,
+            "month": 11,
+            "category": "crisis_response",
+            "title": "🚨 FLOOD CRISIS - DAPU BRIEFING",
+            "context": "The Minister needs your recommendation on how DAPU can support the Ministry's flood response.\n\nMINISTRY PRIORITY: Restore schools ASAP\n\nYour options as Program Manager:",
+            "choices": [
+                {
+                    "id": "flood_a",
+                    "label": "A) FAST-TRACK EMERGENCY REPAIRS",
+                    "description": "Pull resources from other projects. Prioritize flood response above all else.",
+                    "costs": {
+                        "budget": 20
+                    },
+                    "effects": {
+                        "access": 6,
+                        "unity": 4
+                    },
+                    "outcome_text": "DAPU's rapid coordination wins praise. Schools repaired faster than expected.",
+                    "headline": "MOE's rapid flood response wins praise from affected communities"
+                },
+                {
+                    "id": "flood_b",
+                    "label": "B) DEFER TO NEXT YEAR",
+                    "description": "Advise Minister to defer major repairs to 2015. Minimal coordination now.",
+                    "costs": {},
+                    "effects": {
+                        "unity": -6,
+                        "equity": -2
+                    },
+                    "outcome_text": "Budget saved but public frustration grows. 'Government moves too slowly' criticism persists.",
+                    "headline": "Flood victims criticize slow education recovery"
+                },
+                {
+                    "id": "flood_c",
+                    "label": "C) MOBILIZE COMMUNITY PARTNERS",
+                    "description": "Coordinate NGO/state involvement. Leverage political capital to unlock partnerships.",
+                    "costs": {
+                        "budget": 5,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "access": 4,
+                        "unity": 6,
+                        "equity": 3,
+                        "efficiency": -2
+                    },
+                    "outcome_text": "Community-led response creates lasting partnerships. Grassroots hero status achieved.",
+                    "headline": "Community rebuilds schools together - MOE coordination praised"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -8,
+                "outcome_text": "Unable to coordinate effective response due to resource constraints.",
+                "headline": "Education Ministry unprepared for crisis - critics"
+            }
+        },
+        {
+            "id": "scenario_003",
+            "name": "VLE Usage Enforcement",
+            "year": 2015,
+            "month": 6,
+            "category": "policy_debate",
+            "title": "📱 VLE ADOPTION STRATEGY",
+            "context": "Teachers complain about forced Frog VLE logins just to hit KPIs. The platform shows low actual usage despite high login numbers.\n\nHow should DAPU coordinate the VLE rollout?",
+            "choices": [
+                {
+                    "id": "vle_a",
+                    "label": "A) STRICT KPI ENFORCEMENT",
+                    "description": "Maintain login requirements. Use political capital to enforce compliance.",
+                    "costs": {
+                        "pc": 10
+                    },
+                    "effects": {
+                        "access": 5,
+                        "unity": -5,
+                        "efficiency": -3
+                    },
+                    "outcome_text": "Login numbers increase but teacher morale drops. 'Checkbox exercise' criticism grows.",
+                    "headline": "Teachers protest VLE enforcement - 'We're not robots'"
+                },
+                {
+                    "id": "vle_b",
+                    "label": "B) FLEXIBLE ADOPTION APPROACH",
+                    "description": "Invest in training and support. Let schools adopt at their own pace.",
+                    "costs": {
+                        "budget": 8
+                    },
+                    "effects": {
+                        "access": 2,
+                        "unity": 3,
+                        "quality": 2,
+                        "efficiency": -2
+                    },
+                    "outcome_text": "Slower rollout but genuine adoption. Teachers appreciate the flexibility.",
+                    "headline": "MOE takes measured approach to digital learning"
+                },
+                {
+                    "id": "vle_c",
+                    "label": "C) PILOT MODEL SCHOOLS",
+                    "description": "Focus resources on showcase schools. Build success stories first.",
+                    "costs": {
+                        "budget": 5,
+                        "pc": 5
+                    },
+                    "effects": {
+                        "access": 1,
+                        "quality": 3,
+                        "efficiency": 2
+                    },
+                    "outcome_text": "Model schools demonstrate VLE value. Other schools request to join program.",
+                    "headline": "Pilot schools show promise of digital learning"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "VLE rollout stalls without clear direction.",
+                "headline": "MOE's digital learning initiative loses momentum"
+            }
+        },
+        {
+            "id": "scenario_004",
+            "name": "TIMSS Results Crisis",
+            "trigger_event": "event_020",
+            "year": 2016,
+            "month": 1,
+            "category": "performance_review",
+            "title": "🚨 TIMSS 2015 RESULTS - WAVE 2 PRESSURE",
+            "context": "TIMSS 2015 results show Malaysia's ranking has stagnated. Wave 2 begins with intense scrutiny on quality improvements.\n\nMINISTER'S CONCERN: 'We need visible progress NOW.'\n\nYour strategic response:",
+            "choices": [
+                {
+                    "id": "timss_a",
+                    "label": "A) INTENSIVE TEACHER UPSKILLING",
+                    "description": "Launch emergency teacher training program. Focus on STEM pedagogy.",
+                    "costs": {
+                        "budget": 25,
+                        "pc": 8
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "efficiency": -2
+                    },
+                    "outcome_text": "Aggressive upskilling shows early promise but strains system capacity.",
+                    "headline": "MOE launches intensive teacher development in response to TIMSS"
+                },
+                {
+                    "id": "timss_b",
+                    "label": "B) CURRICULUM REFINEMENT",
+                    "description": "Revise curriculum to better align with international assessments.",
+                    "costs": {
+                        "budget": 15,
+                        "pc": 5
+                    },
+                    "effects": {
+                        "quality": 5,
+                        "unity": -2
+                    },
+                    "outcome_text": "Curriculum changes implemented but face resistance from some educators.",
+                    "headline": "MOE refines curriculum following international assessment feedback"
+                },
+                {
+                    "id": "timss_c",
+                    "label": "C) LONG-TERM STRATEGY",
+                    "description": "Stay the course. Emphasize that transformation takes time.",
+                    "costs": {
+                        "pc": 3
+                    },
+                    "effects": {
+                        "unity": 3,
+                        "quality": 2
+                    },
+                    "outcome_text": "Measured response maintains stakeholder confidence in long-term vision.",
+                    "headline": "MOE reaffirms commitment to Blueprint despite TIMSS results"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "quality_kpi": -8,
+                "outcome_text": "Inability to respond to TIMSS results damages credibility.",
+                "headline": "MOE criticized for lack of response to international assessment results"
+            }
+        },
+        {
+            "id": "scenario_005",
+            "name": "New Minister Transition",
+            "year": 2016,
+            "month": 2,
+            "category": "political_event",
+            "title": "🔄 NEW MINISTER - WAVE 2 BEGINS",
+            "context": "Wave 2 begins with a new Education Minister. The new minister wants to put their stamp on the Blueprint.\n\nHow should DAPU manage this transition?",
+            "choices": [
+                {
+                    "id": "newmin_a",
+                    "label": "A) PROACTIVE BRIEFING",
+                    "description": "Invest political capital in comprehensive briefing. Show DAPU value.",
+                    "costs": {
+                        "pc": 10
+                    },
+                    "effects": {
+                        "efficiency": 4,
+                        "unity": 3
+                    },
+                    "outcome_text": "New minister impressed by DAPU capability. Strong working relationship formed.",
+                    "headline": "DAPU earns confidence of new Education Minister"
+                },
+                {
+                    "id": "newmin_b",
+                    "label": "B) SHOWCASE RESULTS",
+                    "description": "Prepare detailed Wave 1 results. Let achievements speak.",
+                    "costs": {
+                        "budget": 8
+                    },
+                    "effects": {
+                        "unity": 4,
+                        "quality": 2
+                    },
+                    "outcome_text": "Wave 1 results provide strong foundation for Wave 2 mandate.",
+                    "headline": "Blueprint Wave 1 results earn ministerial support"
+                },
+                {
+                    "id": "newmin_c",
+                    "label": "C) WAIT AND SEE",
+                    "description": "Minimal engagement. Continue existing work quietly.",
+                    "costs": {},
+                    "effects": {
+                        "unity": -3,
+                        "efficiency": -2
+                    },
+                    "outcome_text": "New minister sidelines DAPU in early decisions. Lost influence.",
+                    "headline": "DAPU sidelined as new minister charts own course"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "Failed to build relationship with new minister.",
+                "headline": "DAPU struggles to adapt to new ministerial priorities"
+            }
+        },
+        {
+            "id": "scenario_006",
+            "name": "Teacher Contract Reform",
+            "year": 2016,
+            "month": 8,
+            "category": "implementation_challenge",
+            "title": "📋 TEACHER CONTRACT NEGOTIATIONS",
+            "context": "The Ministry wants to reform teacher contracts to improve flexibility and performance incentives. Teacher unions are resistant.\n\nHow should DAPU coordinate this sensitive reform?",
+            "choices": [
+                {
+                    "id": "contract_a",
+                    "label": "A) NEGOTIATE WITH UNION",
+                    "description": "Use political capital to broker a compromise. Slow but consensual approach.",
+                    "costs": {
+                        "pc": 15
+                    },
+                    "effects": {
+                        "equity": 6,
+                        "unity": 4,
+                        "efficiency": -2
+                    },
+                    "outcome_text": "Agreement reached after lengthy negotiations. Teachers feel heard.",
+                    "headline": "MOE and teachers reach historic agreement on reforms"
+                },
+                {
+                    "id": "contract_b",
+                    "label": "B) IMPLEMENT UNILATERALLY",
+                    "description": "Push through reforms quickly. Compensate with budget for implementation.",
+                    "costs": {
+                        "budget": 10
+                    },
+                    "effects": {
+                        "efficiency": 5,
+                        "unity": -6
+                    },
+                    "outcome_text": "Reforms implemented but at cost of teacher morale. Protests follow.",
+                    "headline": "Teachers protest unilateral contract changes"
+                },
+                {
+                    "id": "contract_c",
+                    "label": "C) MAINTAIN STATUS QUO",
+                    "description": "Advise Minister to postpone reforms. Avoid confrontation.",
+                    "costs": {},
+                    "effects": {
+                        "efficiency": -5,
+                        "unity": 2
+                    },
+                    "outcome_text": "Opportunity for reform lost. System remains inefficient.",
+                    "headline": "MOE backs down on teacher contract reforms"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "Reform attempt collapses without resources to implement.",
+                "headline": "Teacher contract reform initiative fails"
+            }
+        },
+        {
+            "id": "scenario_007",
+            "name": "Rural School Infrastructure Crisis",
+            "year": 2017,
+            "month": 4,
+            "category": "crisis_response",
+            "title": "🏚️ RURAL SCHOOLS IN CRISIS",
+            "context": "Media exposes shocking conditions in rural schools: leaking roofs, broken toilets, no electricity. Public outrage is building.\n\nImmediate DAPU response required:",
+            "choices": [
+                {
+                    "id": "rural_a",
+                    "label": "A) EMERGENCY ALLOCATION",
+                    "description": "Redirect major budget to emergency repairs. Comprehensive fix.",
+                    "costs": {
+                        "budget": 30
+                    },
+                    "effects": {
+                        "access": 6,
+                        "equity": 5
+                    },
+                    "outcome_text": "Massive repair program launched. Rural communities grateful.",
+                    "headline": "MOE launches RM30M rural school rescue program"
+                },
+                {
+                    "id": "rural_b",
+                    "label": "B) PHASED APPROACH",
+                    "description": "Spread repairs over 2 years. Use political capital to manage expectations.",
+                    "costs": {
+                        "budget": 15,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "access": 6,
+                        "equity": 6
+                    },
+                    "outcome_text": "Gradual improvements begin. Some criticism of slow pace.",
+                    "headline": "MOE commits to multi-year rural school upgrade"
+                },
+                {
+                    "id": "rural_c",
+                    "label": "C) PRIVATE SECTOR PARTNERSHIP",
+                    "description": "Coordinate CSR programs. Use political capital to broker deals.",
+                    "costs": {
+                        "pc": 20
+                    },
+                    "effects": {
+                        "access": 6,
+                        "equity": 4,
+                        "efficiency": 4
+                    },
+                    "outcome_text": "Innovative public-private model emerges. Sustainable solution found.",
+                    "headline": "Corporate Malaysia adopts rural schools"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -8,
+                "outcome_text": "Crisis deepens as MOE unable to respond adequately.",
+                "headline": "Rural schools abandoned - parents furious"
+            }
+        },
+        {
+            "id": "scenario_008",
+            "name": "GE14 Aftermath Management",
+            "year": 2018,
+            "month": 5,
+            "category": "political_event",
+            "title": "🗳️ NEW GOVERNMENT - POLICY REVIEW",
+            "context": "Historic government change. New Minister Dr. Maz-Lee wants to review all Blueprint initiatives.\n\nHow should DAPU position itself?",
+            "choices": [
+                {
+                    "id": "ge14_a",
+                    "label": "A) ALIGN WITH NEW PRIORITIES",
+                    "description": "Use political capital to demonstrate DAPU's value to new government.",
+                    "costs": {
+                        "pc": 15
+                    },
+                    "effects": {
+                        "unity": 6,
+                        "efficiency": -3
+                    },
+                    "special_effects": {
+                        "unlock_initiatives": [
+                            "pol_003",
+                            "pol_004"
+                        ]
+                    },
+                    "outcome_text": "DAPU proves adaptability. New reform initiatives unlocked.",
+                    "headline": "DAPU earns trust of new administration"
+                },
+                {
+                    "id": "ge14_b",
+                    "label": "B) MAINTAIN CONTINUITY",
+                    "description": "Invest budget in demonstrating Blueprint's ongoing value.",
+                    "costs": {
+                        "budget": 10
+                    },
+                    "effects": {
+                        "efficiency": 5
+                    },
+                    "outcome_text": "Blueprint framework preserved despite political change.",
+                    "headline": "Education transformation continues despite transition"
+                },
+                {
+                    "id": "ge14_c",
+                    "label": "C) MINIMAL DISRUPTION",
+                    "description": "Keep low profile. Quietly continue existing work.",
+                    "costs": {},
+                    "effects": {
+                        "unity": -3,
+                        "efficiency": -1
+                    },
+                    "outcome_text": "DAPU maintains but loses some influence during transition.",
+                    "headline": "Education reform stalls during government transition"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "DAPU unable to navigate political transition effectively.",
+                "headline": "Education coordination unit struggles post-GE14"
+            }
+        },
+        {
+            "id": "scenario_009",
+            "name": "Exam Paper Leak Crisis",
+            "year": 2018,
+            "month": 10,
+            "category": "crisis_response",
+            "title": "📰 UPSR PAPERS LEAKED!",
+            "context": "Science and English UPSR papers leaked online days before exam. Public outrage. Integrity of national exam at stake.\n\nDAPU must coordinate response:",
+            "choices": [
+                {
+                    "id": "leak_a",
+                    "label": "A) RETAKE EXAM NATIONALLY",
+                    "description": "Massive logistical effort. Restore public confidence.",
+                    "costs": {
+                        "budget": 25
+                    },
+                    "effects": {
+                        "quality": 5,
+                        "unity": 6,
+                        "efficiency": -3
+                    },
+                    "outcome_text": "Swift action restores faith in exam system. Logistical triumph.",
+                    "headline": "MOE's decisive response to leak wins public praise"
+                },
+                {
+                    "id": "leak_b",
+                    "label": "B) RETAKE AFFECTED STATES",
+                    "description": "Targeted approach. Balance cost and fairness.",
+                    "costs": {
+                        "budget": 10
+                    },
+                    "effects": {
+                        "quality": 5,
+                        "unity": 3
+                    },
+                    "outcome_text": "Partial solution satisfies most stakeholders.",
+                    "headline": "MOE takes measured approach to exam leak"
+                },
+                {
+                    "id": "leak_c",
+                    "label": "C) INVESTIGATE ONLY",
+                    "description": "Focus on finding culprits. Use political capital for damage control.",
+                    "costs": {
+                        "pc": 5
+                    },
+                    "effects": {
+                        "unity": -5
+                    },
+                    "outcome_text": "Investigation launched but public trust damaged.",
+                    "headline": "Parents question exam integrity after leak"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -8,
+                "outcome_text": "Exam system credibility collapses.",
+                "headline": "MOE unable to respond to exam leak crisis"
+            }
+        },
+        {
+            "id": "scenario_010",
+            "name": "PISA Disappointment",
+            "trigger_event": "event_021",
+            "year": 2018,
+            "month": 12,
+            "category": "international_benchmark",
+            "title": "📉 PISA 2018 - EQUITY CONCERNS",
+            "context": "PISA 2018 results reveal persistent achievement gaps between urban and rural students.\n\nPUBLIC PRESSURE: 'The Blueprint promised equity. Where is it?'\n\nYour response strategy:",
+            "choices": [
+                {
+                    "id": "pisa_a",
+                    "label": "A) RURAL SCHOOL ACCELERATION",
+                    "description": "Massive investment in rural schools. Close the gap aggressively.",
+                    "costs": {
+                        "budget": 30,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "equity": 6,
+                        "access": 4,
+                        "efficiency": -3
+                    },
+                    "outcome_text": "Bold rural investment shows commitment but strains budget significantly.",
+                    "headline": "MOE launches major rural education initiative after PISA results"
+                },
+                {
+                    "id": "pisa_b",
+                    "label": "B) TARGETED INTERVENTIONS",
+                    "description": "Focus on specific gap areas. Evidence-based, cost-effective approach.",
+                    "costs": {
+                        "budget": 18,
+                        "pc": 6
+                    },
+                    "effects": {
+                        "equity": 6,
+                        "quality": 3
+                    },
+                    "outcome_text": "Targeted programs show measurable impact in identified gap areas.",
+                    "headline": "MOE implements evidence-based interventions for equity gaps"
+                },
+                {
+                    "id": "pisa_c",
+                    "label": "C) REFRAME NARRATIVE",
+                    "description": "Highlight progress made. Manage expectations on equity timeline.",
+                    "costs": {
+                        "pc": 4
+                    },
+                    "effects": {
+                        "unity": 4,
+                        "equity": 2
+                    },
+                    "outcome_text": "Communication strategy maintains public support despite challenges.",
+                    "headline": "MOE emphasizes long-term equity progress amid PISA results"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "equity_kpi": -8,
+                "outcome_text": "Failure to address equity concerns damages Blueprint credibility.",
+                "headline": "PISA results expose unfulfilled Blueprint equity promises"
+            }
+        },
+        {
+            "id": "scenario_011",
+            "name": "UPSR Abolishment Debate",
+            "year": 2019,
+            "month": 3,
+            "category": "policy_debate",
+            "title": "📝 UPSR ABOLISHMENT PROPOSAL",
+            "context": "Minister Dr. Maz-Lee proposes abolishing UPSR exam. Public divided: some celebrate reduced stress, others fear declining standards.\n\nDAPU must coordinate implementation strategy:",
+            "choices": [
+                {
+                    "id": "upsr_a",
+                    "label": "A) FULL ABOLISHMENT",
+                    "description": "Bold reform. Use political capital to push through despite controversy.",
+                    "costs": {
+                        "pc": 20
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "unity": -5
+                    },
+                    "outcome_text": "UPSR abolished. Reformists celebrate, traditionalists protest.",
+                    "headline": "Malaysia abolishes primary school exam - historic reform"
+                },
+                {
+                    "id": "upsr_b",
+                    "label": "B) FORMAT CHANGES ONLY",
+                    "description": "Compromise approach. Reform exam format but keep assessment.",
+                    "costs": {
+                        "pc": 10
+                    },
+                    "effects": {
+                        "quality": 5,
+                        "unity": 2
+                    },
+                    "outcome_text": "Moderate reform satisfies most stakeholders.",
+                    "headline": "MOE reforms UPSR format - balanced approach"
+                },
+                {
+                    "id": "upsr_c",
+                    "label": "C) MAINTAIN WITH IMPROVEMENTS",
+                    "description": "Keep UPSR but invest in improvements.",
+                    "costs": {
+                        "budget": 8
+                    },
+                    "effects": {
+                        "quality": 3,
+                        "unity": -3,
+                        "efficiency": 2
+                    },
+                    "outcome_text": "Status quo maintained. Opportunity for bold reform lost.",
+                    "headline": "MOE opts for incremental UPSR improvements"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "UPSR debate drags on without resolution.",
+                "headline": "MOE indecisive on exam reform"
+            }
+        },
+        {
+            "id": "scenario_012",
+            "name": "Digital Divide Exposed",
+            "year": 2019,
+            "month": 9,
+            "category": "crisis_response",
+            "title": "💻 DIGITAL DIVIDE CRISIS",
+            "context": "Study reveals shocking digital divide: 40% of students lack devices or internet. Urban-rural gap widening.\n\nDAPU must coordinate response:",
+            "choices": [
+                {
+                    "id": "digital_a",
+                    "label": "A) MASSIVE DEVICE PROGRAM",
+                    "description": "Major budget allocation for devices and connectivity.",
+                    "costs": {
+                        "budget": 40
+                    },
+                    "effects": {
+                        "access": 6,
+                        "equity": 5
+                    },
+                    "outcome_text": "Ambitious program launched. Thousands of devices distributed.",
+                    "headline": "MOE launches RM40M digital inclusion program"
+                },
+                {
+                    "id": "digital_b",
+                    "label": "B) CONNECTIVITY FOCUS",
+                    "description": "Prioritize internet access over devices.",
+                    "costs": {
+                        "budget": 20
+                    },
+                    "effects": {
+                        "access": 6,
+                        "equity": 5
+                    },
+                    "outcome_text": "Internet connectivity expanded to rural areas.",
+                    "headline": "MOE focuses on bridging connectivity gap"
+                },
+                {
+                    "id": "digital_c",
+                    "label": "C) HYBRID APPROACH",
+                    "description": "Balanced investment in devices AND connectivity.",
+                    "costs": {
+                        "budget": 25,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "access": 6,
+                        "equity": 5,
+                        "quality": 2
+                    },
+                    "outcome_text": "Comprehensive digital inclusion strategy implemented.",
+                    "headline": "MOE's balanced digital strategy wins praise"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -8,
+                "outcome_text": "Digital divide continues to widen.",
+                "headline": "MOE fails to address digital inequality"
+            }
+        },
+        {
+            "id": "scenario_013",
+            "name": "Sheraton Move Crisis",
+            "year": 2020,
+            "month": 2,
+            "category": "political_event",
+            "title": "⚠️ POLITICAL CRISIS - GOVERNMENT COLLAPSE",
+            "context": "Sheraton Move: Government collapses overnight. Minister Dr. Maz-Lee resigns. Political instability.\n\nHow should DAPU navigate this crisis?",
+            "choices": [
+                {
+                    "id": "sheraton_a",
+                    "label": "A) WORK WITH NEW MINISTER",
+                    "description": "Use political capital to build relationship with incoming minister.",
+                    "costs": {
+                        "pc": 15
+                    },
+                    "effects": {
+                        "efficiency": 5
+                    },
+                    "outcome_text": "DAPU maintains relevance through political storm.",
+                    "headline": "Education coordination continues despite crisis"
+                },
+                {
+                    "id": "sheraton_b",
+                    "label": "B) KEEP LOW PROFILE",
+                    "description": "Minimize activity. Wait for stability.",
+                    "costs": {},
+                    "effects": {
+                        "unity": -3,
+                        "efficiency": 2
+                    },
+                    "outcome_text": "DAPU maintains operations quietly. Less visible but internally efficient.",
+                    "headline": "Education reform stalls amid political chaos"
+                },
+                {
+                    "id": "sheraton_c",
+                    "label": "C) RALLY STAKEHOLDER SUPPORT",
+                    "description": "Invest in maintaining stakeholder relationships.",
+                    "costs": {
+                        "budget": 10
+                    },
+                    "effects": {
+                        "unity": 6,
+                        "efficiency": -2
+                    },
+                    "outcome_text": "Strong stakeholder support helps weather crisis.",
+                    "headline": "Education community rallies amid political turmoil"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "DAPU loses credibility during crisis.",
+                "headline": "Education coordination collapses with government"
+            }
+        },
+        {
+            "id": "scenario_014",
+            "name": "COVID-19 Pandemic Response",
+            "trigger_event": "event_022",
+            "year": 2020,
+            "month": 3,
+            "category": "crisis_response",
+            "title": "🦠 PANDEMIC CRISIS - EDUCATION CONTINUITY",
+            "context": "COVID-19 forces nationwide school closures. The entire education system must pivot to remote learning immediately.\n\nCRISIS DIRECTIVE: 'No student left behind during lockdown.'\n\nYour emergency response:",
+            "choices": [
+                {
+                    "id": "covid_a",
+                    "label": "A) FULL DIGITAL PIVOT",
+                    "description": "Emergency rollout of online learning for all. Massive tech investment.",
+                    "costs": {
+                        "budget": 40,
+                        "pc": 12
+                    },
+                    "effects": {
+                        "access": -5,
+                        "quality": -3,
+                        "equity": -6
+                    },
+                    "special_effects": {
+                        "initiatives_delayed_months": 2
+                    },
+                    "outcome_text": "Rapid digital shift reaches many but exposes severe digital divide.",
+                    "headline": "MOE launches emergency online learning amid pandemic"
+                },
+                {
+                    "id": "covid_b",
+                    "label": "B) HYBRID APPROACH",
+                    "description": "Mix of online, TV broadcasts, and printed materials. Reach all students.",
+                    "costs": {
+                        "budget": 28,
+                        "pc": 8
+                    },
+                    "effects": {
+                        "access": -4,
+                        "quality": -3,
+                        "equity": -5,
+                        "unity": 2
+                    },
+                    "special_effects": {
+                        "initiatives_delayed_months": 1
+                    },
+                    "outcome_text": "Multi-channel approach provides broader reach despite quality challenges.",
+                    "headline": "MOE implements hybrid learning strategy during pandemic"
+                },
+                {
+                    "id": "covid_c",
+                    "label": "C) MINIMAL INTERVENTION",
+                    "description": "Basic continuity measures. Prioritize health, accept learning loss.",
+                    "costs": {
+                        "budget": 15,
+                        "pc": 5
+                    },
+                    "effects": {
+                        "access": -6,
+                        "quality": -4,
+                        "equity": -4
+                    },
+                    "outcome_text": "Conservative response minimizes costs but significant learning loss occurs.",
+                    "headline": "MOE adopts cautious pandemic education response"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -8,
+                "outcome_text": "Inability to respond to pandemic causes catastrophic learning disruption.",
+                "headline": "Education system collapses during pandemic lockdown"
+            }
+        },
+        {
+            "id": "scenario_015",
+            "name": "School Reopening Strategy",
+            "year": 2020,
+            "month": 10,
+            "category": "pandemic_response",
+            "title": "🏫 SCHOOL REOPENING DEBATE",
+            "context": "Cases declining. Pressure to reopen schools. Parents divided: some want normalcy, others fear safety.\n\nDAPU must coordinate reopening strategy:",
+            "choices": [
+                {
+                    "id": "reopen_a",
+                    "label": "A) PHASED REOPENING WITH STRICT SOP",
+                    "description": "Gradual reopening with comprehensive safety measures.",
+                    "costs": {
+                        "budget": 20
+                    },
+                    "effects": {
+                        "access": 5,
+                        "unity": 5
+                    },
+                    "outcome_text": "Careful reopening builds confidence. Safety maintained.",
+                    "headline": "MOE's cautious reopening strategy succeeds"
+                },
+                {
+                    "id": "reopen_b",
+                    "label": "B) CONTINUE REMOTE LEARNING",
+                    "description": "Keep schools closed. Invest more in online learning.",
+                    "costs": {
+                        "budget": 15
+                    },
+                    "effects": {
+                        "access": 3,
+                        "equity": -3
+                    },
+                    "outcome_text": "Safety prioritized but learning gaps widen.",
+                    "headline": "Schools remain closed - digital divide concerns grow"
+                },
+                {
+                    "id": "reopen_c",
+                    "label": "C) HYBRID MODEL",
+                    "description": "Combination of in-person and online learning.",
+                    "costs": {
+                        "budget": 30
+                    },
+                    "effects": {
+                        "access": 6,
+                        "unity": 6,
+                        "quality": 2
+                    },
+                    "outcome_text": "Flexible model satisfies most stakeholders.",
+                    "headline": "MOE's hybrid learning model wins praise"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -10,
+                "outcome_text": "Reopening chaos as MOE lacks clear plan.",
+                "headline": "School reopening confusion angers parents"
+            }
+        },
+        {
+            "id": "scenario_016",
+            "name": "Learning Loss Assessment",
+            "year": 2021,
+            "month": 4,
+            "category": "pandemic_response",
+            "title": "📉 LEARNING LOSS REVEALED",
+            "context": "Assessment reveals massive learning loss from pandemic: students 1-2 years behind.\n\nDAPU must coordinate recovery strategy:",
+            "choices": [
+                {
+                    "id": "recovery_a",
+                    "label": "A) INTENSIVE RECOVERY PROGRAM",
+                    "description": "Major investment in catch-up programs and remedial support.",
+                    "costs": {
+                        "budget": 35
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "access": 3
+                    },
+                    "outcome_text": "Comprehensive recovery program launched. Progress visible.",
+                    "headline": "MOE's RM35M recovery program tackles learning loss"
+                },
+                {
+                    "id": "recovery_b",
+                    "label": "B) EXTENDED SCHOOL YEAR",
+                    "description": "Use political capital to extend school calendar.",
+                    "costs": {
+                        "pc": 15
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "unity": -4
+                    },
+                    "outcome_text": "Extra school time helps but parents complain about holidays.",
+                    "headline": "School year extended to address learning loss"
+                },
+                {
+                    "id": "recovery_c",
+                    "label": "C) REMEDIAL FOCUS",
+                    "description": "Targeted support for struggling students.",
+                    "costs": {
+                        "budget": 20,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "equity": 3
+                    },
+                    "outcome_text": "Focused approach helps close achievement gaps.",
+                    "headline": "MOE's targeted recovery strategy shows promise"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -10,
+                "outcome_text": "Learning loss becomes permanent for many students.",
+                "headline": "MOE fails to address pandemic learning loss"
+            }
+        },
+        {
+            "id": "scenario_017",
+            "name": "UPSR Abolishment Implementation",
+            "year": 2021,
+            "month": 8,
+            "category": "policy_debate",
+            "title": "✅ UPSR ABOLISHMENT - FINAL DECISION",
+            "context": "Time to finalize UPSR abolishment. Alternative assessment needed.\n\nDAPU must coordinate implementation:",
+            "choices": [
+                {
+                    "id": "upsr_impl_a",
+                    "label": "A) IMMEDIATE ABOLISHMENT",
+                    "description": "Abolish immediately. Use political capital to manage backlash.",
+                    "costs": {
+                        "pc": 20
+                    },
+                    "effects": {
+                        "quality": 5,
+                        "unity": -6
+                    },
+                    "outcome_text": "Bold move divides public. Reformists celebrate.",
+                    "headline": "UPSR abolished - parents divided on decision"
+                },
+                {
+                    "id": "upsr_impl_b",
+                    "label": "B) ONE-YEAR TRANSITION",
+                    "description": "Gradual transition with preparation time.",
+                    "costs": {
+                        "budget": 10,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "unity": 3
+                    },
+                    "outcome_text": "Smooth transition builds confidence in reform.",
+                    "headline": "MOE's measured UPSR transition praised"
+                },
+                {
+                    "id": "upsr_impl_c",
+                    "label": "C) ASSESSMENT ALTERNATIVES READY",
+                    "description": "Invest in robust alternative assessment system first.",
+                    "costs": {
+                        "budget": 15
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "unity": 6,
+                        "efficiency": -3
+                    },
+                    "outcome_text": "Well-prepared transition wins broad support.",
+                    "headline": "MOE's alternative assessment system ready"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "UPSR abolishment stalls without clear plan.",
+                "headline": "UPSR reform confusion angers stakeholders"
+            }
+        },
+        {
+            "id": "scenario_018",
+            "name": "Post-Pandemic Recovery",
+            "trigger_event": "event_023",
+            "year": 2022,
+            "month": 1,
+            "category": "strategic_pivot",
+            "title": "🔄 POST-PANDEMIC RECOVERY PLAN",
+            "context": "Schools reopen fully. Assessment reveals significant learning loss, especially among disadvantaged students.\n\nRECOVERY IMPERATIVE: 'We must accelerate to make up lost ground.'\n\nYour recovery strategy:",
+            "choices": [
+                {
+                    "id": "recovery_a",
+                    "label": "A) INTENSIVE CATCH-UP PROGRAM",
+                    "description": "Extended school hours, holiday classes, targeted tutoring for all affected students.",
+                    "costs": {
+                        "budget": 35,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "equity": 5,
+                        "access": 4,
+                        "efficiency": -2
+                    },
+                    "outcome_text": "Aggressive recovery program shows strong results but exhausts resources.",
+                    "headline": "MOE launches comprehensive learning recovery initiative"
+                },
+                {
+                    "id": "recovery_b",
+                    "label": "B) CURRICULUM ADJUSTMENT",
+                    "description": "Streamline curriculum. Focus on essential competencies. Realistic expectations.",
+                    "costs": {
+                        "budget": 20,
+                        "pc": 6
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "equity": 4,
+                        "unity": 3
+                    },
+                    "outcome_text": "Pragmatic curriculum changes help students catch up at sustainable pace.",
+                    "headline": "MOE adjusts curriculum to support post-pandemic recovery"
+                },
+                {
+                    "id": "recovery_c",
+                    "label": "C) GRADUAL NORMALIZATION",
+                    "description": "Return to normal operations. Let students recover naturally over time.",
+                    "costs": {
+                        "budget": 10,
+                        "pc": 3
+                    },
+                    "effects": {
+                        "quality": 3,
+                        "equity": 1,
+                        "access": 4
+                    },
+                    "outcome_text": "Gentle return to normalcy provides stability but slow recovery.",
+                    "headline": "MOE opts for gradual return to pre-pandemic operations"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "quality_kpi": -6,
+                "equity_kpi": -4,
+                "outcome_text": "Failure to address learning loss jeopardizes Blueprint targets.",
+                "headline": "Pandemic learning loss threatens Blueprint achievement"
+            }
+        },
+        {
+            "id": "scenario_019",
+            "name": "Teacher Morale Crisis",
+            "year": 2022,
+            "month": 3,
+            "category": "crisis_response",
+            "title": "😔 TEACHER BURNOUT CRISIS",
+            "context": "Post-pandemic teacher burnout epidemic. Resignations rising. Morale at all-time low.\n\nDAPU must coordinate response:",
+            "choices": [
+                {
+                    "id": "morale_a",
+                    "label": "A) SALARY ADJUSTMENT",
+                    "description": "Major budget for teacher compensation increase.",
+                    "costs": {
+                        "budget": 30
+                    },
+                    "effects": {
+                        "unity": 6,
+                        "efficiency": -5
+                    },
+                    "outcome_text": "Teachers appreciate raise but budget strained.",
+                    "headline": "MOE announces teacher salary increase"
+                },
+                {
+                    "id": "morale_b",
+                    "label": "B) NON-MONETARY RECOGNITION",
+                    "description": "Use political capital for recognition programs.",
+                    "costs": {
+                        "pc": 10
+                    },
+                    "effects": {
+                        "unity": 5,
+                        "quality": 3
+                    },
+                    "outcome_text": "Recognition helps but some want tangible benefits.",
+                    "headline": "MOE launches teacher appreciation initiatives"
+                },
+                {
+                    "id": "morale_c",
+                    "label": "C) WORKLOAD REDUCTION",
+                    "description": "Invest in admin support to reduce teacher burden.",
+                    "costs": {
+                        "budget": 15,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "unity": 6,
+                        "quality": 4,
+                        "efficiency": 2
+                    },
+                    "outcome_text": "Teachers grateful for reduced administrative burden.",
+                    "headline": "MOE tackles teacher workload crisis"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -8,
+                "outcome_text": "Teacher exodus accelerates.",
+                "headline": "Teacher crisis deepens as MOE fails to act"
+            }
+        },
+        {
+            "id": "scenario_020",
+            "name": "PT3 Abolishment Process",
+            "year": 2022,
+            "month": 9,
+            "category": "policy_debate",
+            "title": "📝 PT3 ABOLISHMENT DECISION",
+            "context": "Following UPSR abolishment, PT3 exam also under review.\n\nDAPU must coordinate decision:",
+            "choices": [
+                {
+                    "id": "pt3_a",
+                    "label": "A) FULL ABOLISHMENT",
+                    "description": "Complete exam reform. Use political capital.",
+                    "costs": {
+                        "pc": 20
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "unity": -6
+                    },
+                    "outcome_text": "PT3 abolished. Exam-free lower secondary achieved.",
+                    "headline": "Malaysia abolishes PT3 - exam reform continues"
+                },
+                {
+                    "id": "pt3_b",
+                    "label": "B) SCHOOL-BASED ASSESSMENT",
+                    "description": "Replace with school-based assessment system.",
+                    "costs": {
+                        "pc": 15
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "unity": 3
+                    },
+                    "outcome_text": "School-based assessment empowers teachers.",
+                    "headline": "MOE introduces school-based assessment"
+                },
+                {
+                    "id": "pt3_c",
+                    "label": "C) REFORMED PT3",
+                    "description": "Keep PT3 but reform format and reduce stakes.",
+                    "costs": {
+                        "budget": 8
+                    },
+                    "effects": {
+                        "quality": 5,
+                        "unity": 3
+                    },
+                    "outcome_text": "Moderate reform satisfies traditionalists.",
+                    "headline": "MOE reforms PT3 exam format"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "PT3 debate drags on without resolution.",
+                "headline": "MOE indecisive on PT3 future"
+            }
+        },
+        {
+            "id": "scenario_021",
+            "name": "Mental Health Crisis",
+            "year": 2023,
+            "month": 5,
+            "category": "crisis_response",
+            "title": "🧠 STUDENT MENTAL HEALTH CRISIS",
+            "context": "Post-pandemic mental health crisis: anxiety, depression, suicide rates rising among students.\n\nDAPU must coordinate response:",
+            "choices": [
+                {
+                    "id": "mental_a",
+                    "label": "A) COUNSELOR HIRING SURGE",
+                    "description": "Major investment in school counselors.",
+                    "costs": {
+                        "budget": 25
+                    },
+                    "effects": {
+                        "unity": 6,
+                        "quality": 3
+                    },
+                    "outcome_text": "Counselor-student ratio improves dramatically.",
+                    "headline": "MOE hires 1000 new school counselors"
+                },
+                {
+                    "id": "mental_b",
+                    "label": "B) TEACHER TRAINING",
+                    "description": "Train teachers in mental health first aid.",
+                    "costs": {
+                        "budget": 12,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "unity": 6,
+                        "quality": 4
+                    },
+                    "outcome_text": "Teachers equipped to support student wellbeing.",
+                    "headline": "MOE trains teachers in mental health support"
+                },
+                {
+                    "id": "mental_c",
+                    "label": "C) EXTERNAL PARTNERSHIPS",
+                    "description": "Partner with NGOs and mental health organizations.",
+                    "costs": {
+                        "pc": 15
+                    },
+                    "effects": {
+                        "unity": 6,
+                        "equity": 4
+                    },
+                    "outcome_text": "Community partnerships provide comprehensive support.",
+                    "headline": "MOE partners with mental health organizations"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -8,
+                "outcome_text": "Mental health crisis worsens without intervention.",
+                "headline": "Student mental health crisis ignored - critics"
+            }
+        },
+        {
+            "id": "scenario_022",
+            "name": "International School Exodus",
+            "year": 2023,
+            "month": 10,
+            "category": "crisis_response",
+            "title": "🏫 INTERNATIONAL SCHOOL EXODUS",
+            "context": "Record numbers of middle-class parents switching children to international schools. Public system losing talent and credibility.\n\nDU must respond to this confidence crisis:",
+            "choices": [
+                {
+                    "id": "exodus_a",
+                    "label": "A) PUBLIC SCHOOL EXCELLENCE PROGRAM",
+                    "description": "Major investment in flagship public schools to compete.",
+                    "costs": {
+                        "budget": 25,
+                        "pc": 5
+                    },
+                    "effects": {
+                        "quality": 5,
+                        "unity": 3,
+                        "equity": -2
+                    },
+                    "outcome_text": "Elite public schools attract back some families, but creates two-tier system.",
+                    "headline": "MOE creates flagship public schools to stem exodus"
+                },
+                {
+                    "id": "exodus_b",
+                    "label": "B) SYSTEMIC QUALITY UPLIFT",
+                    "description": "Spread investment across all schools. Raise baseline quality.",
+                    "costs": {
+                        "budget": 20,
+                        "pc": 8
+                    },
+                    "effects": {
+                        "quality": 4,
+                        "equity": 4,
+                        "unity": 2
+                    },
+                    "outcome_text": "Broad quality improvements begin, but results take time to show.",
+                    "headline": "MOE invests in system-wide quality improvement"
+                },
+                {
+                    "id": "exodus_c",
+                    "label": "C) REGULATE INTERNATIONAL SCHOOLS",
+                    "description": "Use political capital to restrict international school growth.",
+                    "costs": {
+                        "pc": 15
+                    },
+                    "effects": {
+                        "unity": -4,
+                        "efficiency": 3
+                    },
+                    "outcome_text": "Regulation faces legal challenges. Parents protest restrictions.",
+                    "headline": "MOE faces backlash over international school restrictions"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -8,
+                "outcome_text": "Exodus accelerates as public system fails to respond.",
+                "headline": "Public school confidence crisis deepens"
+            }
+        },
+        {
+            "id": "scenario_023",
+            "name": "DAPU Restructured to DU",
+            "year": 2024,
+            "month": 1,
+            "category": "political_event",
+            "title": "🔄 ORGANIZATIONAL RESTRUCTURE",
+            "context": "DAPU restructured to DU (Delivery Unit). Streamlined mandate, reduced bureaucracy.\n\nHow to manage transition?",
+            "choices": [
+                {
+                    "id": "du_a",
+                    "label": "A) EMBRACE NEW MANDATE",
+                    "description": "Use political capital to maximize restructure benefits.",
+                    "costs": {
+                        "pc": 15
+                    },
+                    "effects": {
+                        "efficiency": 6
+                    },
+                    "special_effects": {
+                        "bureaucracy_penalty_reduced": true
+                    },
+                    "outcome_text": "DU emerges stronger and more efficient.",
+                    "headline": "DU restructure improves education coordination"
+                },
+                {
+                    "id": "du_b",
+                    "label": "B) MAINTAIN CONTINUITY",
+                    "description": "Minimize disruption during transition.",
+                    "costs": {
+                        "budget": 10
+                    },
+                    "effects": {
+                        "unity": 5,
+                        "efficiency": -2
+                    },
+                    "outcome_text": "Smooth transition but limited improvement.",
+                    "headline": "DU transition maintains stability"
+                },
+                {
+                    "id": "du_c",
+                    "label": "C) MINIMAL DISRUPTION",
+                    "description": "Business as usual approach.",
+                    "costs": {},
+                    "effects": {
+                        "efficiency": -2,
+                        "unity": 1
+                    },
+                    "outcome_text": "Business as usual maintains some stability but wastes restructure opportunity.",
+                    "headline": "DU restructure fails to deliver improvements"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "Restructure creates confusion and inefficiency.",
+                "headline": "DU restructure causes organizational chaos"
+            }
+        },
+        {
+            "id": "scenario_024",
+            "name": "AI in Education Debate",
+            "year": 2024,
+            "month": 3,
+            "category": "policy_debate",
+            "title": "🤖 AI TOOLS IN SCHOOLS",
+            "context": "ChatGPT and AI tools revolutionizing education. Students using AI for homework. Teachers confused.\n\nDU must coordinate policy:",
+            "choices": [
+                {
+                    "id": "ai_a",
+                    "label": "A) BAN AI TOOLS",
+                    "description": "Prohibit AI use in schools. Traditional approach.",
+                    "costs": {
+                        "pc": 10
+                    },
+                    "effects": {
+                        "quality": -4,
+                        "unity": -6
+                    },
+                    "outcome_text": "Ban proves unenforceable. Students use AI anyway.",
+                    "headline": "MOE's AI ban criticized as outdated"
+                },
+                {
+                    "id": "ai_b",
+                    "label": "B) EMBRACE & ADAPT ASSESSMENT",
+                    "description": "Redesign assessment for AI era. Use political capital.",
+                    "costs": {
+                        "pc": 15
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "unity": 3
+                    },
+                    "outcome_text": "Forward-thinking approach wins international praise.",
+                    "headline": "Malaysia leads in AI-adapted education"
+                },
+                {
+                    "id": "ai_c",
+                    "label": "C) GRADUAL INTEGRATION",
+                    "description": "Pilot AI literacy programs. Measured approach.",
+                    "costs": {
+                        "budget": 10,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "unity": 6,
+                        "equity": -2
+                    },
+                    "outcome_text": "Balanced approach prepares students for AI future.",
+                    "headline": "MOE's AI integration strategy praised"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "AI debate continues without clear direction.",
+                "headline": "MOE indecisive on AI in education"
+            }
+        },
+        {
+            "id": "scenario_025",
+            "name": "Final Blueprint Review",
+            "trigger_event": "event_024",
+            "year": 2024,
+            "month": 6,
+            "category": "milestone_review",
+            "title": "🎯 FINAL BLUEPRINT REVIEW - 2025 APPROACH",
+            "context": "Mid-2024 comprehensive review shows progress but gaps remain. One year left to achieve 2025 targets.\n\nFINAL PUSH: 'This is our last chance to deliver on the Blueprint promise.'\n\nYour final year strategy:",
+            "choices": [
+                {
+                    "id": "final_a",
+                    "label": "A) ALL-IN ACCELERATION",
+                    "description": "Maximum resource deployment. Hit every target possible. Legacy at stake.",
+                    "costs": {
+                        "budget": 45,
+                        "pc": 15
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "equity": 5,
+                        "access": 4,
+                        "unity": 3,
+                        "efficiency": -3
+                    },
+                    "outcome_text": "Heroic final push delivers impressive results but at significant cost.",
+                    "headline": "MOE launches all-out effort to achieve Blueprint 2025 targets"
+                },
+                {
+                    "id": "final_b",
+                    "label": "B) STRATEGIC FOCUS",
+                    "description": "Prioritize achievable targets. Deliver strong finish on key metrics.",
+                    "costs": {
+                        "budget": 30,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "quality": 6,
+                        "equity": 5,
+                        "access": 4,
+                        "unity": 3
+                    },
+                    "outcome_text": "Focused strategy delivers solid results on priority areas.",
+                    "headline": "MOE targets key Blueprint metrics in final year push"
+                },
+                {
+                    "id": "final_c",
+                    "label": "C) SUSTAINABLE TRANSITION",
+                    "description": "Set up post-2025 framework. Emphasize long-term sustainability over targets.",
+                    "costs": {
+                        "budget": 20,
+                        "pc": 6
+                    },
+                    "effects": {
+                        "quality": 5,
+                        "equity": 4,
+                        "access": 3,
+                        "unity": 6,
+                        "efficiency": 4
+                    },
+                    "outcome_text": "Forward-looking approach builds foundation for continued transformation.",
+                    "headline": "MOE prepares sustainable post-Blueprint education framework"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "quality_kpi": -5,
+                "unity_kpi": -5,
+                "outcome_text": "Inability to execute final year strategy undermines entire Blueprint.",
+                "headline": "Blueprint 2025 ends with whimper as final push fails"
+            }
+        },
+        {
+            "id": "scenario_026",
+            "name": "Blueprint Report Card Leak",
+            "year": 2025,
+            "month": 1,
+            "category": "crisis_response",
+            "title": "📰 BLUEPRINT REPORT CARD LEAKED",
+            "context": "Internal Blueprint performance report leaked to media. Public now sees raw KPI scores. Depending on your performance, this could be vindication or crisis.\n\nHow do you handle the leak?",
+            "choices": [
+                {
+                    "id": "rcleak_a",
+                    "label": "A) OWN THE NARRATIVE",
+                    "description": "Hold press conference. Present full context with achievements AND gaps.",
+                    "costs": {
+                        "pc": 10
+                    },
+                    "effects": {
+                        "unity": 5,
+                        "efficiency": 2
+                    },
+                    "outcome_text": "Transparent approach wins respect. Public appreciates honesty.",
+                    "headline": "DU earns praise for transparent Blueprint assessment"
+                },
+                {
+                    "id": "rcleak_b",
+                    "label": "B) ACCELERATE FINAL PUSH",
+                    "description": "Use leak as motivation. Redirect budget to close remaining gaps.",
+                    "costs": {
+                        "budget": 15
+                    },
+                    "effects": {
+                        "quality": 3,
+                        "equity": 3,
+                        "unity": -2
+                    },
+                    "outcome_text": "Urgent final push shows results but creates appearance of panic.",
+                    "headline": "MOE scrambles to improve numbers after report card leak"
+                },
+                {
+                    "id": "rcleak_c",
+                    "label": "C) DAMAGE CONTROL",
+                    "description": "Minimize attention. Question methodology. Buy time.",
+                    "costs": {
+                        "pc": 5
+                    },
+                    "effects": {
+                        "unity": -4,
+                        "efficiency": -2
+                    },
+                    "outcome_text": "Defensive response backfires. Media digs deeper.",
+                    "headline": "MOE credibility questioned after defensive response to leak"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -8,
+                "outcome_text": "No response to leak destroys public confidence.",
+                "headline": "Blueprint credibility collapses after unanswered report card leak"
+            }
+        },
+        {
+            "id": "scenario_027",
+            "name": "Blueprint Legacy Planning",
+            "year": 2025,
+            "month": 6,
+            "category": "policy_debate",
+            "title": "📜 BLUEPRINT LEGACY",
+            "context": "Blueprint concludes in 2025. Time to plan for post-Blueprint era.\n\nDU must coordinate legacy planning:",
+            "choices": [
+                {
+                    "id": "legacy_a",
+                    "label": "A) FORMALIZE GAINS",
+                    "description": "Invest in institutionalizing Blueprint achievements.",
+                    "costs": {
+                        "budget": 20
+                    },
+                    "effects": {
+                        "quality": 3,
+                        "equity": 3,
+                        "access": 3,
+                        "unity": 3,
+                        "efficiency": 3
+                    },
+                    "outcome_text": "Blueprint gains locked in for future.",
+                    "headline": "Blueprint achievements institutionalized"
+                },
+                {
+                    "id": "legacy_b",
+                    "label": "B) PUBLISH COMPREHENSIVE REPORT",
+                    "description": "Document lessons learned. Use political capital.",
+                    "costs": {
+                        "pc": 10
+                    },
+                    "effects": {
+                        "unity": 6
+                    },
+                    "outcome_text": "Comprehensive report becomes reference for future reforms.",
+                    "headline": "Blueprint report documents transformation journey"
+                },
+                {
+                    "id": "legacy_c",
+                    "label": "C) TRAIN SUCCESSORS",
+                    "description": "Invest in capacity building for next generation.",
+                    "costs": {
+                        "budget": 15,
+                        "pc": 10
+                    },
+                    "effects": {
+                        "efficiency": 6,
+                        "unity": 4
+                    },
+                    "outcome_text": "Strong foundation laid for continued transformation.",
+                    "headline": "MOE prepares next generation of education leaders"
+                }
+            ],
+            "cannot_afford_penalty": {
+                "unity_kpi": -5,
+                "outcome_text": "Blueprint ends without clear succession plan.",
+                "headline": "Blueprint legacy uncertain as 2025 ends"
+            }
+        }
+    ]
+}

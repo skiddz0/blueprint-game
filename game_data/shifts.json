@@ -1,0 +1,114 @@
+{
+    "shifts": [
+        {
+            "id": 1,
+            "title": "Shift 1: High-Performing Schools",
+            "shortTitle": "High-Performing Schools",
+            "description": "Maximize student outcomes through quality teaching and learning",
+            "targetKpi": "quality",
+            "level": 0,
+            "xp": 0,
+            "nextLevelXp": 3
+        },
+        {
+            "id": 2,
+            "title": "Shift 2: Every Child Succeeds",
+            "shortTitle": "Every Child Succeeds",
+            "description": "Close achievement gaps and ensure equitable access",
+            "targetKpi": "equity",
+            "level": 0,
+            "xp": 0,
+            "nextLevelXp": 3
+        },
+        {
+            "id": 3,
+            "title": "Shift 3: Universal Access",
+            "shortTitle": "Universal Access",
+            "description": "Ensure all children have access to quality education",
+            "targetKpi": "access",
+            "level": 0,
+            "xp": 0,
+            "nextLevelXp": 3
+        },
+        {
+            "id": 4,
+            "title": "Shift 4: Transform Teaching Profession",
+            "shortTitle": "Transform Teaching",
+            "description": "Make teaching a profession of choice",
+            "targetKpi": "quality",
+            "level": 0,
+            "xp": 0,
+            "nextLevelXp": 3
+        },
+        {
+            "id": 5,
+            "title": "Shift 5: Ensure High-Performing Leaders",
+            "shortTitle": "School Leadership",
+            "description": "Develop excellent school leaders",
+            "targetKpi": "quality",
+            "level": 0,
+            "xp": 0,
+            "nextLevelXp": 3
+        },
+        {
+            "id": 6,
+            "title": "Shift 6: Empower JPNs, PPDs & Schools",
+            "shortTitle": "Empower Schools",
+            "description": "Grant autonomy to schools and districts",
+            "targetKpi": "efficiency",
+            "level": 0,
+            "xp": 0,
+            "nextLevelXp": 3
+        },
+        {
+            "id": 7,
+            "title": "Shift 7: Leverage ICT",
+            "shortTitle": "Leverage ICT",
+            "description": "Scale up quality learning through technology",
+            "targetKpi": "access",
+            "level": 0,
+            "xp": 0,
+            "nextLevelXp": 3
+        },
+        {
+            "id": 8,
+            "title": "Shift 8: Transform Curriculum & Assessment",
+            "shortTitle": "Transform Curriculum",
+            "description": "Align curriculum with international standards",
+            "targetKpi": "quality",
+            "level": 0,
+            "xp": 0,
+            "nextLevelXp": 3
+        },
+        {
+            "id": 9,
+            "title": "Shift 9: Maximize Student Outcomes",
+            "shortTitle": "Maximize Outcomes",
+            "description": "Focus on holistic student development",
+            "targetKpi": "quality",
+            "level": 0,
+            "xp": 0,
+            "nextLevelXp": 3
+        },
+        {
+            "id": 10,
+            "title": "Shift 10: Increase Transparency",
+            "shortTitle": "Increase Transparency",
+            "description": "Build public confidence through accountability",
+            "targetKpi": "unity",
+            "level": 0,
+            "xp": 0,
+            "nextLevelXp": 3
+        },
+        {
+            "id": 11,
+            "title": "Shift 11: Partner with Parents & Community",
+            "shortTitle": "Partner with Community",
+            "description": "Engage stakeholders in education transformation",
+            "targetKpi": "unity",
+            "level": 0,
+            "xp": 0,
+            "nextLevelXp": 3
+        }
+    ]
+}

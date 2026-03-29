@@ -1,0 +1,97 @@
+{
+  "game_version": "2.0.0",
+  "data_version": "2026-01-21",
+  "time": {
+    "year_duration_seconds": 360,
+    "months_per_year": 12,
+    "mid_year_month": 6,
+    "october_month": 10
+  },
+  "kpis": {
+    "starting_values": {
+      "quality": 45,
+      "equity": 50,
+      "access": 45,
+      "unity": 50,
+      "efficiency": 60
+    },
+    "min_value": 0,
+    "max_value": 100,
+    "victory_threshold": 65,
+    "grade_thresholds": {
+      "s_rank": 80,
+      "a_rank": 75,
+      "b_rank": 65,
+      "c_rank": 55,
+      "d_rank": 45
+    },
+    "decay_rates": {
+      "access_per_year": -2,
+      "quality_per_year": -1
+    },
+    "stagnant_penalty": -0.5
+  },
+  "resources": {
+    "starting_budget": 100,
+    "starting_pc": 50,
+    "max_pc": 100,
+    "october_unspent_threshold": 10,
+    "october_penalty_percent": 20
+  },
+  "efficiency": {
+    "penalty_threshold": 40,
+    "penalty_cost_increase": 50,
+    "bureaucracy_penalty_per_initiative": -0.5,
+    "bureaucracy_penalty_after_du": -0.25,
+    "reform_pc_cost": 10,
+    "reform_efficiency_bonus": 10
+  },
+  "initiatives": {
+    "completion_thresholds": {
+      "full": 100,
+      "partial": 50
+    },
+    "partial_effects_multiplier": 0.5,
+    "partial_unity_penalty": -2,
+    "failed_pc_penalty": -5,
+    "failed_unity_penalty": -3
+  },
+  "shifts": {
+    "count": 11,
+    "max_level": 5,
+    "xp_per_level": [
+      3,
+      3,
+      4,
+      4,
+      5
+    ]
+  },
+  "waves": {
+    "wave_1": {
+      "name": "Foundation",
+      "start_year": 2013,
+      "end_year": 2015,
+      "base_budget": 100
+    },
+    "wave_2": {
+      "name": "Acceleration",
+      "start_year": 2016,
+      "end_year": 2020,
+      "base_budget": 80
+    },
+    "wave_3": {
+      "name": "Excellence",
+      "start_year": 2021,
+      "end_year": 2025,
+      "base_budget": 60
+    }
+  },
+  "performance_modifiers": {
+    "avg_below_45": -0.25,
+    "avg_45_to_54": -0.10,
+    "avg_55_to_64": 0.00,
+    "avg_65_to_74": 0.10,
+    "avg_75_plus": 0.25
+  }
+}

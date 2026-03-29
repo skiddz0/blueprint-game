@@ -1,0 +1,2174 @@
+{
+    "initiatives": [
+        {
+            "id": "inf_001",
+            "name": "Coordinate 1BestariNet Rollout",
+            "description": "Deploy high-speed internet to 10,000 schools nationwide",
+            "category": "infrastructure",
+            "shift": 7,
+            "cost_rm": 45,
+            "cost_pc": 10,
+            "effects": {
+                "access": 3,
+                "equity": 2
+            },
+            "shift_xp": 4,
+            "duration_months": 12,
+            "unlock_year": 2013,
+            "tags": [
+                "connectivity",
+                "digital",
+                "wave1"
+            ]
+        },
+        {
+            "id": "inf_002",
+            "name": "Execute School Repair Program Phase 1",
+            "description": "Repair 500 dilapidated schools in rural areas",
+            "category": "infrastructure",
+            "shift": 2,
+            "cost_rm": 30,
+            "cost_pc": 5,
+            "effects": {
+                "access": 2,
+                "equity": 3
+            },
+            "shift_xp": 3,
+            "duration_months": 10,
+            "unlock_year": 2013,
+            "tags": [
+                "rural",
+                "equity",
+                "wave1"
+            ]
+        },
+        {
+            "id": "inf_003",
+            "name": "Deploy Frog VLE Platform",
+            "description": "Coordinate Virtual Learning Environment deployment",
+            "category": "infrastructure",
+            "shift": 7,
+            "cost_rm": 25,
+            "cost_pc": 8,
+            "effects": {
+                "access": 2,
+                "quality": 1
+            },
+            "shift_xp": 3,
+            "duration_months": 8,
+            "unlock_year": 2013,
+            "tags": [
+                "digital",
+                "vle",
+                "wave1"
+            ]
+        },
+        {
+            "id": "inf_004",
+            "name": "Coordinate Science Lab Upgrades",
+            "description": "Modernize science laboratories in 1,000 schools",
+            "category": "infrastructure",
+            "shift": 1,
+            "cost_rm": 20,
+            "cost_pc": 3,
+            "effects": {
+                "quality": 2,
+                "access": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 9,
+            "unlock_year": 2014,
+            "tags": [
+                "stem",
+                "quality",
+                "wave1"
+            ]
+        },
+        {
+            "id": "inf_005",
+            "name": "Execute Library Modernization Program",
+            "description": "Upgrade school libraries with digital resources",
+            "category": "infrastructure",
+            "shift": 9,
+            "cost_rm": 15,
+            "cost_pc": 2,
+            "effects": {
+                "quality": 2,
+                "access": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 7,
+            "unlock_year": 2014,
+            "tags": [
+                "literacy",
+                "digital",
+                "wave1"
+            ]
+        },
+        {
+            "id": "inf_006",
+            "name": "Deploy Smart Classroom Technology",
+            "description": "Install interactive whiteboards and projectors",
+            "category": "infrastructure",
+            "shift": 9,
+            "cost_rm": 18,
+            "cost_pc": 4,
+            "effects": {
+                "quality": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 6,
+            "unlock_year": 2015,
+            "tags": [
+                "technology",
+                "classroom",
+                "wave1"
+            ]
+        },
+        {
+            "id": "inf_007",
+            "name": "Coordinate Rural School Electrification",
+            "description": "Provide electricity to 200 remote schools",
+            "category": "infrastructure",
+            "shift": 2,
+            "cost_rm": 22,
+            "cost_pc": 6,
+            "effects": {
+                "access": 3,
+                "equity": 2
+            },
+            "shift_xp": 3,
+            "duration_months": 11,
+            "unlock_year": 2015,
+            "tags": [
+                "rural",
+                "basic_needs",
+                "wave1"
+            ]
+        },
+        {
+            "id": "inf_008",
+            "name": "Execute School Toilet Upgrade Program",
+            "description": "Renovate toilets in 800 schools to improve hygiene",
+            "category": "infrastructure",
+            "shift": 2,
+            "cost_rm": 12,
+            "cost_pc": 2,
+            "effects": {
+                "access": 1,
+                "unity": 2
+            },
+            "shift_xp": 1,
+            "duration_months": 5,
+            "unlock_year": 2016,
+            "tags": [
+                "hygiene",
+                "basic_needs",
+                "wave2"
+            ]
+        },
+        {
+            "id": "inf_009",
+            "name": "Deploy Broadband Expansion Phase 2",
+            "description": "Extend high-speed internet to remaining rural schools",
+            "category": "infrastructure",
+            "shift": 7,
+            "cost_rm": 35,
+            "cost_pc": 8,
+            "effects": {
+                "access": 3,
+                "equity": 2
+            },
+            "shift_xp": 4,
+            "duration_months": 10,
+            "unlock_year": 2016,
+            "tags": [
+                "connectivity",
+                "rural",
+                "wave2"
+            ]
+        },
+        {
+            "id": "inf_010",
+            "name": "Coordinate Special Education Facilities",
+            "description": "Build specialized facilities for students with disabilities",
+            "category": "infrastructure",
+            "shift": 2,
+            "cost_rm": 28,
+            "cost_pc": 10,
+            "effects": {
+                "equity": 3,
+                "unity": 2
+            },
+            "shift_xp": 3,
+            "duration_months": 12,
+            "unlock_year": 2017,
+            "tags": [
+                "inclusion",
+                "special_ed",
+                "wave2"
+            ]
+        },
+        {
+            "id": "hc_001",
+            "name": "Coordinate Teacher Training - Pedagogy",
+            "description": "Upskill 10,000 teachers in modern teaching methods",
+            "category": "human_capital",
+            "shift": 4,
+            "cost_rm": 15,
+            "cost_pc": 5,
+            "effects": {
+                "quality": 3
+            },
+            "shift_xp": 3,
+            "duration_months": 6,
+            "unlock_year": 2013,
+            "tags": [
+                "teacher_training",
+                "quality",
+                "wave1"
+            ]
+        },
+        {
+            "id": "hc_002",
+            "name": "Execute Graduate Teacher Program",
+            "description": "Recruit and train 5,000 new graduate teachers",
+            "category": "human_capital",
+            "shift": 4,
+            "cost_rm": 20,
+            "cost_pc": 3,
+            "effects": {
+                "quality": 2,
+                "access": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 8,
+            "unlock_year": 2013,
+            "tags": [
+                "recruitment",
+                "capacity",
+                "wave1"
+            ]
+        },
+        {
+            "id": "hc_003",
+            "name": "Deploy School Counselor Hiring Wave 1",
+            "description": "Hire 500 school counselors for student support",
+            "category": "human_capital",
+            "shift": 3,
+            "cost_rm": 12,
+            "cost_pc": 4,
+            "effects": {
+                "unity": 2,
+                "equity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2014,
+            "tags": [
+                "wellbeing",
+                "counseling",
+                "wave1"
+            ]
+        },
+        {
+            "id": "hc_004",
+            "name": "Coordinate Principal Leadership Program",
+            "description": "Train school principals in leadership and management",
+            "category": "human_capital",
+            "shift": 6,
+            "cost_rm": 10,
+            "cost_pc": 6,
+            "effects": {
+                "efficiency": 2,
+                "quality": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 4,
+            "unlock_year": 2014,
+            "tags": [
+                "leadership",
+                "management",
+                "wave1"
+            ]
+        },
+        {
+            "id": "hc_005",
+            "name": "Execute STEM Teacher Specialization",
+            "description": "Provide advanced STEM training for 3,000 teachers",
+            "category": "human_capital",
+            "shift": 1,
+            "cost_rm": 18,
+            "cost_pc": 5,
+            "effects": {
+                "quality": 3,
+                "efficiency": 1
+            },
+            "shift_xp": 3,
+            "duration_months": 7,
+            "unlock_year": 2015,
+            "tags": [
+                "stem",
+                "specialization",
+                "wave1"
+            ]
+        },
+        {
+            "id": "hc_006",
+            "name": "Deploy English Language Upskilling",
+            "description": "Improve English proficiency of 8,000 teachers",
+            "category": "human_capital",
+            "shift": 5,
+            "cost_rm": 14,
+            "cost_pc": 4,
+            "effects": {
+                "quality": 2,
+                "unity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 6,
+            "unlock_year": 2015,
+            "tags": [
+                "language",
+                "english",
+                "wave1"
+            ]
+        },
+        {
+            "id": "hc_007",
+            "name": "Coordinate Teacher Performance Incentives",
+            "description": "Implement merit-based bonuses for high performers",
+            "category": "human_capital",
+            "shift": 6,
+            "cost_rm": 25,
+            "cost_pc": 12,
+            "effects": {
+                "quality": 2,
+                "unity": -2
+            },
+            "shift_xp": 3,
+            "duration_months": 4,
+            "unlock_year": 2016,
+            "tags": [
+                "incentives",
+                "performance",
+                "wave2"
+            ]
+        },
+        {
+            "id": "hc_008",
+            "name": "Execute Rural Teacher Retention Program",
+            "description": "Provide incentives for teachers in rural postings",
+            "category": "human_capital",
+            "shift": 2,
+            "cost_rm": 16,
+            "cost_pc": 5,
+            "effects": {
+                "equity": 3,
+                "unity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2016,
+            "tags": [
+                "rural",
+                "retention",
+                "wave2"
+            ]
+        },
+        {
+            "id": "hc_009",
+            "name": "Deploy Digital Literacy Training",
+            "description": "Train 12,000 teachers in digital teaching tools",
+            "category": "human_capital",
+            "shift": 9,
+            "cost_rm": 13,
+            "cost_pc": 3,
+            "effects": {
+                "quality": 2,
+                "access": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2017,
+            "tags": [
+                "digital",
+                "training",
+                "wave2"
+            ]
+        },
+        {
+            "id": "hc_010",
+            "name": "Coordinate Teacher Wellness Program",
+            "description": "Provide mental health support for teachers",
+            "category": "human_capital",
+            "shift": 3,
+            "cost_rm": 8,
+            "cost_pc": 4,
+            "effects": {
+                "unity": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 1,
+            "duration_months": 3,
+            "unlock_year": 2018,
+            "tags": [
+                "wellbeing",
+                "mental_health",
+                "wave2"
+            ]
+        },
+        {
+            "id": "pol_002",
+            "name": "Deploy School-Based Assessment (PBS)",
+            "description": "Implement continuous assessment to complement exams",
+            "category": "policy",
+            "shift": 8,
+            "cost_rm": 12,
+            "cost_pc": 10,
+            "effects": {
+                "quality": 2,
+                "unity": -1
+            },
+            "shift_xp": 3,
+            "duration_months": 6,
+            "unlock_year": 2013,
+            "tags": [
+                "assessment",
+                "reform",
+                "wave1"
+            ]
+        },
+        {
+            "id": "pol_003",
+            "name": "Coordinate Dual Language Program (DLP)",
+            "description": "Allow STEM subjects to be taught in English",
+            "category": "policy",
+            "shift": 5,
+            "cost_rm": 8,
+            "cost_pc": 12,
+            "effects": {
+                "quality": 2,
+                "unity": -2
+            },
+            "shift_xp": 3,
+            "duration_months": 5,
+            "unlock_year": 2014,
+            "tags": [
+                "language",
+                "controversial",
+                "wave1"
+            ]
+        },
+        {
+            "id": "pol_004",
+            "name": "Execute KSSR Curriculum Rollout",
+            "description": "Implement new primary school curriculum",
+            "category": "policy",
+            "shift": 8,
+            "cost_rm": 15,
+            "cost_pc": 8,
+            "effects": {
+                "quality": 3,
+                "efficiency": 1
+            },
+            "shift_xp": 3,
+            "duration_months": 8,
+            "unlock_year": 2014,
+            "tags": [
+                "curriculum",
+                "primary",
+                "wave1"
+            ]
+        },
+        {
+            "id": "pol_005",
+            "name": "Deploy High-Performing Schools Program",
+            "description": "Identify and support 100 high-performing schools",
+            "category": "policy",
+            "shift": 1,
+            "cost_rm": 10,
+            "cost_pc": 5,
+            "effects": {
+                "quality": 2,
+                "equity": -1
+            },
+            "shift_xp": 2,
+            "duration_months": 4,
+            "unlock_year": 2015,
+            "tags": [
+                "excellence",
+                "selective",
+                "wave1"
+            ]
+        },
+        {
+            "id": "pol_006",
+            "name": "Coordinate UPSR Format Changes",
+            "description": "Reform UPSR exam to reduce exam stress",
+            "category": "policy",
+            "shift": 1,
+            "cost_rm": 6,
+            "cost_pc": 10,
+            "effects": {
+                "quality": 1,
+                "unity": 2
+            },
+            "shift_xp": 2,
+            "duration_months": 4,
+            "unlock_year": 2016,
+            "tags": [
+                "exam_reform",
+                "upsr",
+                "wave2"
+            ]
+        },
+        {
+            "id": "pol_007",
+            "name": "Execute KSSM Curriculum Implementation",
+            "description": "Roll out new secondary school curriculum",
+            "category": "policy",
+            "shift": 8,
+            "cost_rm": 18,
+            "cost_pc": 8,
+            "effects": {
+                "quality": 3,
+                "efficiency": 1
+            },
+            "shift_xp": 3,
+            "duration_months": 9,
+            "unlock_year": 2017,
+            "tags": [
+                "curriculum",
+                "secondary",
+                "wave2"
+            ]
+        },
+        {
+            "id": "pol_008",
+            "name": "Deploy School Autonomy Initiative",
+            "description": "Grant more decision-making power to school leaders",
+            "category": "policy",
+            "shift": 6,
+            "cost_rm": 5,
+            "cost_pc": 8,
+            "effects": {
+                "efficiency": 2,
+                "quality": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 3,
+            "unlock_year": 2018,
+            "tags": [
+                "autonomy",
+                "decentralization",
+                "wave2"
+            ]
+        },
+        {
+            "id": "pol_009",
+            "name": "Coordinate UPSR Abolishment Process",
+            "description": "Phase out UPSR examination system",
+            "category": "policy",
+            "shift": 1,
+            "cost_rm": 8,
+            "cost_pc": 20,
+            "effects": {
+                "quality": 3,
+                "unity": -2
+            },
+            "shift_xp": 4,
+            "duration_months": 6,
+            "unlock_year": 2019,
+            "tags": [
+                "exam_reform",
+                "abolishment",
+                "wave2"
+            ]
+        },
+        {
+            "id": "pol_010",
+            "name": "Execute PT3 Reform Initiative",
+            "description": "Reform or abolish PT3 examination",
+            "category": "policy",
+            "shift": 1,
+            "cost_rm": 7,
+            "cost_pc": 15,
+            "effects": {
+                "quality": 2,
+                "unity": -1
+            },
+            "shift_xp": 3,
+            "duration_months": 5,
+            "unlock_year": 2020,
+            "tags": [
+                "exam_reform",
+                "pt3",
+                "wave3"
+            ]
+        },
+        {
+            "id": "tech_001",
+            "name": "Deploy Tablet Distribution Program",
+            "description": "Provide tablets to 50,000 students in need",
+            "category": "technology",
+            "shift": 7,
+            "cost_rm": 30,
+            "cost_pc": 5,
+            "effects": {
+                "access": 3,
+                "equity": 2
+            },
+            "shift_xp": 3,
+            "duration_months": 6,
+            "unlock_year": 2014,
+            "tags": [
+                "devices",
+                "digital_divide",
+                "wave1"
+            ]
+        },
+        {
+            "id": "tech_002",
+            "name": "Coordinate Learning Management System",
+            "description": "Deploy centralized LMS for all schools",
+            "category": "technology",
+            "shift": 7,
+            "cost_rm": 20,
+            "cost_pc": 6,
+            "effects": {
+                "quality": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 3,
+            "duration_months": 7,
+            "unlock_year": 2015,
+            "tags": [
+                "lms",
+                "digital",
+                "wave1"
+            ]
+        },
+        {
+            "id": "tech_003",
+            "name": "Execute Digital Content Development",
+            "description": "Create digital learning materials for all subjects",
+            "category": "technology",
+            "shift": 9,
+            "cost_rm": 16,
+            "cost_pc": 4,
+            "effects": {
+                "quality": 2,
+                "access": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 8,
+            "unlock_year": 2016,
+            "tags": [
+                "content",
+                "digital",
+                "wave2"
+            ]
+        },
+        {
+            "id": "tech_004",
+            "name": "Deploy Coding Education Program",
+            "description": "Introduce coding classes in all secondary schools",
+            "category": "technology",
+            "shift": 8,
+            "cost_rm": 14,
+            "cost_pc": 5,
+            "effects": {
+                "quality": 3
+            },
+            "shift_xp": 3,
+            "duration_months": 6,
+            "unlock_year": 2017,
+            "tags": [
+                "coding",
+                "stem",
+                "wave2"
+            ]
+        },
+        {
+            "id": "tech_005",
+            "name": "Coordinate Cybersecurity Education",
+            "description": "Teach students about online safety and security",
+            "category": "technology",
+            "shift": 9,
+            "cost_rm": 8,
+            "cost_pc": 3,
+            "effects": {
+                "quality": 1,
+                "unity": 1
+            },
+            "shift_xp": 1,
+            "duration_months": 4,
+            "unlock_year": 2018,
+            "tags": [
+                "safety",
+                "digital",
+                "wave2"
+            ]
+        },
+        {
+            "id": "tech_006",
+            "name": "Execute DidikTV Launch",
+            "description": "Launch educational TV channel for remote learning",
+            "category": "technology",
+            "shift": 7,
+            "cost_rm": 25,
+            "cost_pc": 8,
+            "effects": {
+                "access": 3,
+                "equity": 2
+            },
+            "shift_xp": 4,
+            "duration_months": 5,
+            "unlock_year": 2020,
+            "tags": [
+                "tv",
+                "pandemic",
+                "wave3"
+            ]
+        },
+        {
+            "id": "tech_007",
+            "name": "Deploy AI Literacy Program",
+            "description": "Introduce AI and machine learning concepts",
+            "category": "technology",
+            "shift": 1,
+            "cost_rm": 12,
+            "cost_pc": 6,
+            "effects": {
+                "quality": 2,
+                "access": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2023,
+            "tags": [
+                "ai",
+                "future_skills",
+                "wave3"
+            ]
+        },
+        {
+            "id": "tech_008",
+            "name": "Coordinate Digital Assessment Platform",
+            "description": "Implement online examination and assessment system",
+            "category": "technology",
+            "shift": 9,
+            "cost_rm": 18,
+            "cost_pc": 7,
+            "effects": {
+                "efficiency": 2,
+                "quality": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 6,
+            "unlock_year": 2024,
+            "tags": [
+                "assessment",
+                "digital",
+                "wave3"
+            ]
+        },
+        {
+            "id": "tech_009",
+            "name": "Execute Cloud Infrastructure Upgrade",
+            "description": "Migrate education systems to cloud platforms",
+            "category": "technology",
+            "shift": 7,
+            "cost_rm": 22,
+            "cost_pc": 5,
+            "effects": {
+                "efficiency": 3,
+                "access": 1
+            },
+            "shift_xp": 3,
+            "duration_months": 8,
+            "unlock_year": 2024,
+            "tags": [
+                "cloud",
+                "infrastructure",
+                "wave3"
+            ]
+        },
+        {
+            "id": "tech_010",
+            "name": "Deploy EdTech Innovation Hub",
+            "description": "Create center for educational technology innovation",
+            "category": "technology",
+            "shift": 9,
+            "cost_rm": 15,
+            "cost_pc": 8,
+            "effects": {
+                "quality": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 7,
+            "unlock_year": 2025,
+            "tags": [
+                "innovation",
+                "edtech",
+                "wave3"
+            ]
+        },
+        {
+            "id": "com_001",
+            "name": "Coordinate Parent Engagement Program",
+            "description": "Strengthen parent-school partnerships",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 6,
+            "cost_pc": 4,
+            "effects": {
+                "unity": 2,
+                "quality": 1
+            },
+            "shift_xp": 1,
+            "duration_months": 4,
+            "unlock_year": 2014,
+            "tags": [
+                "parents",
+                "engagement",
+                "wave1"
+            ]
+        },
+        {
+            "id": "com_002",
+            "name": "Execute Community School Program",
+            "description": "Open schools for community activities after hours",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 8,
+            "cost_pc": 5,
+            "effects": {
+                "unity": 3,
+                "equity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2015,
+            "tags": [
+                "community",
+                "facilities",
+                "wave1"
+            ]
+        },
+        {
+            "id": "com_003",
+            "name": "Deploy School Volunteer Network",
+            "description": "Recruit and coordinate community volunteers",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 5,
+            "cost_pc": 3,
+            "effects": {
+                "unity": 2,
+                "access": 1
+            },
+            "shift_xp": 1,
+            "duration_months": 3,
+            "unlock_year": 2016,
+            "tags": [
+                "volunteers",
+                "community",
+                "wave2"
+            ]
+        },
+        {
+            "id": "com_004",
+            "name": "Coordinate Corporate Partnership Program",
+            "description": "Partner with companies for CSR education initiatives",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 10,
+            "cost_pc": 8,
+            "effects": {
+                "unity": 2,
+                "efficiency": 2
+            },
+            "shift_xp": 2,
+            "duration_months": 6,
+            "unlock_year": 2017,
+            "tags": [
+                "csr",
+                "partnerships",
+                "wave2"
+            ]
+        },
+        {
+            "id": "com_005",
+            "name": "Execute Alumni Mentorship Network",
+            "description": "Connect students with successful alumni mentors",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 7,
+            "cost_pc": 4,
+            "effects": {
+                "quality": 1,
+                "unity": 2
+            },
+            "shift_xp": 1,
+            "duration_months": 4,
+            "unlock_year": 2018,
+            "tags": [
+                "mentorship",
+                "alumni",
+                "wave2"
+            ]
+        },
+        {
+            "id": "com_006",
+            "name": "Deploy School Breakfast Program",
+            "description": "Provide free breakfast to students in need",
+            "category": "community",
+            "shift": 2,
+            "cost_rm": 12,
+            "cost_pc": 5,
+            "effects": {
+                "equity": 2,
+                "unity": 2
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2019,
+            "tags": [
+                "nutrition",
+                "welfare",
+                "wave2"
+            ]
+        },
+        {
+            "id": "com_007",
+            "name": "Coordinate After-School Care Program",
+            "description": "Provide supervised activities for working parents",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 10,
+            "cost_pc": 6,
+            "effects": {
+                "unity": 3,
+                "equity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 6,
+            "unlock_year": 2020,
+            "tags": [
+                "childcare",
+                "support",
+                "wave3"
+            ]
+        },
+        {
+            "id": "com_008",
+            "name": "Execute Community Learning Centers",
+            "description": "Establish learning hubs in underserved communities",
+            "category": "community",
+            "shift": 2,
+            "cost_rm": 15,
+            "cost_pc": 7,
+            "effects": {
+                "access": 2,
+                "equity": 3
+            },
+            "shift_xp": 3,
+            "duration_months": 8,
+            "unlock_year": 2021,
+            "tags": [
+                "access",
+                "community",
+                "wave3"
+            ]
+        },
+        {
+            "id": "com_009",
+            "name": "Deploy Student Mental Health Awareness",
+            "description": "Community-wide mental health education campaign",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 8,
+            "cost_pc": 5,
+            "effects": {
+                "unity": 2,
+                "quality": 1
+            },
+            "shift_xp": 1,
+            "duration_months": 4,
+            "unlock_year": 2022,
+            "tags": [
+                "mental_health",
+                "awareness",
+                "wave3"
+            ]
+        },
+        {
+            "id": "com_010",
+            "name": "Coordinate Intergenerational Learning",
+            "description": "Connect students with senior citizens for knowledge exchange",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 6,
+            "cost_pc": 4,
+            "effects": {
+                "unity": 3
+            },
+            "shift_xp": 1,
+            "duration_months": 3,
+            "unlock_year": 2023,
+            "tags": [
+                "social",
+                "community",
+                "wave3"
+            ]
+        },
+        {
+            "id": "gov_001",
+            "name": "Execute DAPU Establishment",
+            "description": "Formally establish Delivery Unit for education coordination",
+            "category": "governance",
+            "shift": 11,
+            "cost_rm": 8,
+            "cost_pc": 10,
+            "effects": {
+                "efficiency": 3
+            },
+            "shift_xp": 4,
+            "duration_months": 4,
+            "unlock_year": 2013,
+            "tags": [
+                "dapu",
+                "governance",
+                "wave1"
+            ]
+        },
+        {
+            "id": "gov_002",
+            "name": "Deploy Performance Dashboard System",
+            "description": "Implement real-time KPI tracking for all schools",
+            "category": "governance",
+            "shift": 10,
+            "cost_rm": 12,
+            "cost_pc": 5,
+            "effects": {
+                "efficiency": 2,
+                "quality": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 6,
+            "unlock_year": 2014,
+            "tags": [
+                "monitoring",
+                "data",
+                "wave1"
+            ]
+        },
+        {
+            "id": "gov_003",
+            "name": "Coordinate District Transformation Program",
+            "description": "Empower district education offices with resources",
+            "category": "governance",
+            "shift": 6,
+            "cost_rm": 10,
+            "cost_pc": 6,
+            "effects": {
+                "efficiency": 2,
+                "equity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2015,
+            "tags": [
+                "decentralization",
+                "districts",
+                "wave1"
+            ]
+        },
+        {
+            "id": "gov_004",
+            "name": "Execute Transparency Initiative",
+            "description": "Publish school performance data publicly",
+            "category": "governance",
+            "shift": 10,
+            "cost_rm": 5,
+            "cost_pc": 8,
+            "effects": {
+                "unity": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 3,
+            "unlock_year": 2016,
+            "tags": [
+                "transparency",
+                "accountability",
+                "wave2"
+            ]
+        },
+        {
+            "id": "gov_005",
+            "name": "Deploy Stakeholder Consultation Framework",
+            "description": "Formalize process for stakeholder input on policies",
+            "category": "governance",
+            "shift": 11,
+            "cost_rm": 6,
+            "cost_pc": 7,
+            "effects": {
+                "unity": 3
+            },
+            "shift_xp": 2,
+            "duration_months": 4,
+            "unlock_year": 2017,
+            "tags": [
+                "consultation",
+                "participation",
+                "wave2"
+            ]
+        },
+        {
+            "id": "gov_006",
+            "name": "Coordinate Anti-Corruption Measures",
+            "description": "Strengthen integrity and anti-corruption systems",
+            "category": "governance",
+            "shift": 10,
+            "cost_rm": 7,
+            "cost_pc": 10,
+            "effects": {
+                "efficiency": 2,
+                "unity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2018,
+            "tags": [
+                "integrity",
+                "governance",
+                "wave2"
+            ]
+        },
+        {
+            "id": "gov_007",
+            "name": "Execute Budget Optimization Review",
+            "description": "Comprehensive review of education spending efficiency",
+            "category": "governance",
+            "shift": 11,
+            "cost_rm": 8,
+            "cost_pc": 6,
+            "effects": {
+                "efficiency": 3
+            },
+            "shift_xp": 3,
+            "duration_months": 6,
+            "unlock_year": 2019,
+            "tags": [
+                "budget",
+                "efficiency",
+                "wave2"
+            ]
+        },
+        {
+            "id": "gov_008",
+            "name": "Deploy Evidence-Based Policy Framework",
+            "description": "Require research evidence for all major policy decisions",
+            "category": "governance",
+            "shift": 10,
+            "cost_rm": 6,
+            "cost_pc": 8,
+            "effects": {
+                "quality": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 4,
+            "unlock_year": 2020,
+            "tags": [
+                "research",
+                "evidence",
+                "wave3"
+            ]
+        },
+        {
+            "id": "gov_009",
+            "name": "Coordinate DU Restructure Implementation",
+            "description": "Transition from DAPU to streamlined DU structure",
+            "category": "governance",
+            "shift": 11,
+            "cost_rm": 10,
+            "cost_pc": 12,
+            "effects": {
+                "efficiency": 3
+            },
+            "shift_xp": 4,
+            "duration_months": 6,
+            "unlock_year": 2024,
+            "tags": [
+                "restructure",
+                "du",
+                "wave3"
+            ]
+        },
+        {
+            "id": "gov_010",
+            "name": "Execute Blueprint Legacy Documentation",
+            "description": "Comprehensive documentation of 13-year transformation",
+            "category": "governance",
+            "shift": 11,
+            "cost_rm": 8,
+            "cost_pc": 5,
+            "effects": {
+                "unity": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 3,
+            "duration_months": 5,
+            "unlock_year": 2025,
+            "tags": [
+                "legacy",
+                "documentation",
+                "wave3"
+            ]
+        },
+        {
+            "id": "inf_011",
+            "name": "Execute Sports Facility Upgrades",
+            "description": "Modernize sports facilities in 600 schools",
+            "category": "infrastructure",
+            "shift": 3,
+            "cost_rm": 24,
+            "cost_pc": 6,
+            "effects": {
+                "unity": 2,
+                "quality": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 9,
+            "unlock_year": 2018,
+            "tags": [
+                "sports",
+                "facilities",
+                "wave2"
+            ]
+        },
+        {
+            "id": "inf_012",
+            "name": "Deploy Green School Initiative",
+            "description": "Install solar panels and rainwater harvesting systems",
+            "category": "infrastructure",
+            "shift": 2,
+            "cost_rm": 20,
+            "cost_pc": 7,
+            "effects": {
+                "efficiency": 2,
+                "unity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 8,
+            "unlock_year": 2019,
+            "tags": [
+                "sustainability",
+                "environment",
+                "wave2"
+            ]
+        },
+        {
+            "id": "inf_013",
+            "name": "Coordinate School Bus Safety Program",
+            "description": "Upgrade school transportation fleet with safety features",
+            "category": "infrastructure",
+            "shift": 2,
+            "cost_rm": 18,
+            "cost_pc": 5,
+            "effects": {
+                "access": 2,
+                "unity": 2
+            },
+            "shift_xp": 2,
+            "duration_months": 7,
+            "unlock_year": 2020,
+            "tags": [
+                "transport",
+                "safety",
+                "wave3"
+            ]
+        },
+        {
+            "id": "inf_014",
+            "name": "Execute Pandemic-Safe Infrastructure",
+            "description": "Install ventilation and hygiene facilities for COVID safety",
+            "category": "infrastructure",
+            "shift": 2,
+            "cost_rm": 22,
+            "cost_pc": 8,
+            "effects": {
+                "access": 2,
+                "unity": 3
+            },
+            "shift_xp": 3,
+            "duration_months": 6,
+            "unlock_year": 2020,
+            "tags": [
+                "pandemic",
+                "health",
+                "wave3"
+            ]
+        },
+        {
+            "id": "inf_015",
+            "name": "Deploy Maker Space Labs",
+            "description": "Create innovation labs with 3D printers and robotics kits",
+            "category": "infrastructure",
+            "shift": 1,
+            "cost_rm": 26,
+            "cost_pc": 6,
+            "effects": {
+                "quality": 3
+            },
+            "shift_xp": 3,
+            "duration_months": 8,
+            "unlock_year": 2021,
+            "tags": [
+                "innovation",
+                "stem",
+                "wave3"
+            ]
+        },
+        {
+            "id": "inf_016",
+            "name": "Coordinate School Canteen Modernization",
+            "description": "Upgrade canteen facilities and nutrition standards",
+            "category": "infrastructure",
+            "shift": 2,
+            "cost_rm": 14,
+            "cost_pc": 4,
+            "effects": {
+                "unity": 2,
+                "equity": 1
+            },
+            "shift_xp": 1,
+            "duration_months": 6,
+            "unlock_year": 2022,
+            "tags": [
+                "nutrition",
+                "facilities",
+                "wave3"
+            ]
+        },
+        {
+            "id": "inf_017",
+            "name": "Execute Accessibility Compliance Program",
+            "description": "Make all schools wheelchair accessible",
+            "category": "infrastructure",
+            "shift": 2,
+            "cost_rm": 30,
+            "cost_pc": 10,
+            "effects": {
+                "equity": 3,
+                "unity": 2
+            },
+            "shift_xp": 3,
+            "duration_months": 11,
+            "unlock_year": 2023,
+            "tags": [
+                "inclusion",
+                "accessibility",
+                "wave3"
+            ]
+        },
+        {
+            "id": "inf_018",
+            "name": "Deploy Smart Security Systems",
+            "description": "Install CCTV and access control in all schools",
+            "category": "infrastructure",
+            "shift": 9,
+            "cost_rm": 16,
+            "cost_pc": 5,
+            "effects": {
+                "unity": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 7,
+            "unlock_year": 2024,
+            "tags": [
+                "security",
+                "technology",
+                "wave3"
+            ]
+        },
+        {
+            "id": "inf_019",
+            "name": "Coordinate Climate-Resilient Buildings",
+            "description": "Retrofit schools for climate change adaptation",
+            "category": "infrastructure",
+            "shift": 2,
+            "cost_rm": 28,
+            "cost_pc": 8,
+            "effects": {
+                "access": 2,
+                "efficiency": 2
+            },
+            "shift_xp": 3,
+            "duration_months": 10,
+            "unlock_year": 2025,
+            "tags": [
+                "climate",
+                "resilience",
+                "wave3"
+            ]
+        },
+        {
+            "id": "inf_020",
+            "name": "Execute School Repair Program Phase 2",
+            "description": "Continue repairs of remaining dilapidated schools",
+            "category": "infrastructure",
+            "shift": 2,
+            "cost_rm": 32,
+            "cost_pc": 6,
+            "effects": {
+                "access": 3,
+                "equity": 2
+            },
+            "shift_xp": 3,
+            "duration_months": 11,
+            "unlock_year": 2018,
+            "tags": [
+                "rural",
+                "maintenance",
+                "wave2"
+            ]
+        },
+        {
+            "id": "hc_011",
+            "name": "Execute Special Education Teacher Training",
+            "description": "Train 2,000 teachers in special education methods",
+            "category": "human_capital",
+            "shift": 2,
+            "cost_rm": 16,
+            "cost_pc": 6,
+            "effects": {
+                "equity": 3
+            },
+            "shift_xp": 3,
+            "duration_months": 7,
+            "unlock_year": 2019,
+            "tags": [
+                "special_ed",
+                "inclusion",
+                "wave2"
+            ]
+        },
+        {
+            "id": "hc_012",
+            "name": "Deploy Teacher Exchange Program",
+            "description": "Send teachers abroad for international best practices",
+            "category": "human_capital",
+            "shift": 4,
+            "cost_rm": 12,
+            "cost_pc": 8,
+            "effects": {
+                "quality": 2,
+                "unity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2019,
+            "tags": [
+                "international",
+                "exchange",
+                "wave2"
+            ]
+        },
+        {
+            "id": "hc_013",
+            "name": "Coordinate School Counselor Hiring Wave 2",
+            "description": "Hire additional 1,000 counselors for mental health support",
+            "category": "human_capital",
+            "shift": 3,
+            "cost_rm": 20,
+            "cost_pc": 6,
+            "effects": {
+                "unity": 3,
+                "equity": 1
+            },
+            "shift_xp": 3,
+            "duration_months": 6,
+            "unlock_year": 2021,
+            "tags": [
+                "mental_health",
+                "counseling",
+                "wave3"
+            ]
+        },
+        {
+            "id": "hc_014",
+            "name": "Execute Teacher Sabbatical Program",
+            "description": "Provide sabbaticals for teacher professional development",
+            "category": "human_capital",
+            "shift": 4,
+            "cost_rm": 10,
+            "cost_pc": 7,
+            "effects": {
+                "quality": 2,
+                "unity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 4,
+            "unlock_year": 2022,
+            "tags": [
+                "development",
+                "retention",
+                "wave3"
+            ]
+        },
+        {
+            "id": "hc_015",
+            "name": "Deploy Mentor Teacher Network",
+            "description": "Establish peer mentoring system for new teachers",
+            "category": "human_capital",
+            "shift": 4,
+            "cost_rm": 8,
+            "cost_pc": 4,
+            "effects": {
+                "quality": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2023,
+            "tags": [
+                "mentorship",
+                "support",
+                "wave3"
+            ]
+        },
+        {
+            "id": "hc_016",
+            "name": "Coordinate Bahasa Malaysia Excellence",
+            "description": "Strengthen national language proficiency programs",
+            "category": "human_capital",
+            "shift": 5,
+            "cost_rm": 11,
+            "cost_pc": 4,
+            "effects": {
+                "quality": 2,
+                "unity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 6,
+            "unlock_year": 2016,
+            "tags": [
+                "language",
+                "national",
+                "wave2"
+            ]
+        },
+        {
+            "id": "hc_017",
+            "name": "Execute Arts Teacher Training",
+            "description": "Train teachers in music, drama, and visual arts",
+            "category": "human_capital",
+            "shift": 4,
+            "cost_rm": 9,
+            "cost_pc": 3,
+            "effects": {
+                "quality": 2
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2020,
+            "tags": [
+                "arts",
+                "training",
+                "wave3"
+            ]
+        },
+        {
+            "id": "hc_018",
+            "name": "Deploy Teacher Housing Assistance",
+            "description": "Provide housing support for teachers in remote areas",
+            "category": "human_capital",
+            "shift": 2,
+            "cost_rm": 18,
+            "cost_pc": 7,
+            "effects": {
+                "equity": 3,
+                "unity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 8,
+            "unlock_year": 2017,
+            "tags": [
+                "rural",
+                "housing",
+                "wave2"
+            ]
+        },
+        {
+            "id": "hc_019",
+            "name": "Coordinate Leadership Pipeline",
+            "description": "Identify and develop future school leaders",
+            "category": "human_capital",
+            "shift": 6,
+            "cost_rm": 12,
+            "cost_pc": 6,
+            "effects": {
+                "efficiency": 2,
+                "quality": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 7,
+            "unlock_year": 2021,
+            "tags": [
+                "leadership",
+                "succession",
+                "wave3"
+            ]
+        },
+        {
+            "id": "hc_020",
+            "name": "Execute Teacher Salary Reform",
+            "description": "Implement competitive salary structure for teachers",
+            "category": "human_capital",
+            "shift": 6,
+            "cost_rm": 35,
+            "cost_pc": 15,
+            "effects": {
+                "quality": 2,
+                "unity": 2,
+                "efficiency": -2
+            },
+            "shift_xp": 4,
+            "duration_months": 4,
+            "unlock_year": 2024,
+            "tags": [
+                "salary",
+                "reform",
+                "wave3"
+            ]
+        },
+        {
+            "id": "pol_011",
+            "name": "Coordinate Inclusive Education Policy",
+            "description": "Formalize policy for students with special needs",
+            "category": "policy",
+            "shift": 2,
+            "cost_rm": 6,
+            "cost_pc": 8,
+            "effects": {
+                "equity": 3
+            },
+            "shift_xp": 3,
+            "duration_months": 4,
+            "unlock_year": 2018,
+            "tags": [
+                "inclusion",
+                "policy",
+                "wave2"
+            ]
+        },
+        {
+            "id": "pol_012",
+            "name": "Execute Anti-Bullying Framework",
+            "description": "Implement comprehensive anti-bullying policies",
+            "category": "policy",
+            "shift": 3,
+            "cost_rm": 5,
+            "cost_pc": 6,
+            "effects": {
+                "unity": 3
+            },
+            "shift_xp": 2,
+            "duration_months": 3,
+            "unlock_year": 2019,
+            "tags": [
+                "wellbeing",
+                "safety",
+                "wave2"
+            ]
+        },
+        {
+            "id": "pol_013",
+            "name": "Deploy Flexible Learning Pathways",
+            "description": "Allow students to customize their learning tracks",
+            "category": "policy",
+            "shift": 1,
+            "cost_rm": 8,
+            "cost_pc": 10,
+            "effects": {
+                "quality": 2,
+                "unity": 1
+            },
+            "shift_xp": 3,
+            "duration_months": 5,
+            "unlock_year": 2021,
+            "tags": [
+                "personalization",
+                "reform",
+                "wave3"
+            ]
+        },
+        {
+            "id": "pol_014",
+            "name": "Coordinate Sustainability Curriculum",
+            "description": "Integrate climate education across all subjects",
+            "category": "policy",
+            "shift": 8,
+            "cost_rm": 7,
+            "cost_pc": 5,
+            "effects": {
+                "quality": 2,
+                "unity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 6,
+            "unlock_year": 2022,
+            "tags": [
+                "environment",
+                "curriculum",
+                "wave3"
+            ]
+        },
+        {
+            "id": "pol_015",
+            "name": "Execute Competency-Based Assessment",
+            "description": "Shift from exam-based to competency-based evaluation",
+            "category": "policy",
+            "shift": 8,
+            "cost_rm": 10,
+            "cost_pc": 12,
+            "effects": {
+                "quality": 3,
+                "unity": -1
+            },
+            "shift_xp": 4,
+            "duration_months": 7,
+            "unlock_year": 2023,
+            "tags": [
+                "assessment",
+                "reform",
+                "wave3"
+            ]
+        },
+        {
+            "id": "pol_016",
+            "name": "Deploy Vocational Education Expansion",
+            "description": "Expand technical and vocational education tracks",
+            "category": "policy",
+            "shift": 1,
+            "cost_rm": 16,
+            "cost_pc": 8,
+            "effects": {
+                "quality": 2,
+                "equity": 1
+            },
+            "shift_xp": 3,
+            "duration_months": 8,
+            "unlock_year": 2015,
+            "tags": [
+                "vocational",
+                "pathways",
+                "wave1"
+            ]
+        },
+        {
+            "id": "pol_017",
+            "name": "Coordinate Mother Tongue Education",
+            "description": "Support vernacular schools and mother tongue learning",
+            "category": "policy",
+            "shift": 5,
+            "cost_rm": 12,
+            "cost_pc": 12,
+            "effects": {
+                "equity": 2,
+                "unity": -1
+            },
+            "shift_xp": 3,
+            "duration_months": 6,
+            "unlock_year": 2014,
+            "tags": [
+                "language",
+                "diversity",
+                "wave1"
+            ]
+        },
+        {
+            "id": "pol_018",
+            "name": "Execute Student Rights Charter",
+            "description": "Formalize student rights and responsibilities",
+            "category": "policy",
+            "shift": 3,
+            "cost_rm": 4,
+            "cost_pc": 7,
+            "effects": {
+                "unity": 2,
+                "quality": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 3,
+            "unlock_year": 2020,
+            "tags": [
+                "rights",
+                "governance",
+                "wave3"
+            ]
+        },
+        {
+            "id": "pol_019",
+            "name": "Deploy Early Childhood Education Policy",
+            "description": "Expand and standardize pre-school education",
+            "category": "policy",
+            "shift": 2,
+            "cost_rm": 14,
+            "cost_pc": 8,
+            "effects": {
+                "access": 2,
+                "equity": 2
+            },
+            "shift_xp": 3,
+            "duration_months": 9,
+            "unlock_year": 2016,
+            "tags": [
+                "early_childhood",
+                "access",
+                "wave2"
+            ]
+        },
+        {
+            "id": "pol_020",
+            "name": "Coordinate Lifelong Learning Framework",
+            "description": "Enable adult education and skills upgrading",
+            "category": "policy",
+            "shift": 1,
+            "cost_rm": 10,
+            "cost_pc": 6,
+            "effects": {
+                "access": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 7,
+            "unlock_year": 2024,
+            "tags": [
+                "adult_ed",
+                "lifelong",
+                "wave3"
+            ]
+        },
+        {
+            "id": "tech_011",
+            "name": "Coordinate Laptop Distribution Program",
+            "description": "Provide laptops to 100,000 students in need",
+            "category": "technology",
+            "shift": 7,
+            "cost_rm": 40,
+            "cost_pc": 8,
+            "effects": {
+                "access": 3,
+                "equity": 3
+            },
+            "shift_xp": 4,
+            "duration_months": 8,
+            "unlock_year": 2021,
+            "tags": [
+                "devices",
+                "pandemic",
+                "wave3"
+            ]
+        },
+        {
+            "id": "tech_012",
+            "name": "Execute Virtual Reality Learning",
+            "description": "Deploy VR headsets for immersive learning experiences",
+            "category": "technology",
+            "shift": 9,
+            "cost_rm": 22,
+            "cost_pc": 7,
+            "effects": {
+                "quality": 2,
+                "access": 1
+            },
+            "shift_xp": 3,
+            "duration_months": 6,
+            "unlock_year": 2022,
+            "tags": [
+                "vr",
+                "innovation",
+                "wave3"
+            ]
+        },
+        {
+            "id": "tech_013",
+            "name": "Deploy Adaptive Learning Software",
+            "description": "Implement AI-powered personalized learning platforms",
+            "category": "technology",
+            "shift": 9,
+            "cost_rm": 18,
+            "cost_pc": 6,
+            "effects": {
+                "quality": 3
+            },
+            "shift_xp": 3,
+            "duration_months": 7,
+            "unlock_year": 2023,
+            "tags": [
+                "ai",
+                "personalization",
+                "wave3"
+            ]
+        },
+        {
+            "id": "tech_014",
+            "name": "Coordinate Robotics Education",
+            "description": "Introduce robotics programs in secondary schools",
+            "category": "technology",
+            "shift": 1,
+            "cost_rm": 16,
+            "cost_pc": 5,
+            "effects": {
+                "quality": 2,
+                "access": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 6,
+            "unlock_year": 2024,
+            "tags": [
+                "robotics",
+                "stem",
+                "wave3"
+            ]
+        },
+        {
+            "id": "tech_015",
+            "name": "Execute Blockchain Credentials System",
+            "description": "Implement blockchain for secure academic records",
+            "category": "technology",
+            "shift": 9,
+            "cost_rm": 12,
+            "cost_pc": 8,
+            "effects": {
+                "efficiency": 2,
+                "quality": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 5,
+            "unlock_year": 2025,
+            "tags": [
+                "blockchain",
+                "credentials",
+                "wave3"
+            ]
+        },
+        {
+            "id": "com_011",
+            "name": "Execute School Garden Program",
+            "description": "Establish community gardens in 500 schools",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 9,
+            "cost_pc": 4,
+            "effects": {
+                "unity": 2,
+                "quality": 1
+            },
+            "shift_xp": 1,
+            "duration_months": 5,
+            "unlock_year": 2024,
+            "tags": [
+                "environment",
+                "community",
+                "wave3"
+            ]
+        },
+        {
+            "id": "com_012",
+            "name": "Deploy Refugee Student Integration",
+            "description": "Support programs for refugee and migrant students",
+            "category": "community",
+            "shift": 2,
+            "cost_rm": 10,
+            "cost_pc": 8,
+            "effects": {
+                "equity": 3,
+                "unity": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 6,
+            "unlock_year": 2024,
+            "tags": [
+                "refugees",
+                "inclusion",
+                "wave3"
+            ]
+        },
+        {
+            "id": "com_013",
+            "name": "Coordinate Arts and Culture Program",
+            "description": "Partner with cultural institutions for arts education",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 8,
+            "cost_pc": 5,
+            "effects": {
+                "unity": 2,
+                "quality": 1
+            },
+            "shift_xp": 1,
+            "duration_months": 4,
+            "unlock_year": 2025,
+            "tags": [
+                "arts",
+                "culture",
+                "wave3"
+            ]
+        },
+        {
+            "id": "com_014",
+            "name": "Execute Sports Excellence Program",
+            "description": "Identify and nurture student athletes with community support",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 11,
+            "cost_pc": 6,
+            "effects": {
+                "unity": 3
+            },
+            "shift_xp": 2,
+            "duration_months": 6,
+            "unlock_year": 2017,
+            "tags": [
+                "sports",
+                "excellence",
+                "wave2"
+            ]
+        },
+        {
+            "id": "com_015",
+            "name": "Deploy Community Health Partnerships",
+            "description": "Partner with health clinics for student health programs",
+            "category": "community",
+            "shift": 3,
+            "cost_rm": 9,
+            "cost_pc": 5,
+            "effects": {
+                "unity": 2,
+                "equity": 1
+            },
+            "shift_xp": 1,
+            "duration_months": 5,
+            "unlock_year": 2021,
+            "tags": [
+                "health",
+                "partnerships",
+                "wave3"
+            ]
+        },
+        {
+            "id": "gov_011",
+            "name": "Execute Data Privacy Framework",
+            "description": "Implement comprehensive student data protection policies",
+            "category": "governance",
+            "shift": 11,
+            "cost_rm": 7,
+            "cost_pc": 8,
+            "effects": {
+                "unity": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 4,
+            "unlock_year": 2021,
+            "tags": [
+                "privacy",
+                "data",
+                "wave3"
+            ]
+        },
+        {
+            "id": "gov_012",
+            "name": "Deploy Teacher Feedback System",
+            "description": "Implement 360-degree feedback for continuous improvement",
+            "category": "governance",
+            "shift": 11,
+            "cost_rm": 6,
+            "cost_pc": 6,
+            "effects": {
+                "quality": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 3,
+            "unlock_year": 2022,
+            "tags": [
+                "feedback",
+                "quality",
+                "wave3"
+            ]
+        },
+        {
+            "id": "gov_013",
+            "name": "Coordinate Impact Evaluation Framework",
+            "description": "Establish rigorous evaluation of all major initiatives",
+            "category": "governance",
+            "shift": 10,
+            "cost_rm": 8,
+            "cost_pc": 7,
+            "effects": {
+                "efficiency": 3
+            },
+            "shift_xp": 3,
+            "duration_months": 5,
+            "unlock_year": 2023,
+            "tags": [
+                "evaluation",
+                "evidence",
+                "wave3"
+            ]
+        },
+        {
+            "id": "gov_014",
+            "name": "Execute Whistleblower Protection",
+            "description": "Protect those who report corruption or misconduct",
+            "category": "governance",
+            "shift": 10,
+            "cost_rm": 5,
+            "cost_pc": 10,
+            "effects": {
+                "unity": 2,
+                "efficiency": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 3,
+            "unlock_year": 2019,
+            "tags": [
+                "integrity",
+                "protection",
+                "wave2"
+            ]
+        },
+        {
+            "id": "gov_015",
+            "name": "Deploy Continuous Improvement Cycles",
+            "description": "Implement PDCA cycles for all education programs",
+            "category": "governance",
+            "shift": 11,
+            "cost_rm": 7,
+            "cost_pc": 6,
+            "effects": {
+                "efficiency": 2,
+                "quality": 1
+            },
+            "shift_xp": 2,
+            "duration_months": 4,
+            "unlock_year": 2024,
+            "tags": [
+                "improvement",
+                "quality",
+                "wave3"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,127 @@
+{
+    "blueprint_launch": "2012",
+    "game_start": "2013-01",
+    "game_end": "2025-12",
+    "waves": [
+        {
+            "id": "wave_1",
+            "name": "Foundation",
+            "start": "2013-01",
+            "end": "2015-12",
+            "base_budget": 100,
+            "description": "Stabilize the system & raise standards"
+        },
+        {
+            "id": "wave_2",
+            "name": "Acceleration",
+            "start": "2016-01",
+            "end": "2020-12",
+            "base_budget": 80,
+            "description": "Accelerate system improvement"
+        },
+        {
+            "id": "wave_3",
+            "name": "Excellence",
+            "start": "2021-01",
+            "end": "2025-12",
+            "base_budget": 60,
+            "description": "Move to excellence & global benchmarks"
+        }
+    ],
+    "scheduled_events": [
+        {
+            "date": "2014-11",
+            "event_id": "event_001",
+            "name": "East Coast Floods"
+        },
+        {
+            "date": "2015-12",
+            "type": "minister_transition",
+            "from": "minister_001",
+            "to": "minister_002"
+        },
+        {
+            "date": "2018-05",
+            "event_id": "event_002",
+            "name": "GE14 Government Change"
+        },
+        {
+            "date": "2018-05",
+            "type": "minister_transition",
+            "from": "minister_002",
+            "to": "minister_003"
+        },
+        {
+            "date": "2020-02",
+            "event_id": "event_003",
+            "name": "Sheraton Move"
+        },
+        {
+            "date": "2020-03",
+            "event_id": "event_004",
+            "name": "COVID-19 Pandemic"
+        },
+        {
+            "date": "2020-03",
+            "type": "minister_transition",
+            "from": "minister_003",
+            "to": "minister_004"
+        },
+        {
+            "date": "2021-01",
+            "event_id": "event_005",
+            "name": "DidikTV Launch"
+        },
+        {
+            "date": "2022-12",
+            "type": "minister_transition",
+            "from": "minister_004",
+            "to": "minister_005"
+        },
+        {
+            "date": "2024-01",
+            "event_id": "event_006",
+            "name": "DAPU Restructured to DU"
+        }
+    ],
+    "minister_transitions": [
+        {
+            "year": 2015,
+            "month": 12,
+            "from": "minister_001",
+            "to": "minister_002"
+        },
+        {
+            "year": 2018,
+            "month": 5,
+            "from": "minister_002",
+            "to": "minister_003"
+        },
+        {
+            "year": 2020,
+            "month": 3,
+            "from": "minister_003",
+            "to": "minister_004"
+        },
+        {
+            "year": 2022,
+            "month": 12,
+            "from": "minister_004",
+            "to": "minister_005"
+        }
+    ],
+    "wave_transitions": [
+        {
+            "year": 2015,
+            "month": 12,
+            "from": "wave_1",
+            "to": "wave_2"
+        },
+        {
+            "year": 2020,
+            "month": 12,
+            "from": "wave_2",
+            "to": "wave_3"
+        }
+    ]
+}

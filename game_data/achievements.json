@@ -1,0 +1,229 @@
+{
+    "achievements": [
+        {
+            "id": "first_steps",
+            "name": "First Steps",
+            "description": "Complete your first year of the Blueprint",
+            "icon": "🎯",
+            "condition": {
+                "type": "year_completed",
+                "value": 2013
+            },
+            "points": 10
+        },
+        {
+            "id": "halfway_there",
+            "name": "Halfway There",
+            "description": "Reach 2019 - halfway through the Blueprint",
+            "icon": "⏱️",
+            "condition": {
+                "type": "year_completed",
+                "value": 2019
+            },
+            "points": 25
+        },
+        {
+            "id": "blueprint_complete",
+            "name": "Blueprint Complete",
+            "description": "Complete all 13 years of the Blueprint",
+            "icon": "🏆",
+            "condition": {
+                "type": "year_completed",
+                "value": 2025
+            },
+            "points": 50
+        },
+        {
+            "id": "perfect_score",
+            "name": "Perfect Score",
+            "description": "Achieve 100 in all KPIs simultaneously",
+            "icon": "⭐",
+            "condition": {
+                "type": "all_kpis_above",
+                "value": 100
+            },
+            "points": 100
+        },
+        {
+            "id": "excellence",
+            "name": "Excellence",
+            "description": "Win the game with Grade A",
+            "icon": "🎓",
+            "condition": {
+                "type": "win_with_grade",
+                "value": "A"
+            },
+            "points": 75
+        },
+        {
+            "id": "good_effort",
+            "name": "Good Effort",
+            "description": "Win the game with Grade B",
+            "icon": "📚",
+            "condition": {
+                "type": "win_with_grade",
+                "value": "B"
+            },
+            "points": 50
+        },
+        {
+            "id": "budget_master",
+            "name": "Budget Master",
+            "description": "Complete a year without going into debt",
+            "icon": "💰",
+            "condition": {
+                "type": "positive_budget_year",
+                "value": true
+            },
+            "points": 20
+        },
+        {
+            "id": "political_genius",
+            "name": "Political Genius",
+            "description": "Accumulate 50+ Political Capital",
+            "icon": "🎭",
+            "condition": {
+                "type": "pc_above",
+                "value": 50
+            },
+            "points": 30
+        },
+        {
+            "id": "crisis_manager",
+            "name": "Crisis Manager",
+            "description": "Successfully handle 10 scenarios",
+            "icon": "🚨",
+            "condition": {
+                "type": "scenarios_completed",
+                "value": 10
+            },
+            "points": 40
+        },
+        {
+            "id": "scenario_expert",
+            "name": "Scenario Expert",
+            "description": "Successfully handle all 24 scenarios",
+            "icon": "🎯",
+            "condition": {
+                "type": "scenarios_completed",
+                "value": 24
+            },
+            "points": 100
+        },
+        {
+            "id": "initiative_champion",
+            "name": "Initiative Champion",
+            "description": "Complete 20 initiatives",
+            "icon": "🚀",
+            "condition": {
+                "type": "initiatives_completed",
+                "value": 20
+            },
+            "points": 50
+        },
+        {
+            "id": "shift_master",
+            "name": "Shift Master",
+            "description": "Max out all 11 shifts",
+            "icon": "📊",
+            "condition": {
+                "type": "all_shifts_maxed",
+                "value": true
+            },
+            "points": 75
+        },
+        {
+            "id": "equity_champion",
+            "name": "Equity Champion",
+            "description": "Achieve 90+ Equity KPI",
+            "icon": "⚖️",
+            "condition": {
+                "type": "kpi_above",
+                "kpi": "equity",
+                "value": 90
+            },
+            "points": 30
+        },
+        {
+            "id": "quality_leader",
+            "name": "Quality Leader",
+            "description": "Achieve 90+ Quality KPI",
+            "icon": "✨",
+            "condition": {
+                "type": "kpi_above",
+                "kpi": "quality",
+                "value": 90
+            },
+            "points": 30
+        },
+        {
+            "id": "access_hero",
+            "name": "Access Hero",
+            "description": "Achieve 90+ Access KPI",
+            "icon": "🌍",
+            "condition": {
+                "type": "kpi_above",
+                "kpi": "access",
+                "value": 90
+            },
+            "points": 30
+        },
+        {
+            "id": "unity_builder",
+            "name": "Unity Builder",
+            "description": "Achieve 90+ Unity KPI",
+            "icon": "🤝",
+            "condition": {
+                "type": "kpi_above",
+                "kpi": "unity",
+                "value": 90
+            },
+            "points": 30
+        },
+        {
+            "id": "efficiency_expert",
+            "name": "Efficiency Expert",
+            "description": "Achieve 90+ Efficiency KPI",
+            "icon": "⚡",
+            "condition": {
+                "type": "kpi_above",
+                "kpi": "efficiency",
+                "value": 90
+            },
+            "points": 30
+        },
+        {
+            "id": "speed_runner",
+            "name": "Speed Runner",
+            "description": "Complete the game at 2x speed",
+            "icon": "⏩",
+            "condition": {
+                "type": "complete_at_speed",
+                "value": 2
+            },
+            "points": 50
+        },
+        {
+            "id": "survivor",
+            "name": "Survivor",
+            "description": "Survive to 2025 despite low KPIs",
+            "icon": "💪",
+            "condition": {
+                "type": "survive_low_kpis",
+                "value": true
+            },
+            "points": 40
+        },
+        {
+            "id": "comeback_kid",
+            "name": "Comeback Kid",
+            "description": "Win after having a KPI below 30",
+            "icon": "🔄",
+            "condition": {
+                "type": "comeback_victory",
+                "value": true
+            },
+            "points": 60
+        }
+    ]
+}
