@@ -9,16 +9,24 @@
 Thumbs.db
 Desktop.ini
 
-# === Claude Code Local ===
-.claude/settings.local.json
-.claude/docs/UPGRADE-PLAN.md
+# === Internal tooling & docs (not for public) ===
+.claude/
+CLAUDE.md
 CLAUDE.local.md
-production/session-logs/
-production/session-state/*.md
-
-# === Internal Planning (not for public) ===
+UPGRADING.md
+Claude Code Game Studios.code-workspace
+production/
+design/gdd/
+docs/engine-reference/unity/
+docs/engine-reference/unreal/
+docs/engine-reference/README.md
+docs/examples/
+docs/COLLABORATIVE-DESIGN-PRINCIPLE.md
+docs/WORKFLOW-GUIDE.md
 docs/IMPROVEMENTS-PROPOSAL.md
 docs/MULTI-STAGE-DOCUMENT-WORKFLOW.md
+.github/ISSUE_TEMPLATE/
+.github/PULL_REQUEST_TEMPLATE.md
 
 # === Build Output ===
 build/
@@ -40,46 +48,6 @@ export_presets.cfg
 # Uncomment if using Godot:
 # *.import
 
-# === Engine: Unity ===
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[Ll]ogs/
-[Uu]ser[Ss]ettings/
-*.csproj
-*.unityproj
-*.sln
-*.suo
-*.tmp
-*.user
-*.userprefs
-*.pidb
-*.booproj
-*.svd
-*.pdb
-*.mdb
-*.opendb
-*.VC.db
-crashlytics-buildid.txt
-sysinfo.txt
-# Uncomment if using Unity:
-# [Aa]ssets/[Aa]sset[Ss]tore[Tt]ools/
-
-# === Engine: Unreal ===
-Binaries/
-DerivedDataCache/
-Intermediate/
-Saved/
-*.VC.opendb
-*.opensdf
-*.sdf
-*.cachefile
-*.VC.db
-# Uncomment if using Unreal:
-# *.uasset
-# *.umap
 
 # === Compiled Shaders ===
 *.spv
