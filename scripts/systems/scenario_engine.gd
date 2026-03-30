@@ -50,8 +50,18 @@ static func apply_callback_chains(
 	scenario: Dictionary,
 	scenarios_completed: Dictionary
 ) -> Dictionary:
-	if str(scenario.get("name", "")) == "Primary Exam Reform Implementation":
-		return _apply_upsr_chain(scenario, scenarios_completed)
+	var scenario_id: String = str(scenario.get("id", ""))
+	match scenario_id:
+		"scenario_017":  # Primary Exam Reform Implementation ← scenario_011 debate
+			return _apply_upsr_chain(scenario, scenarios_completed)
+		"scenario_015":  # School Reopening ← scenario_014 COVID response
+			return _apply_covid_chain(scenario, scenarios_completed)
+		"scenario_016":  # Learning Loss ← scenario_014 COVID + scenario_015 Reopening
+			return _apply_learning_loss_chain(scenario, scenarios_completed)
+		"scenario_020":  # PT3 Reform ← scenario_009 Exam Leak
+			return _apply_exam_reform_chain(scenario, scenarios_completed)
+		"scenario_024":  # AI in Education ← scenario_012 Digital Divide
+			return _apply_digital_chain(scenario, scenarios_completed)
 	return scenario
 
 
@@ -68,12 +78,9 @@ static func _apply_upsr_chain(
 			debate_choice = choice_id
 			break
 
-	# Deep clone via JSON round-trip
-	var json_str := JSON.stringify(scenario)
-	var json := JSON.new()
-	if json.parse(json_str) != OK:
+	var modified := _deep_clone(scenario)
+	if modified.is_empty():
 		return scenario
-	var modified: Dictionary = json.data
 
 	var choices: Array = modified.get("choices", [])
 	for choice: Dictionary in choices:
@@ -98,3 +105,144 @@ static func _apply_upsr_chain(
 		choice["costs"] = costs
 
 	return modified
+
+
+## COVID response chain: how you handled COVID affects school reopening.
+static func _apply_covid_chain(
+	scenario: Dictionary,
+	scenarios_completed: Dictionary
+) -> Dictionary:
+	var covid_choice: String = str(scenarios_completed.get("scenario_014", ""))
+	if covid_choice == "":
+		return scenario
+
+	var modified := _deep_clone(scenario)
+	if modified.is_empty():
+		return scenario
+
+	for choice: Dictionary in modified.get("choices", []):
+		var effects: Dictionary = choice.get("effects", {})
+		var costs: Dictionary = choice.get("costs", {})
+
+		if covid_choice == "covid_a":
+			# Heavy investment → reopening is easier and cheaper
+			effects["access"] = float(effects.get("access", 0)) + 2
+			if costs.has("budget"):
+				costs["budget"] = maxi(0, int(costs["budget"]) - 5)
+		elif covid_choice == "covid_c":
+			# Minimal response → reopening is harder
+			effects["access"] = float(effects.get("access", 0)) - 2
+			effects["equity"] = float(effects.get("equity", 0)) - 2
+		# covid_b = balanced, no modification
+
+	return modified
+
+
+## Learning loss chain: prior COVID + reopening choices compound.
+static func _apply_learning_loss_chain(
+	scenario: Dictionary,
+	scenarios_completed: Dictionary
+) -> Dictionary:
+	var covid_choice: String = str(scenarios_completed.get("scenario_014", ""))
+	var reopen_choice: String = str(scenarios_completed.get("scenario_015", ""))
+	if covid_choice == "" and reopen_choice == "":
+		return scenario
+
+	var modified := _deep_clone(scenario)
+	if modified.is_empty():
+		return scenario
+
+	for choice: Dictionary in modified.get("choices", []):
+		var effects: Dictionary = choice.get("effects", {})
+		var costs: Dictionary = choice.get("costs", {})
+
+		# COVID impact
+		if covid_choice == "covid_a":
+			effects["quality"] = float(effects.get("quality", 0)) + 2
+		elif covid_choice == "covid_c" or covid_choice == "cannot_afford":
+			effects["quality"] = float(effects.get("quality", 0)) - 2
+
+		# Reopening impact
+		if reopen_choice == "reopen_c":
+			# Comprehensive reopening → less learning loss
+			effects["quality"] = float(effects.get("quality", 0)) + 2
+			if costs.has("budget"):
+				costs["budget"] = maxi(0, int(costs["budget"]) - 5)
+		elif reopen_choice == "reopen_b":
+			# Urban-first → equity suffers
+			effects["equity"] = float(effects.get("equity", 0)) - 2
+
+	return modified
+
+
+## Exam reform chain: how you handled the leak affects PT3 reform appetite.
+static func _apply_exam_reform_chain(
+	scenario: Dictionary,
+	scenarios_completed: Dictionary
+) -> Dictionary:
+	var leak_choice: String = str(scenarios_completed.get("scenario_009", ""))
+	if leak_choice == "":
+		return scenario
+
+	var modified := _deep_clone(scenario)
+	if modified.is_empty():
+		return scenario
+
+	for choice: Dictionary in modified.get("choices", []):
+		var effects: Dictionary = choice.get("effects", {})
+		var costs: Dictionary = choice.get("costs", {})
+
+		if leak_choice == "leak_a":
+			# Full investigation built trust → reform is easier
+			effects["unity"] = float(effects.get("unity", 0)) + 3
+			if costs.has("pc"):
+				costs["pc"] = maxi(0, int(costs["pc"]) - 5)
+		elif leak_choice == "leak_c":
+			# Downplayed → public distrusts exam changes
+			effects["unity"] = float(effects.get("unity", 0)) - 3
+			if costs.has("pc"):
+				costs["pc"] = int(costs["pc"]) + 5
+		# leak_b = moderate, no modification
+
+	return modified
+
+
+## Digital chain: prior digital divide response affects AI adoption readiness.
+static func _apply_digital_chain(
+	scenario: Dictionary,
+	scenarios_completed: Dictionary
+) -> Dictionary:
+	var digital_choice: String = str(scenarios_completed.get("scenario_012", ""))
+	if digital_choice == "":
+		return scenario
+
+	var modified := _deep_clone(scenario)
+	if modified.is_empty():
+		return scenario
+
+	for choice: Dictionary in modified.get("choices", []):
+		var effects: Dictionary = choice.get("effects", {})
+		var costs: Dictionary = choice.get("costs", {})
+
+		if digital_choice == "digital_a":
+			# Heavy infra investment → AI adoption smoother
+			effects["quality"] = float(effects.get("quality", 0)) + 2
+			effects["equity"] = float(effects.get("equity", 0)) + 2
+		elif digital_choice == "digital_c":
+			# PPP approach → strong foundation
+			effects["quality"] = float(effects.get("quality", 0)) + 3
+		elif digital_choice == "cannot_afford":
+			# Never addressed digital divide → AI widens gap
+			effects["equity"] = float(effects.get("equity", 0)) - 3
+		# digital_b = moderate, no modification
+
+	return modified
+
+
+## Deep clone a dictionary via JSON round-trip.
+static func _deep_clone(source: Dictionary) -> Dictionary:
+	var json_str := JSON.stringify(source)
+	var json := JSON.new()
+	if json.parse(json_str) != OK:
+		return {}
+	return json.data

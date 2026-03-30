@@ -430,8 +430,9 @@ func _refresh_all() -> void:
 	else:
 		minister_agenda_label.text = ""
 
-	# Load portrait
+	# Load portrait with fallback placeholder
 	var portrait_file: String = str(minister.get("portrait", ""))
+	var portrait_loaded := false
 	if portrait_file != "":
 		var res_path := "res://assets/ministers/" + portrait_file
 		if FileAccess.file_exists(res_path):
@@ -447,10 +448,12 @@ func _refresh_all() -> void:
 				ok = (img.load_jpg_from_buffer(bytes) == OK)
 			if ok:
 				minister_portrait.texture = ImageTexture.create_from_image(img)
-			else:
-				minister_portrait.texture = null
-		else:
-			minister_portrait.texture = null
+				portrait_loaded = true
+	if not portrait_loaded:
+		# Generate a placeholder image with the minister's initials
+		var placeholder := Image.create(200, 200, false, Image.FORMAT_RGBA8)
+		placeholder.fill(ThemeConfig.BLUE.lerp(ThemeConfig.PURPLE, 0.3))
+		minister_portrait.texture = ImageTexture.create_from_image(placeholder)
 
 	_update_sentiment()
 	_refresh_active_initiatives()

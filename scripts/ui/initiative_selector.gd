@@ -15,6 +15,7 @@ signal selection_cancelled
 var _current_filter: String = "all"
 var _search_text: String = ""
 var _category_buttons: Dictionary = {}
+var _search_timer: Timer
 
 const CATEGORIES := ["all", "infrastructure", "human_capital", "policy",
 	"technology", "community", "governance"]
@@ -38,6 +39,12 @@ func _ready() -> void:
 	confirm_btn.pressed.connect(_on_confirm)
 	cancel_btn.pressed.connect(_on_cancel)
 	search_field.text_changed.connect(_on_search_changed)
+
+	_search_timer = Timer.new()
+	_search_timer.one_shot = true
+	_search_timer.wait_time = 0.2
+	_search_timer.timeout.connect(_rebuild_list)
+	add_child(_search_timer)
 
 	# Modal background — semi-transparent overlay + white card
 	add_theme_stylebox_override("panel", ThemeConfig.make_panel_stylebox(
@@ -110,7 +117,7 @@ func _on_cancel() -> void:
 
 func _on_search_changed(new_text: String) -> void:
 	_search_text = new_text.to_lower()
-	_rebuild_list()
+	_search_timer.start()
 
 func _on_category_pressed(category: String) -> void:
 	_current_filter = category
