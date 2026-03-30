@@ -340,6 +340,7 @@ theme_override_constants/separation = 8
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 1.0
 custom_minimum_size = Vector2(0, 120)
 
 [node name="InitiativesContainer" type="VBoxContainer" parent="VBoxMain/ContentSplit/MainMargin/MainContent/InitiativesRow/InitiativesScroll"]
@@ -350,8 +351,10 @@ theme_override_constants/separation = 4
 
 [node name="SchoolAnimation" type="Control" parent="VBoxMain/ContentSplit/MainMargin/MainContent/InitiativesRow"]
 layout_mode = 2
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(280, 200)
+size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
 script = ExtResource("5_anim")
 
 [node name="ShiftsHeader" type="Label" parent="VBoxMain/ContentSplit/MainMargin/MainContent"]
